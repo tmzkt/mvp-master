@@ -1,0 +1,24 @@
+{
+    "webcredentials": {
+        "apps": [
+            "Y24464MUL3.digital.intime.app.ios",
+            "Y24464MUL3.digital.intime.app.ios.QA",
+            "Y24464MUL3.digital.intime.app.ios.Dev"
+        ]
+    },
+    "applinks": {
+        "apps": [
+            "Y24464MUL3.digital.intime.app.ios",
+            "Y24464MUL3.digital.intime.app.ios.QA",
+            "Y24464MUL3.com.di.AutoPassword-iOS12.Dev"
+        ],
+        "details": [
+            {
+                "appID": "Y24464MUL3.digital.intime.app.ios",
+                "paths": [
+                    "*"
+                ]
+            }
+        ]
+    }
+}

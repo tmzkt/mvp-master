@@ -1,0 +1,22 @@
+{% load i18n %}
+{% load static %}
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent=""
+  chat-icon={% static 'img/messenger.png' %}
+  chat-title="InTime-bot"
+  agent-id="eda4e55d-6ab9-4c36-aa7a-5c173552e0c4"
+  language-code={{ LANGUAGE_CODE }}>
+</df-messenger>
+
+<style style="css">
+  df-messenger {
+   --df-messenger-bot-message: #878fac;
+   --df-messenger-button-titlebar-color: #052b45;
+   --df-messenger-chat-background-color: #fafafa;
+   --df-messenger-font-color: white;
+   --df-messenger-send-icon: #878fac;
+   --df-messenger-user-message: #479b3d;
+  }
+</style>

@@ -1,0 +1,2914 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-10 07:22+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: api/authentication.py:12
+msgid "Email not confirmed"
+msgstr "Email не подтвержден"
+
+#: api/exceptions.py:9
+msgid "Incorrect authentication credentials."
+msgstr "Неверные учетные данные"
+
+#: api/exceptions.py:15
+msgid "Device not registered"
+msgstr "Устройство не зарегистрировано"
+
+#: api/marker.py:62
+msgid ""
+"Low body weight is based on your body parameters, height, and body fat "
+"percentage. May lead to the development of serious diseases and, over time, "
+"with a further decrease, develop into anorexia"
+msgstr ""
+"Низкий вес тела исходя из Ваших параметров телосложения, роста и процента "
+"подкожного жира.Может повлечь за собой развитие серьезных заболеваний и со "
+"временем, при дальнейшем уменьшении, перерасти в анорексию"
+
+#: api/marker.py:65
+msgid ""
+"Normal body weight based on your body parameters, height, and percentage of "
+"body fat. Does not have any serious health consequences associated with "
+"being overweight"
+msgstr ""
+"Нормальный вес тела исходя из Ваших параметров телосложения, роста и "
+"процента подкожного жира. Не влечет за собой никаких серьезных последствий "
+"для здоровья связанных с избыточным весом "
+
+#: api/marker.py:67
+msgid ""
+"Being overweight is based on your body parameters, height, and percentage of "
+"subcutaneous fat. With further weight gain, obesity of the 1st degree may "
+"develop"
+msgstr ""
+"Наличие избыточного веса тела исходя из Ваших параметров телосложения, роста "
+"и процента подкожного жира. При дальнейшем наборе веса возможно развитие "
+"ожирения 1 степени"
+
+#: api/marker.py:69
+msgid ""
+"Not significantly exceeding normal body weight, which will not lead to "
+"serious health consequences. However, with further weight gain, obesity of "
+"the 2nd degree may develop."
+msgstr ""
+"Не значительное превышение нормального веса тела, которое не влечет за собой "
+"серьезных последствий, связанных со здоровьем. Однако при дальнейшем наборе "
+"веса возможно развитие ожирения 2 степени "
+
+#: api/marker.py:71
+msgid ""
+"Significant increase in body weight, which is possibly chronic. With obesity "
+"of the 2nd degree, all types of metabolism are disrupted, it may lead to the "
+"development of serious pathologies: heart disease, stroke, diabetes "
+"mellitus, risk of sudden cardiac death, etc."
+msgstr ""
+"Значительное повышение массы тела, которое возможно носит хронический "
+"характер. При ожирении 2 степени нарушаются все виды обмена, что может "
+"привести к развитию серьезных патологий: болезней сердца, инсульта, "
+"сахарного диабета, риска внезапной сердечной смерти и др. "
+
+#: api/marker.py:74
+msgid ""
+"Significant increase in body weight, in which the body mass index is more "
+"than 40. Obesity of 3rd degree is accompanied by numerous changes in the "
+"work of all organs, systems, and hormonal disorders"
+msgstr ""
+"Значительное повышение массы тела, при котором индекс массы тела составляет "
+"более 40. Ожирение 3 степени сопровождается многочисленными изменениями "
+"работы всех органов, систем и с нарушениями работы гормонов "
+
+#: api/marker.py:86
+msgid ""
+"This type is characterized by a fragile and refined figure. Narrow shoulders "
+"and ribcage, lean and weak muscles"
+msgstr ""
+"Для данного типа характерна хрупкая и утонченная фигура. Узкие плечи и "
+"грудная клетка, худощавость и слабовыраженные мышцы"
+
+#: api/marker.py:88
+msgid ""
+"This type is usually characterized by well-developed muscles. Medium height, "
+"strong skeleton, harmonious length of the limbs, and a moderately wide chest"
+msgstr ""
+"Для данного типа как правило, характерна хорошо развитая мускулатура. "
+"Средний рост, крепкий скелет, гармоничная длина конечностей и в меру широкая "
+"грудная клетка "
+
+#: api/marker.py:90
+msgid ""
+"This type is characterized by relatively short stature and a dense physique. "
+"Mainly short limbs and neck, broad ribcage, and hips, strong skeleton"
+msgstr ""
+"Для данного типа характерен сравнительно низкий рост и плотное телосложение. "
+"В основном короткие конечности и шея, широкие грудная клетка и бедра, "
+"крепкий скелет "
+
+#: api/marker.py:105
+msgid ""
+"Body mass index is a value that allows you to assess the degree of "
+"correspondence between a person's weight and his height and thereby, "
+"indirectly, assess whether the mass is low, normal, or overweight"
+msgstr ""
+"Индекс массы тела величина, позволяющая оценить степень соответствия массы "
+"человека и его роста и тем самым, косвенно, оценить, является ли масса "
+"недостаточной, нормальной, или избыточной "
+
+#: api/marker.py:109
+msgid ""
+"Displays the ideal body weight calculated based on your body and height "
+"parameters"
+msgstr ""
+"Отображает идеальный вес тела рассчитанный, основываясь на Ваших параметрах "
+"телосложения и роста "
+
+#: api/marker.py:111
+msgid ""
+"The minimum amount of calories (energy) that your body burns at rest, "
+"necessary to ensure normal functioning"
+msgstr ""
+"Минимальное количество калорий (энергии), которое сжигает Ваш организм в "
+"состоянии покоя, необходимое для обеспечения нормальной жизнедеятельности "
+
+#: api/marker.py:113
+msgid "Some of the calories"
+msgstr "Какие-то калории"
+
+#: api/marker.py:114
+msgid ""
+"The ratio is determined by dividing the waist circumference by the pelvic "
+"circumference. This value is an indicator of a person's health and the risk "
+"of developing serious diseases. (Изменена русская формулировка)"
+msgstr ""
+"Соотношение, определяемое делением окружности талии на окружность таза. Это "
+"значение является показателем здоровья человека и риска развития у него "
+"серьезных заболеваний "
+
+#: api/marker.py:117
+msgid "Your age according to the birth date"
+msgstr "Ваш возраст согласно дате рождения"
+
+#: api/marker.py:118
+msgid ""
+"Overall risk of developing serious obesity-related diseases. Determined "
+"based on your physical and biological parameters"
+msgstr ""
+"Общий уровень риска развития серьезных заболеваний, связанных с ожирением. "
+"Определяется на основании Ваших физических и биологических параметров"
+
+#: api/marker.py:120
+msgid "Calculated age"
+msgstr "Рассчитанный возраст"
+
+#: api/marker.py:121
+msgid ""
+"One of the indicators that means the presence or absence of excess weight"
+msgstr ""
+"Один из показателей указывающий на наличие или отсутствие избыточного веса"
+
+#: api/mixins.py:18
+msgid "device data or device_uuid incorrect!"
+msgstr "данные устройства или UUID некорректны"
+
+#: api/serializers.py:69 api/serializers.py:189
+msgid "user data should be a separate block in json"
+msgstr "данные пользователя должны быть отдельным блоком в JSON"
+
+#: api/serializers.py:199
+msgid "token data not found or not separate block in json"
+msgstr "данные токена не найдены или нет отдельного блока в JSON"
+
+#: api/serializers.py:319
+msgid "device data not found or not separate block in json."
+msgstr "данные устройства не найдены или нет отдельного блока в JSON"
+
+#: api/serializers.py:447
+msgid "Your old password was entered incorrectly. Please enter it again."
+msgstr "Ваш старый пароль был введен некорректно. Пожалуйста, введите снова."
+
+#: api/serializers.py:520
+msgid "user_calc_data should be a separate block in json."
+msgstr "user_calc_data должны быть отдельным блоком JSON"
+
+#: api/views.py:244
+msgid "too many devices logged in. First device will be deleted"
+msgstr ""
+"Вход осуществлен со слишком большого количества устройств. Пожалуйста, "
+"выйдите с одного из них."
+
+#: api/views.py:380 api/views.py:828 cms/models.py:61
+msgid "Male"
+msgstr "Мужской"
+
+#: api/views.py:381 api/views.py:829 cms/models.py:62
+msgid "Female"
+msgstr "Женский"
+
+#: api/views.py:382 api/views.py:830
+msgid "Undefined"
+msgstr ""
+
+#: api/views.py:426
+msgid "Password reset e-mail has been sent."
+msgstr "Письмо для сброса пароля отправлено."
+
+#: api/views.py:451
+msgid "Password has been reset with the new password."
+msgstr "Пароль был сброшен и заменен на новый."
+
+#: api/views.py:472
+msgid "New password has been saved."
+msgstr "Ваш пароль успешно установлен."
+
+#: cms/countries.py:5
+msgid "Andorra"
+msgstr "Андорра"
+
+#: cms/countries.py:6
+msgid "United Arab Emirates"
+msgstr "Объединенные Арабские Эмираты"
+
+#: cms/countries.py:7
+msgid "Afghanistan"
+msgstr "Афганистан"
+
+#: cms/countries.py:8
+msgid "Antigua and Barbuda"
+msgstr "Антигуа и Барбуда"
+
+#: cms/countries.py:9
+msgid "Anguilla"
+msgstr "Ангилья"
+
+#: cms/countries.py:10
+msgid "Albania"
+msgstr "Албания"
+
+#: cms/countries.py:11
+msgid "Armenia"
+msgstr "Армения"
+
+#: cms/countries.py:12
+msgid "Netherlands Antilles"
+msgstr "Нидерландские Антильские острова"
+
+#: cms/countries.py:13
+msgid "Angola"
+msgstr "Ангола"
+
+#: cms/countries.py:14
+msgid "Antarctica"
+msgstr "Антарктика"
+
+#: cms/countries.py:15
+msgid "Argentina"
+msgstr "Аргентина"
+
+#: cms/countries.py:16
+msgid "American Samoa"
+msgstr "Американское Самоа"
+
+#: cms/countries.py:17
+msgid "Austria"
+msgstr "Австрия"
+
+#: cms/countries.py:18
+msgid "Australia"
+msgstr "Австралия"
+
+#: cms/countries.py:19
+msgid "Aruba"
+msgstr "Аруба"
+
+#: cms/countries.py:20
+msgid "Azerbaijan"
+msgstr "Азербайджан"
+
+#: cms/countries.py:21
+msgid "Bosnia and Herzegovina"
+msgstr "Босния и Герцеговина"
+
+#: cms/countries.py:22
+msgid "Barbados"
+msgstr "Барбадос"
+
+#: cms/countries.py:23
+msgid "Bangladesh"
+msgstr "Бангладеш"
+
+#: cms/countries.py:24
+msgid "Belgium"
+msgstr "Бельгия"
+
+#: cms/countries.py:25
+msgid "Burkina Faso"
+msgstr "Буркина Фасо"
+
+#: cms/countries.py:26
+msgid "Bulgaria"
+msgstr "Болгария"
+
+#: cms/countries.py:27
+msgid "Bahrain"
+msgstr "Бахрейн"
+
+#: cms/countries.py:28
+msgid "Burundi"
+msgstr "Бурунди"
+
+#: cms/countries.py:29
+msgid "Benin"
+msgstr "Бенин"
+
+#: cms/countries.py:30
+msgid "Bermuda"
+msgstr "Бермуды"
+
+#: cms/countries.py:31
+msgid "Brunei"
+msgstr "Бруней"
+
+#: cms/countries.py:32
+msgid "Bolivia"
+msgstr "Боливия"
+
+#: cms/countries.py:33
+msgid "Brazil"
+msgstr "Бразилия"
+
+#: cms/countries.py:34
+msgid "Bahamas"
+msgstr "Багамы"
+
+#: cms/countries.py:35
+msgid "Bhutan"
+msgstr "Бутан"
+
+#: cms/countries.py:36
+msgid "Bouvet Island"
+msgstr "Остров Буве"
+
+#: cms/countries.py:37
+msgid "Botswana"
+msgstr "Ботствана"
+
+#: cms/countries.py:38
+msgid "Belarus"
+msgstr "Беларусь"
+
+#: cms/countries.py:39
+msgid "Belize"
+msgstr "Белиз"
+
+#: cms/countries.py:40
+msgid "Canada"
+msgstr "Канада"
+
+#: cms/countries.py:41
+msgid "Cocos [Keeling] Islands"
+msgstr "Кокосовые острова [Килинг]"
+
+#: cms/countries.py:42
+msgid "Congo [DRC]"
+msgstr "Конго [ДРК]"
+
+#: cms/countries.py:43
+msgid "Central African Republic"
+msgstr "Центральноафриканская республика"
+
+#: cms/countries.py:44
+msgid "Congo [Republic]"
+msgstr "Конго [Республика]"
+
+#: cms/countries.py:45
+msgid "Switzerland"
+msgstr "Швейцария"
+
+#: cms/countries.py:46
+msgid "Côte d`Ivoire"
+msgstr "Кот-д'Ивуар"
+
+#: cms/countries.py:47
+msgid "Cook Islands"
+msgstr "Острова Кука"
+
+#: cms/countries.py:48
+msgid "Chile"
+msgstr "Чили"
+
+#: cms/countries.py:49
+msgid "Cameroon"
+msgstr "Камерун"
+
+#: cms/countries.py:50
+msgid "China"
+msgstr "Китай"
+
+#: cms/countries.py:51
+msgid "Colombia"
+msgstr "Колумбия"
+
+#: cms/countries.py:52
+msgid "Costa Rica"
+msgstr "Коста-Рика"
+
+#: cms/countries.py:53
+msgid "Cuba"
+msgstr "Куба"
+
+#: cms/countries.py:54
+msgid "Cape Verde"
+msgstr "Кабо-Верде"
+
+#: cms/countries.py:55
+msgid "Christmas Island"
+msgstr "Остров Рождества"
+
+#: cms/countries.py:56
+msgid "Cyprus"
+msgstr "Кипр"
+
+#: cms/countries.py:57
+msgid "Czech Republic"
+msgstr "Чешская республика"
+
+#: cms/countries.py:58
+msgid "Germany"
+msgstr "Германия"
+
+#: cms/countries.py:59
+msgid "Djibouti"
+msgstr "Джибути"
+
+#: cms/countries.py:60
+msgid "Denmark"
+msgstr "Дания"
+
+#: cms/countries.py:61
+msgid "Dominica"
+msgstr "Доминика"
+
+#: cms/countries.py:62
+msgid "Dominican Republic"
+msgstr "Доминиканская республика"
+
+#: cms/countries.py:63
+msgid "Algeria"
+msgstr "Алжир"
+
+#: cms/countries.py:64
+msgid "Ecuador"
+msgstr "Эквадор"
+
+#: cms/countries.py:65
+msgid "Estonia"
+msgstr "Эстония"
+
+#: cms/countries.py:66
+msgid "Egypt"
+msgstr "Египет"
+
+#: cms/countries.py:67
+msgid "Western Sahara"
+msgstr "Западная Сахара"
+
+#: cms/countries.py:68
+msgid "Eritrea"
+msgstr "Эритрея"
+
+#: cms/countries.py:69
+msgid "Spain"
+msgstr "Испания"
+
+#: cms/countries.py:70
+msgid "Ethiopia"
+msgstr "Эфиопия"
+
+#: cms/countries.py:71
+msgid "Finland"
+msgstr "Финляндия"
+
+#: cms/countries.py:72
+msgid "Fiji"
+msgstr "Фиджи"
+
+#: cms/countries.py:73
+msgid "Falkland Islands [Islas Malvinas]"
+msgstr "Фоллендские [Мальвинские] острова"
+
+#: cms/countries.py:74
+msgid "Micronesia"
+msgstr "Микронезия"
+
+#: cms/countries.py:75
+msgid "Faroe Islands"
+msgstr "Фарерские острова"
+
+#: cms/countries.py:76
+msgid "France"
+msgstr "Франция"
+
+#: cms/countries.py:77
+msgid "Gabon"
+msgstr "Габон"
+
+#: cms/countries.py:78
+msgid "United Kingdom"
+msgstr "Великобритания"
+
+#: cms/countries.py:79
+msgid "Grenada"
+msgstr "Гренада"
+
+#: cms/countries.py:80
+msgid "Georgia"
+msgstr "Грузия"
+
+#: cms/countries.py:81
+msgid "French Guiana"
+msgstr "Французская Гвиана"
+
+#: cms/countries.py:82
+msgid "Guernsey"
+msgstr "Гернси"
+
+#: cms/countries.py:83
+msgid "Ghana"
+msgstr "Гана"
+
+#: cms/countries.py:84
+msgid "Gibraltar"
+msgstr "Гибралтар"
+
+#: cms/countries.py:85
+msgid "Greenland"
+msgstr "Гренландия"
+
+#: cms/countries.py:86
+msgid "Gambia"
+msgstr "Гамбия"
+
+#: cms/countries.py:87
+msgid "Guinea"
+msgstr "Гвинея"
+
+#: cms/countries.py:88
+msgid "Guadeloupe"
+msgstr "Гваделупа"
+
+#: cms/countries.py:89
+msgid "Equatorial Guinea"
+msgstr "Экваторияльная Гвинея"
+
+#: cms/countries.py:90
+msgid "Greece"
+msgstr "Греция"
+
+#: cms/countries.py:91
+msgid "South Georgia and the South Sandwich Islands"
+msgstr "Южная Георгия и Южные Сандвичевы острова"
+
+#: cms/countries.py:92
+msgid "Guatemala"
+msgstr "Гватемала"
+
+#: cms/countries.py:93
+msgid "Guam"
+msgstr "Гуам"
+
+#: cms/countries.py:94
+msgid "Guinea-Bissau"
+msgstr "Гвинея-Биссау"
+
+#: cms/countries.py:95
+msgid "Guyana"
+msgstr "Гайана"
+
+#: cms/countries.py:96
+msgid "Gaza Strip"
+msgstr "Сектор Газа"
+
+#: cms/countries.py:97
+msgid "Hong Kong"
+msgstr "Гонконг"
+
+#: cms/countries.py:98
+msgid "Heard Island and McDonald Islands"
+msgstr "Остров Херд и острова Макдональд"
+
+#: cms/countries.py:99
+msgid "Honduras"
+msgstr "Гондурас"
+
+#: cms/countries.py:100
+msgid "Croatia"
+msgstr "Хорватия"
+
+#: cms/countries.py:101
+msgid "Haiti"
+msgstr "Гаити"
+
+#: cms/countries.py:102
+msgid "Hungary"
+msgstr "Венгрия"
+
+#: cms/countries.py:103
+msgid "Indonesia"
+msgstr "Индонезия"
+
+#: cms/countries.py:104
+msgid "Ireland"
+msgstr "Ирландия"
+
+#: cms/countries.py:105
+msgid "Israel"
+msgstr "Израиль"
+
+#: cms/countries.py:106
+msgid "Isle of Man"
+msgstr "Остров Мэн"
+
+#: cms/countries.py:107
+msgid "India"
+msgstr "Индия"
+
+#: cms/countries.py:108
+msgid "British Indian Ocean Territory"
+msgstr "Британская Территория в Индийском океане"
+
+#: cms/countries.py:109
+msgid "Iraq"
+msgstr "Ирак"
+
+#: cms/countries.py:110
+msgid "Iran"
+msgstr "Иран"
+
+#: cms/countries.py:111
+msgid "Iceland"
+msgstr "Исландия"
+
+#: cms/countries.py:112
+msgid "Italy"
+msgstr "Италия"
+
+#: cms/countries.py:113
+msgid "Jersey"
+msgstr "Джерси"
+
+#: cms/countries.py:114
+msgid "Jamaica"
+msgstr "Ямайка"
+
+#: cms/countries.py:115
+msgid "Jordan"
+msgstr "Иордан"
+
+#: cms/countries.py:116
+msgid "Japan"
+msgstr "Япония"
+
+#: cms/countries.py:117
+msgid "Kenya"
+msgstr "Кения"
+
+#: cms/countries.py:118
+msgid "Kyrgyzstan"
+msgstr "Кыргызстан"
+
+#: cms/countries.py:119
+msgid "Cambodia"
+msgstr "Камбоджа"
+
+#: cms/countries.py:120
+msgid "Kiribati"
+msgstr "Кирибати"
+
+#: cms/countries.py:121
+msgid "Comoros"
+msgstr "Коморы"
+
+#: cms/countries.py:122
+msgid "Saint Kitts and Nevis"
+msgstr "Сент-Китс и Невис"
+
+#: cms/countries.py:123
+msgid "North Korea"
+msgstr "Северная Корея"
+
+#: cms/countries.py:124
+msgid "South Korea"
+msgstr "Южная Корея"
+
+#: cms/countries.py:125
+msgid "Kuwait"
+msgstr "Кувейт"
+
+#: cms/countries.py:126
+msgid "Cayman Islands"
+msgstr "Каймановы острова"
+
+#: cms/countries.py:127
+msgid "Kazakhstan"
+msgstr "Казахстан"
+
+#: cms/countries.py:128
+msgid "Laos"
+msgstr "Лаос"
+
+#: cms/countries.py:129
+msgid "Lebanon"
+msgstr "Ливан"
+
+#: cms/countries.py:130
+msgid "Saint Lucia"
+msgstr "Сент-Люсия"
+
+#: cms/countries.py:131
+msgid "Liechtenstein"
+msgstr "Лихтенштейн"
+
+#: cms/countries.py:132
+msgid "Sri Lanka"
+msgstr "Шри-Ланка"
+
+#: cms/countries.py:133
+msgid "Liberia"
+msgstr "Либерия"
+
+#: cms/countries.py:134
+msgid "Lesotho"
+msgstr "Лесото"
+
+#: cms/countries.py:135
+msgid "Lithuania"
+msgstr "Литва"
+
+#: cms/countries.py:136
+msgid "Luxembourg"
+msgstr "Люксембург"
+
+#: cms/countries.py:137
+msgid "Latvia"
+msgstr "Латвия"
+
+#: cms/countries.py:138
+msgid "Libya"
+msgstr "Ливия"
+
+#: cms/countries.py:139
+msgid "Morocco"
+msgstr "Марокко"
+
+#: cms/countries.py:140
+msgid "Monaco"
+msgstr "Монако"
+
+#: cms/countries.py:141
+msgid "Moldova"
+msgstr "Молдова"
+
+#: cms/countries.py:142
+msgid "Montenegro"
+msgstr "Монтенегро"
+
+#: cms/countries.py:143
+msgid "Madagascar"
+msgstr "Мадагаскар"
+
+#: cms/countries.py:144
+msgid "Marshall Islands"
+msgstr "Маршаловы острова"
+
+#: cms/countries.py:145
+msgid "Macedonia [FYROM]"
+msgstr "Македония"
+
+#: cms/countries.py:146
+msgid "Mali"
+msgstr "Мали"
+
+#: cms/countries.py:147
+msgid "Myanmar [Burma]"
+msgstr "Мьянма"
+
+#: cms/countries.py:148
+msgid "Mongolia"
+msgstr "Монголия"
+
+#: cms/countries.py:149
+msgid "Macau"
+msgstr "Макао"
+
+#: cms/countries.py:150
+msgid "Northern Mariana Islands"
+msgstr "Северные Марианские острова"
+
+#: cms/countries.py:151
+msgid "Martinique"
+msgstr "Мартиника"
+
+#: cms/countries.py:152
+msgid "Mauritania"
+msgstr "Мавритания"
+
+#: cms/countries.py:153
+msgid "Montserrat"
+msgstr "Монтсеррат"
+
+#: cms/countries.py:154
+msgid "Malta"
+msgstr "Мальта"
+
+#: cms/countries.py:155
+msgid "Mauritius"
+msgstr "Мавритания"
+
+#: cms/countries.py:156
+msgid "Maldives"
+msgstr "Мальдивы"
+
+#: cms/countries.py:157
+msgid "Malawi"
+msgstr "Малави"
+
+#: cms/countries.py:158
+msgid "Mexico"
+msgstr "Мексика"
+
+#: cms/countries.py:159
+msgid "Malaysia"
+msgstr "Малайзия"
+
+#: cms/countries.py:160
+msgid "Mozambique"
+msgstr "Мозамбик"
+
+#: cms/countries.py:161
+msgid "Namibia"
+msgstr "Намибия"
+
+#: cms/countries.py:162
+msgid "New Caledonia"
+msgstr "Новая Каледония"
+
+#: cms/countries.py:163
+msgid "Niger"
+msgstr "Республика Нигер"
+
+#: cms/countries.py:164
+msgid "Norfolk Island"
+msgstr "Остров Норфолк"
+
+#: cms/countries.py:165
+msgid "Nigeria"
+msgstr "Нигерия"
+
+#: cms/countries.py:166
+msgid "Nicaragua"
+msgstr "Никарагуа"
+
+#: cms/countries.py:167
+msgid "Netherlands"
+msgstr "Нидерланды"
+
+#: cms/countries.py:168
+msgid "Norway"
+msgstr "Норвегия"
+
+#: cms/countries.py:169
+msgid "Nepal"
+msgstr "Непал"
+
+#: cms/countries.py:170
+msgid "Nauru"
+msgstr "Науру"
+
+#: cms/countries.py:171
+msgid "Niue"
+msgstr "Савидж [Ниуэ]"
+
+#: cms/countries.py:172
+msgid "New Zealand"
+msgstr "Новая Зеландия"
+
+#: cms/countries.py:173
+msgid "Oman"
+msgstr "Оман"
+
+#: cms/countries.py:174
+msgid "Panama"
+msgstr "Панама"
+
+#: cms/countries.py:175
+msgid "Peru"
+msgstr "Перу"
+
+#: cms/countries.py:176
+msgid "French Polynesia"
+msgstr "Французская Полинезия"
+
+#: cms/countries.py:177
+msgid "Papua New Guinea"
+msgstr "Папуа-Новая Гвинея"
+
+#: cms/countries.py:178
+msgid "Philippines"
+msgstr "Фмлиппины"
+
+#: cms/countries.py:179
+msgid "Pakistan"
+msgstr "Пакистан"
+
+#: cms/countries.py:180
+msgid "Poland"
+msgstr "Польша"
+
+#: cms/countries.py:181
+msgid "Saint Pierre and Miquelon"
+msgstr "Сен-Пьер и Микелон"
+
+#: cms/countries.py:182
+msgid "Pitcairn Islands"
+msgstr "Острова Питкэрн"
+
+#: cms/countries.py:183
+msgid "Puerto Rico"
+msgstr "Пуэрто-Рико"
+
+#: cms/countries.py:184
+msgid "Palestinian Territories"
+msgstr "Палестинские территории"
+
+#: cms/countries.py:185
+msgid "Portugal"
+msgstr "Португалия"
+
+#: cms/countries.py:186
+msgid "Palau"
+msgstr "Палау"
+
+#: cms/countries.py:187
+msgid "Paraguay"
+msgstr "Парагвай"
+
+#: cms/countries.py:188
+msgid "Qatar"
+msgstr "Катар"
+
+#: cms/countries.py:189
+msgid "Réunion"
+msgstr "Реюньон"
+
+#: cms/countries.py:190
+msgid "Romania"
+msgstr "Румыния"
+
+#: cms/countries.py:191
+msgid "Serbia"
+msgstr "Сербия"
+
+#: cms/countries.py:192
+msgid "Russia"
+msgstr "Россия"
+
+#: cms/countries.py:193
+msgid "Rwanda"
+msgstr "Руанда"
+
+#: cms/countries.py:194
+msgid "Saudi Arabia"
+msgstr "Саудовская Аравия"
+
+#: cms/countries.py:195
+msgid "Solomon Islands"
+msgstr "Соломоновы острова"
+
+#: cms/countries.py:196
+msgid "Seychelles"
+msgstr "Сейшелы"
+
+#: cms/countries.py:197
+msgid "Sudan"
+msgstr "Судан"
+
+#: cms/countries.py:198
+msgid "Sweden"
+msgstr "Шведция"
+
+#: cms/countries.py:199
+msgid "Singapore"
+msgstr "Сингапур"
+
+#: cms/countries.py:200
+msgid "Saint Helena"
+msgstr "Остров Святой Елены"
+
+#: cms/countries.py:201
+msgid "Slovenia"
+msgstr "Словения"
+
+#: cms/countries.py:202
+msgid "Svalbard and Jan Mayen"
+msgstr "Острова Шпицберген и Ян-Майен"
+
+#: cms/countries.py:203
+msgid "Slovakia"
+msgstr "Словаикя"
+
+#: cms/countries.py:204
+msgid "Sierra Leone"
+msgstr "Сьерра Леоне"
+
+#: cms/countries.py:205
+msgid "San Marino"
+msgstr "Сан-Марино"
+
+#: cms/countries.py:206
+msgid "Senegal"
+msgstr "Синегал"
+
+#: cms/countries.py:207
+msgid "Somalia"
+msgstr "Сомали"
+
+#: cms/countries.py:208
+msgid "Suriname"
+msgstr "Суринам"
+
+#: cms/countries.py:209
+msgid "São Tomé and Príncipe"
+msgstr "Сан-Томе и Принсипи"
+
+#: cms/countries.py:210
+msgid "El Salvador"
+msgstr "Сальвадор"
+
+#: cms/countries.py:211
+msgid "Syria"
+msgstr "Сирия"
+
+#: cms/countries.py:212
+msgid "Swaziland"
+msgstr "Свазиленд"
+
+#: cms/countries.py:213
+msgid "Turks and Caicos Islands"
+msgstr "Теркс и Кайкос"
+
+#: cms/countries.py:214
+msgid "Chad"
+msgstr "Чад"
+
+#: cms/countries.py:215
+msgid "French Southern Territories"
+msgstr "Французские Южные Территории"
+
+#: cms/countries.py:216
+msgid "Togo"
+msgstr "Того"
+
+#: cms/countries.py:217
+msgid "Thailand"
+msgstr "Таиланд"
+
+#: cms/countries.py:218
+msgid "Tajikistan"
+msgstr "Таджикистан"
+
+#: cms/countries.py:219
+msgid "Tokelau"
+msgstr "Токелау"
+
+#: cms/countries.py:220
+msgid "Timor-Leste"
+msgstr "Восточный Тимор"
+
+#: cms/countries.py:221
+msgid "Turkmenistan"
+msgstr "Туркменистан"
+
+#: cms/countries.py:222
+msgid "Tunisia"
+msgstr "Тунис"
+
+#: cms/countries.py:223
+msgid "Tonga"
+msgstr "Тонга"
+
+#: cms/countries.py:224
+msgid "Turkey"
+msgstr "Турция"
+
+#: cms/countries.py:225
+msgid "Trinidad and Tobago"
+msgstr "Тринидад и Тобаго"
+
+#: cms/countries.py:226
+msgid "Tuvalu"
+msgstr "Тувалу"
+
+#: cms/countries.py:227
+msgid "Taiwan"
+msgstr "Тайвань"
+
+#: cms/countries.py:228
+msgid "Tanzania"
+msgstr "Танзания"
+
+#: cms/countries.py:229
+msgid "Ukraine"
+msgstr "Украина"
+
+#: cms/countries.py:230
+msgid "Uganda"
+msgstr "Уганда"
+
+#: cms/countries.py:231
+msgid "U.S. Minor Outlying Islands"
+msgstr "Внешние малые острова США"
+
+#: cms/countries.py:232
+msgid "United States of America"
+msgstr "Соединенные Штаты Америки"
+
+#: cms/countries.py:233
+msgid "Uruguay"
+msgstr "Урагвай"
+
+#: cms/countries.py:234
+msgid "Uzbekistan"
+msgstr "Узбекистан"
+
+#: cms/countries.py:235
+msgid "Vatican City"
+msgstr "Ватикан"
+
+#: cms/countries.py:236
+msgid "Saint Vincent and the Grenadines"
+msgstr "Сент-Винсент и Гренадины"
+
+#: cms/countries.py:237
+msgid "Venezuela"
+msgstr "Венесуэла"
+
+#: cms/countries.py:238
+msgid "British Virgin Islands"
+msgstr "Бринтанские Виргинские острова"
+
+#: cms/countries.py:239
+msgid "U.S. Virgin Islands"
+msgstr "Американские Виргинские острова"
+
+#: cms/countries.py:240
+msgid "Vietnam"
+msgstr "Вьетнам"
+
+#: cms/countries.py:241
+msgid "Vanuatu"
+msgstr "Вануату"
+
+#: cms/countries.py:242
+msgid "Wallis and Futuna"
+msgstr "Уоллис и Футуна"
+
+#: cms/countries.py:243
+msgid "Samoa"
+msgstr "Самоа"
+
+#: cms/countries.py:244
+msgid "Kosovo"
+msgstr "Косово"
+
+#: cms/countries.py:245
+msgid "Yemen"
+msgstr "Йемен"
+
+#: cms/countries.py:246
+msgid "Mayotte"
+msgstr "Майотта"
+
+#: cms/countries.py:247
+msgid "South Africa"
+msgstr "Южная Африка"
+
+#: cms/countries.py:248
+msgid "Zambia"
+msgstr "Замбия"
+
+#: cms/countries.py:249
+msgid "Zimbabwe"
+msgstr "Зимбабве"
+
+#: cms/disease.py:6
+msgid "arterial hypotension"
+msgstr "артериальная гипертензия"
+
+#: cms/disease.py:7
+msgid "arterial hypertension of the 1st degree"
+msgstr "артериальная гипертензия I-й степени"
+
+#: cms/disease.py:8
+msgid "arterial hypertension of the 2st degree"
+msgstr "артериальная гипертензия II-й степени"
+
+#: cms/disease.py:9
+msgid "arterial hypertension of the 3st degree"
+msgstr "артериальная гипертензия III-й степени"
+
+#: cms/disease.py:10
+msgid "borderline arterial hypertension"
+msgstr "пограничная артериальная гипертензия"
+
+#: cms/disease.py:11
+msgid "isolated systolic hypertension"
+msgstr "изолированная систолическая гипертензия"
+
+#: cms/disease.py:16
+msgid "bradicardia"
+msgstr "брадикардия"
+
+#: cms/disease.py:17
+msgid "tachycardia"
+msgstr "тахикардия"
+
+#: cms/disease.py:18
+msgid "arrhythmia"
+msgstr "аритмия"
+
+#: cms/disease.py:23
+msgid "obesity of the 1st degree"
+msgstr "ожирение I-й степени"
+
+#: cms/disease.py:24
+msgid "obesity of the 2st degree"
+msgstr "ожирение II-й степени"
+
+#: cms/disease.py:25
+msgid "obesity of the 3st degree"
+msgstr "ожирение III-й степени"
+
+#: cms/forms.py:14
+msgid "Weight"
+msgstr "Вес"
+
+#: cms/forms.py:20
+msgid "Hip circumference"
+msgstr "Окружность бедер"
+
+#: cms/forms.py:26
+msgid "Waist circumference"
+msgstr "Окружность талии"
+
+#: cms/forms.py:32
+msgid "Neck circumference"
+msgstr "Окружность шеи"
+
+#: cms/forms.py:38
+msgid "Wrist circumference"
+msgstr "Обхват запястья"
+
+#: cms/forms.py:46 cms/templates/cms/dashboard.html:61
+msgid "Blood pressure"
+msgstr "Артериальное давление"
+
+#: cms/forms.py:57 cms/models.py:100
+msgid "Cholesterol"
+msgstr "Холестерин"
+
+#: cms/forms.py:63
+msgid "Glucose level"
+msgstr "Уровень глюкозы"
+
+#: cms/forms.py:70
+msgid "Heart rate"
+msgstr "Сердечный ритм"
+
+#: cms/forms.py:75
+msgid "bpm"
+msgstr "ударов в минуту"
+
+#: cms/forms.py:149
+msgid "The value must be between 44 up to 1322.8 lb"
+msgstr "Значение должно быть от 44 до 1322,8 фунтов"
+
+#: cms/forms.py:151
+msgid "The value must be between 7.8 up to 59.1 in"
+msgstr "Значение должно быть от 7,8 до 59,1 дюйма"
+
+#: cms/forms.py:153
+msgid "The value must be between 7.8 up to 102.4 in"
+msgstr "Значение должно быть от 7,8 до 102,4 дюйма"
+
+#: cms/forms.py:155
+msgid "The value must be between 3.9 up to 15.8 in"
+msgstr "Значение должно быть от 3,9 до 15,8 дюйма"
+
+#: cms/forms.py:157
+msgid "The value must be between 7.8 up to 47.3 in"
+msgstr "Значение должно быть от 7,8 до 47,3 дюйма"
+
+#: cms/forms.py:159
+msgid "The value must be between 10.7 up to 42.7 kPa"
+msgstr "Значение должно быть от 10,7 до 42,7 кПа"
+
+#: cms/forms.py:161
+msgid "The value must be between 5.3 up to 30.7 kPa"
+msgstr "Значение должно быть от 5,3 до 30,7 кПа"
+
+#: cms/forms.py:163
+msgid "The value must be between 5.4 up to 162 mg/dL"
+msgstr "Значение должно быть от 5,4 до 162 мг/дл"
+
+#: cms/forms.py:165
+msgid "The value must be between 45 up to 252 mg/dL"
+msgstr "Значение должно быть от 45 до 252 мг/дл"
+
+#: cms/forms.py:168
+msgid "The value must be between 20 up to 600 kg"
+msgstr "Значение должно быть от 20 до 600 кг"
+
+#: cms/forms.py:170
+msgid "The value must be between 20 up to 150 cm"
+msgstr "Значение должно быть от 20 до 150 см"
+
+#: cms/forms.py:172
+msgid "The value must be between 20 up to 260 cm"
+msgstr "Значение должно быть от 20 до 260 см"
+
+#: cms/forms.py:174
+msgid "The value must be between 10 up to 40 cm"
+msgstr "Значение должно быть от 10 до 40 см"
+
+#: cms/forms.py:176
+msgid "The value must be between 20 up to 120 cm"
+msgstr "Значение должно быть от 20 до 120 см"
+
+#: cms/forms.py:178
+msgid "The value must be between 80 up to 320 mmHg"
+msgstr "Значение должно быть от 80 до 320 мм рт"
+
+#: cms/forms.py:180
+msgid "The value must be between 40 up to 230 mmHg"
+msgstr "Значение должно быть от 40 до 230 мм рт"
+
+#: cms/forms.py:182
+msgid "The value must be between 0.3 up to 9 mmol/L"
+msgstr "Значение должно быть от 0,3 до 9 ммоль/л"
+
+#: cms/forms.py:184
+msgid "The value must be between 2.5 up to 14 mmol/L"
+msgstr "Значение должно быть от 2,5 до 14 ммоль/л"
+
+#: cms/forms.py:186
+msgid "The value must be between 40 up to 280"
+msgstr "Значение должно быть от 40 до 280"
+
+#: cms/models.py:21
+msgid "Make sure the date is between {} and {}"
+msgstr "Дата должна быть в диапазоне между {} и {}"
+
+#: cms/models.py:65 users/forms.py:147
+msgid "Metric"
+msgstr "Метрическая"
+
+#: cms/models.py:66 users/forms.py:148
+msgid "Inch"
+msgstr "Дюймовая"
+
+#: cms/models.py:69
+msgid "Minimum"
+msgstr "Минимальный"
+
+#: cms/models.py:70
+msgid "Lower"
+msgstr "Низкий"
+
+#: cms/models.py:71
+msgid "Medium"
+msgstr "Средний"
+
+#: cms/models.py:72
+msgid "High"
+msgstr "Высокий"
+
+#: cms/models.py:73
+msgid "Very high"
+msgstr "Очень высокий"
+
+#: cms/models.py:77
+msgid "gender"
+msgstr "пол"
+
+#: cms/models.py:78
+msgid "Select gender"
+msgstr "Выберите пол"
+
+#: cms/models.py:80
+msgid "Date of Birth"
+msgstr "Укажите дату рождения"
+
+#: cms/models.py:81
+msgid "Enter your date of birth"
+msgstr "Введите вашу дату рождения"
+
+#: cms/models.py:84 cms/models.py:87
+msgid "Choose a country Residence"
+msgstr "Выберите страну проживания"
+
+#: cms/models.py:86
+msgid "country"
+msgstr "страна"
+
+#: cms/models.py:88
+msgid "height"
+msgstr "рост"
+
+#: cms/models.py:89
+msgid "weight"
+msgstr "вес"
+
+#: cms/models.py:90
+msgid "hip"
+msgstr "бедро"
+
+#: cms/models.py:91
+msgid "waist"
+msgstr "талия"
+
+#: cms/models.py:92
+msgid "wrist"
+msgstr "запястье"
+
+#: cms/models.py:93
+msgid "neck"
+msgstr "шея"
+
+#: cms/models.py:94 cms/models.py:122
+msgid "heart rate"
+msgstr "сердечный ритм"
+
+#: cms/models.py:96
+msgid "higher"
+msgstr "верхнее"
+
+#: cms/models.py:98
+msgid "lower"
+msgstr "нижнее"
+
+#: cms/models.py:101
+msgid "Glucose"
+msgstr "Глюкоза"
+
+#: cms/models.py:102
+msgid "Smoker"
+msgstr "Курящий"
+
+#: cms/models.py:111 users/forms.py:156
+msgid "Measuring system"
+msgstr "Система измерения"
+
+#: cms/models.py:113
+msgid "Daily activity level"
+msgstr "Ежедневный уровень активности"
+
+#: cms/models.py:125
+msgid "blood pressure systolic"
+msgstr "артериальное давление верхнее"
+
+#: cms/models.py:128
+msgid "blood pressure diastolic"
+msgstr "артериальное давление нижнее"
+
+#: cms/models.py:139
+msgid "device model"
+msgstr "модель устройства"
+
+#: cms/models.py:147
+msgid "Body mass index"
+msgstr "Индекс массы тела"
+
+#: cms/models.py:148
+msgid "Weight excess"
+msgstr "Избыточный вес"
+
+#: cms/models.py:149
+msgid "Ideal weight"
+msgstr "Идеальный вес"
+
+#: cms/models.py:150
+msgid "Basal metabolism"
+msgstr "Базальный метаболизм"
+
+#: cms/models.py:153
+msgid "Calories to low weight"
+msgstr "Калории для снижения веса"
+
+#: cms/models.py:154
+msgid "Waist-hip ratio"
+msgstr "Сотношение талии и бедер"
+
+#: cms/models.py:156
+msgid "Passport age"
+msgstr "Паспортный возраст"
+
+#: cms/models.py:158
+msgid "Common risk level"
+msgstr "Общий уровень риска"
+
+#: cms/models.py:160
+msgid "Prognostic age"
+msgstr "Прогноз длительности жизни"
+
+#: cms/models.py:163
+msgid "Body fat percentage"
+msgstr "Процент подкожного жира"
+
+#: cms/models.py:165
+msgid "Body type"
+msgstr "Тип телосложения"
+
+#: cms/models.py:166
+#, fuzzy
+#| msgid "Diseases of the cardiovascular system"
+msgid "Risk of cardiovascular disease"
+msgstr "Заболевания сердечно-сосудистой системы"
+
+#: cms/models.py:173
+msgid "Risk string"
+msgstr "Риск"
+
+#: cms/models.py:175 pages/forms.py:25 pages/forms.py:44 pages/forms.py:73
+#: pages/models.py:10 pages/models.py:25
+msgid "Message"
+msgstr "Сообщение"
+
+#: cms/models.py:176
+msgid "Risk percents"
+msgstr "% риска"
+
+#: cms/models.py:178
+msgid "Recomendation"
+msgstr "Рекоммендации"
+
+#: cms/models.py:183
+msgid "Message short"
+msgstr "Сообщение короткое"
+
+#: cms/models.py:184
+msgid "Message long"
+msgstr "Сообщение длинное"
+
+#: cms/models.py:186
+msgid "Importance level"
+msgstr "Уровень важности"
+
+#: cms/models.py:210 cms/templates/cms/disease.html:34
+msgid "Blood pressure related"
+msgstr "Связанные с артериальным давлением"
+
+#: cms/models.py:213 cms/templates/cms/disease.html:37
+msgid "Associated with abnormal heart rhythm"
+msgstr "Связанные с нарушением сердечного ритма"
+
+#: cms/models.py:216
+msgid "Nutritional and metabolic disorders"
+msgstr "Связанные с нарушением питания и обмена веществ"
+
+#: cms/models.py:219
+msgid "The likelihood of having a disease associated with blood pressure"
+msgstr "Вероятность наличия заболевания связанного с артериальным давлением"
+
+#: cms/models.py:224
+msgid ""
+"The likelihood of having a disease associated with an irregular heart rhythm"
+msgstr ""
+"Вероятность наличия заболевания связанного с нарушением сердечного ритма"
+
+#: cms/templates/cms/cardio_recommendation.html:6
+#: cms/templates/cms/cardio_recommendation.html:20
+#: cms/templates/cms/recommendation.html:6
+#: cms/templates/cms/recommendation.html:21 cms/templates/cms/result.html:22
+msgid "Recommendations"
+msgstr "Рекоммендации"
+
+#: cms/templates/cms/cardio_recommendation.html:14
+#: cms/templates/cms/cardio_recommendation.html:41
+#: cms/templates/cms/disease.html:6 cms/templates/cms/disease.html:21
+#: users/templates/profile.html:186
+msgid "Disease"
+msgstr "Заболевания"
+
+#: cms/templates/cms/cardio_recommendation.html:29
+msgid "Not recommendations"
+msgstr "Не рекоммендуется"
+
+#: cms/templates/cms/dashboard.html:7 cms/templates/cms/dashboard.html:14
+#: cms/templates/cms/empty_data.html:10 cms/templates/cms/empty_data.html:27
+#: cms/templates/cms/result.html:7 shop/templates/shop/detail.html:7
+#: templates/includes/app-menu.html:132
+msgid "Dashboard"
+msgstr "Данные"
+
+#: cms/templates/cms/dashboard.html:28 cms/templates/cms/dashboard.html:30
+msgid "Weight in kg"
+msgstr "Вес в кг"
+
+#: cms/templates/cms/dashboard.html:38
+msgid "Thigh circumference in cm"
+msgstr "Окружность бедра в см"
+
+#: cms/templates/cms/dashboard.html:44
+msgid "Waist circumference in cm"
+msgstr "Окружность талии в см"
+
+#: cms/templates/cms/dashboard.html:50
+msgid "Neck circumference in cm"
+msgstr "Окружность шеи в см"
+
+#: cms/templates/cms/dashboard.html:56
+msgid "Wrist circumference at thinnest point in cm"
+msgstr "Окружность запястья в самом тонком месте в см"
+
+#: cms/templates/cms/dashboard.html:75
+msgid "Systolic"
+msgstr "Систолическое"
+
+#: cms/templates/cms/dashboard.html:75
+msgid "Diastolic pressure in mmHg Art."
+msgstr "Диастолическое давление в мм рт.cт."
+
+#: cms/templates/cms/dashboard.html:82
+msgid "Pulse in beats per minute"
+msgstr "Пульс в ударах в минуту"
+
+#: cms/templates/cms/dashboard.html:88
+msgid "Blood cholesterol level in mmol/l"
+msgstr "Уровень холестерина в крови в ммоль/л"
+
+#: cms/templates/cms/dashboard.html:94
+msgid "Blood glucose level in mmol/l"
+msgstr "Уровень глюкозы в крови в ммоль/л"
+
+#: cms/templates/cms/dashboard.html:113 cms/templates/cms/disease.html:47
+#: users/templates/profile.html:66 users/templates/profile.html:195
+msgid "Save"
+msgstr "Сохранить"
+
+#: cms/templates/cms/dashboard.html:128
+msgid "Data saved."
+msgstr "Данные сохранены."
+
+#: cms/templates/cms/dashboard.html:132
+msgid "Open Parameters."
+msgstr "Открыть Параметры."
+
+#: cms/templates/cms/dashboard.html:136
+msgid "Open Analisys."
+msgstr "Открыть Анализ."
+
+#: cms/templates/cms/delete_all_devices.html:4
+#: cms/templates/cms/delete_device.html:4
+msgid "delete device"
+msgstr "удалить устройство"
+
+#: cms/templates/cms/delete_all_devices.html:9
+msgid "Are you sure delete all devices?"
+msgstr "Вы уверены, что хотите удалить все устройства?"
+
+#: cms/templates/cms/delete_all_devices.html:15
+#: cms/templates/cms/delete_device.html:15 users/templates/profile.html:85
+msgid "Delete"
+msgstr "Удалить"
+
+#: cms/templates/cms/delete_device.html:9
+msgid "Are you sure delete "
+msgstr "Вы уверены, что хотите удалить "
+
+#: cms/templates/cms/disease.html:29
+msgid "Diseases of the cardiovascular system"
+msgstr "Заболевания сердечно-сосудистой системы"
+
+#: cms/templates/cms/disease.html:41
+msgid "Diseases associated with nutritional and metabolic disorders"
+msgstr "Связанные с нарушением питания и обмена веществ"
+
+#: cms/templates/cms/empty_data.html:2 users/templates/email_verify_done.html:5
+msgid "Email address confirmed"
+msgstr "Email адрес подтвержден"
+
+#: cms/templates/cms/empty_data.html:16
+msgid "You did not enter any data"
+msgstr "Вы не ввели данные"
+
+#: cms/templates/cms/parameters.html:8 cms/templates/cms/parameters.html:15
+msgid "Basic parameters"
+msgstr "Основные параметры"
+
+#: cms/templates/cms/parameters.html:62 cms/templates/cms/result.html:18
+msgid "Analysis results"
+msgstr "Результаты анализа"
+
+#: cms/templates/cms/parameters.html:74
+#: cms/templates/cms/recommendation.html:38 cms/templates/cms/result.html:54
+msgid "Consult a specialist. It is not a medical application."
+msgstr ""
+"Проконсультируйтесь со специалистом. Не является медицинским приложением."
+
+#: pages/forms.py:22 pages/forms.py:41 pages/forms.py:67 users/forms.py:130
+#: users/forms.py:131
+msgid "Enter your name"
+msgstr "Введите ваше имя"
+
+#: pages/forms.py:29 pages/forms.py:48 pages/forms.py:70
+#: pages/templates/application.html:35 pages/templates/contact.html:29
+msgid "Enter your email"
+msgstr "Введите ваш email"
+
+#: pages/forms.py:53
+msgid "Enter your phone number"
+msgstr "Введите Ваш телефон"
+
+#: pages/forms.py:62 pages/forms.py:64
+msgid "Title"
+msgstr "Тема"
+
+#: pages/forms.py:76
+msgid "Choose File"
+msgstr "Выберите файл"
+
+#: pages/models.py:9 pages/models.py:24
+msgid "Name"
+msgstr "Имя"
+
+#: pages/models.py:11 pages/models.py:26
+#: users/templates/registration/password_reset_form.html:32
+msgid "Email"
+msgstr "Email"
+
+#: pages/models.py:17
+msgid "Inquiry"
+msgstr "Обращение"
+
+#: pages/models.py:18
+msgid "Inquiries"
+msgstr "Обращения"
+
+#: pages/models.py:22
+msgid ""
+"Phone number must be entered in the format: '+999999999'. Up to 15 digits "
+"allowed."
+msgstr ""
+"Телефонный номер должен быть в формате: '+999999999'. Не более 15 цифр "
+
+#: pages/models.py:33
+msgid "Contact"
+msgstr "Контакты"
+
+#: pages/models.py:34 templates/includes/app-menu.html:58
+msgid "Contacts"
+msgstr "Контакты"
+
+#: pages/templates/about.html:7 pages/templates/team.html:14
+#: pages/templates/team.html:37 templates/includes/app-menu.html:44
+msgid "About"
+msgstr "О нас"
+
+#: pages/templates/about.html:143
+msgid "Сompany mission"
+msgstr "Миссия компании"
+
+#: pages/templates/about.html:144 pages/templates/investor-relations.html:6
+#: pages/templates/investor-relations.html:20
+msgid "Investor relations"
+msgstr "Инвесторам"
+
+#: pages/templates/about.html:145 pages/templates/doctor-relations.html:5
+#: pages/templates/doctor-relations.html:19
+msgid "Doctor relations"
+msgstr "Врачам"
+
+#: pages/templates/about.html:146 pages/templates/support-research.html:5
+msgid "Support research"
+msgstr "Поддержите исследования"
+
+#: pages/templates/about.html:147 pages/templates/team.html:5
+#: pages/templates/vacancies.html:5 pages/templates/vacancies.html:19
+msgid "Vacancies"
+msgstr "Вакансии"
+
+#: pages/templates/additional.html:6 pages/templates/additional.html:20
+msgid "Additional"
+msgstr "Дополнительно"
+
+#: pages/templates/antivirus.html:8 pages/templates/antivirus.html:17
+#: templates/includes/app-menu.html:86
+msgid "AntiCoronaVirus"
+msgstr "AntiCoronaVirus"
+
+#: pages/templates/application.html:7 pages/templates/application.html:14
+#: pages/templates/article_detail.html:7 pages/templates/articles.html:7
+msgid "Pre order"
+msgstr "Предзаказ"
+
+#: pages/templates/application.html:18
+msgid "To learn more please download"
+msgstr "Пожалуйста, скачайте, чтобы узнать больше"
+
+#: pages/templates/application.html:45 pages/templates/contact.html:48
+#: pages/templates/send_email.html:56
+msgid "Send"
+msgstr "Отправить"
+
+#: pages/templates/company-mission.html:5
+#: pages/templates/company-mission.html:19
+msgid "Company mission"
+msgstr "Миссия компании"
+
+#: pages/templates/contact.html:6 pages/templates/contact.html:14
+msgid "Contact us"
+msgstr "Связаться с нами"
+
+#: pages/templates/contact.html:42
+msgid "The phone number must be in +xxxxxxxxxxx format"
+msgstr ""
+
+#: pages/templates/includes/download-mobile-apps.html:6
+msgid "Download mobile apps"
+msgstr "Скачать приложения"
+
+#: pages/templates/includes/download-mobile-apps.html:32
+#: pages/templates/includes/download-mobile-apps.html:42
+#: pages/templates/includes/download-mobile-apps.html:92
+msgid "Download for Android"
+msgstr "Скачать для Android"
+
+#: pages/templates/includes/download-mobile-apps.html:37
+msgid "Download for iOS"
+msgstr "Скачать для iOS"
+
+#: pages/templates/includes/download-mobile-apps.html:87
+msgid "Sorry, but your browser doesn't support HTML5 video."
+msgstr "К сожалению ваш браузер не поддерживает HTML5 видео."
+
+#: pages/templates/investor-relations.html:31
+msgid "Download Longevity InTime presentation"
+msgstr "Скачать презентацию Longevity InTime"
+
+#: pages/templates/privacy.html:6 pages/templates/privacy.html:12
+#: templates/includes/app-footer.html:29
+msgid "Privacy policy"
+msgstr "Политика конфиденциальности"
+
+#: pages/templates/send_email.html:6 pages/templates/send_email.html:14
+msgid "Send email"
+msgstr "Отправить email"
+
+#: pages/templates/team.html:19
+msgid "Our team"
+msgstr "Наша команда"
+
+#: pages/templates/tou.html:5 pages/templates/tou.html:12
+#: templates/includes/app-footer.html:39
+msgid "Terms of use"
+msgstr "Условия использования"
+
+#: pages/views.py:65
+msgid "Your message is accepted! We will contact you shortly."
+msgstr "Ваша заявка принята! Мы свяжемся с Вами в ближайшее время."
+
+#: pages/views.py:68 pages/views.py:85
+msgid "Invalid data specified! Try it again."
+msgstr "Введены неверные данные. Попробуйте снова."
+
+#: pages/views.py:82
+msgid "Your order is accepted! We will contact you shortly."
+msgstr "Ваша заявка принята! Мы свяжемся с Вами в ближайшее время."
+
+#: pages/views.py:158
+msgid "Email sent successfully"
+msgstr "Email успешно отправлен"
+
+#: publication/models.py:7
+msgid "Add article link in English"
+msgstr "Добавить ссылку статьи на Английском языке"
+
+#: publication/models.py:8
+msgid "Add article title in English "
+msgstr "Добавить заголовок статьи на Английском языке"
+
+#: publication/models.py:9
+msgid "Add article text in English "
+msgstr "Добавить текст статьи на Английском языке"
+
+#: publication/models.py:11
+msgid "Add article link in Russian"
+msgstr "Добавить ссылку статьи на Русском языке"
+
+#: publication/models.py:12
+msgid "Add article title in Russian "
+msgstr "Добавить заголовок статьи на Русском языке"
+
+#: publication/models.py:13
+msgid "Add article text in Russian"
+msgstr "Добавить текст статьи на Русском языке"
+
+#: publication/models.py:21 publication/models.py:22
+msgid "Publication article"
+msgstr "Публикация статьи"
+
+#: publication/models.py:27
+msgid "Add interview link in English"
+msgstr "Добавить ссылку интервью на Английском языке"
+
+#: publication/models.py:28
+msgid "Add interview title in English "
+msgstr "Добавить заголовок интервью на Английском языке"
+
+#: publication/models.py:30
+msgid "Add interview link in Russian"
+msgstr "Добавить ссылку интервью на Русском языке"
+
+#: publication/models.py:31
+msgid "Add interview title in Russian "
+msgstr "Добавить заголовок интервью на Русском языке"
+
+#: publication/models.py:40 publication/models.py:41
+msgid "Publication interview"
+msgstr "Публикация интервью"
+
+#: publication/models.py:45
+msgid "Add awards link in English"
+msgstr "Добавить ссылку награды на Английском языке"
+
+#: publication/models.py:46
+msgid "Add awards title in English "
+msgstr "Добавить заголовок наград на Английском языке"
+
+#: publication/models.py:47
+msgid "Add awards text in English "
+msgstr "Добавить текст награды на Английском языке"
+
+#: publication/models.py:49
+msgid "Add awards link in Russian"
+msgstr "Добавить ссылку награды на Русском языке"
+
+#: publication/models.py:50
+msgid "Add awards title in Russian "
+msgstr "Добавить заголовок награды на Русском языке"
+
+#: publication/models.py:51
+msgid "Add awards text in Russian "
+msgstr "Добавить текст награды на Русском языке"
+
+#: publication/models.py:53
+msgid "Add an award image"
+msgstr "Добавить картинку награды"
+
+#: publication/models.py:61 publication/models.py:62
+msgid "Publication awards"
+msgstr "Публикация наград"
+
+#: publication/templates/publication/publication.html:16
+#: publication/templates/publication/publication.html:111
+msgid "Articles"
+msgstr "Статьи"
+
+#: publication/templates/publication/publication.html:43
+#: publication/templates/publication/publication.html:137
+msgid "Interview"
+msgstr "Интервью"
+
+#: publication/templates/publication/publication.html:76
+#: publication/templates/publication/publication.html:170
+msgid "Awards"
+msgstr "Награды"
+
+#: shop/models.py:7
+msgid "name"
+msgstr "Имя"
+
+#: shop/models.py:8
+msgid "description"
+msgstr "описание"
+
+#: shop/models.py:9
+msgid "price"
+msgstr "цена"
+
+#: shop/models.py:10 users/models.py:14
+msgid "image"
+msgstr "изображение"
+
+#: shop/templates/shop/list.html:7 templates/includes/app-menu.html:101
+#: templates/includes/shop.html:19
+msgid "Shop"
+msgstr "Магазин"
+
+#: templates/includes/app-menu.html:30
+msgid "Main"
+msgstr "Главная"
+
+#: templates/includes/app-menu.html:72
+msgid "Press"
+msgstr "Публикации"
+
+#: templates/includes/app-menu.html:118 users/templates/profile.html:7
+#: users/templates/profile.html:30
+msgid "Profile"
+msgstr "Профиль"
+
+#: templates/includes/app-menu.html:150
+msgid "Parameters"
+msgstr "Параметры"
+
+#: templates/includes/app-menu.html:167
+msgid "Analysis"
+msgstr "Анализ"
+
+#: templates/includes/app-menu.html:176
+msgid "Log out"
+msgstr "Выйти"
+
+#: templates/includes/app-menu.html:185
+msgid "LOG IN"
+msgstr "ВОЙТИ"
+
+#: templates/includes/app-menu.html:190
+#: users/templates/registration/login.html:72
+#: users/templates/registration/signup.html:6
+#: users/templates/registration/signup.html:13
+#: users/templates/registration/signup.html:55
+msgid "Sign up"
+msgstr "Регистрация"
+
+#: templates/includes/cookie-policy.html:17
+msgid "Accept"
+msgstr "Принять"
+
+#: templates/includes/cookie-policy.html:21
+msgid "More info"
+msgstr "Подробнее"
+
+#: templates/includes/shop.html:18
+msgid "Order longevity products and services here. Soon."
+msgstr "Заказывайте «longevity» товары и услуги. Скоро."
+
+#: templates/rest_framework_swagger/index.html:27
+msgid "Logout"
+msgstr "Выйти"
+
+#: templates/rest_framework_swagger/index.html:29
+msgid "Session Login"
+msgstr "Вход в сессию"
+
+#: templates/rest_framework_swagger/index.html:39
+msgid "You are logged in as: "
+msgstr "Вы вошли как: "
+
+#: templates/rest_framework_swagger/index.html:41
+msgid "Viewing as an anonymous user"
+msgstr "Просмотр в режиме анонимного пользователя"
+
+#: templates/rest_framework_swagger/index.html:52
+msgid "Powered by "
+msgstr ""
+
+#: users/admin.py:65
+msgid "Save to .csv"
+msgstr "Сохранить в .csv"
+
+#: users/forms.py:18
+msgid "Enter your password"
+msgstr "Введите пароль"
+
+#: users/forms.py:25
+msgid "Repeat your password"
+msgstr "Введите пароль еще раз"
+
+#: users/forms.py:51 users/templates/registration/login.html:36
+msgid "Password"
+msgstr "Пароль"
+
+#: users/forms.py:58
+msgid ""
+"Please enter a correct email and password. Note that both fields may be case-"
+"sensitive."
+msgstr ""
+"Пожалуйста, введите корректный email и пароль. Заметьте, что оба поля "
+"чувствительны к регистру."
+
+#: users/forms.py:61
+msgid "This account is inactive."
+msgstr "Этот аккаунт неактивен"
+
+#: users/forms.py:119
+msgid "Invalid login or password"
+msgstr ""
+
+#: users/forms.py:132 users/forms.py:133
+msgid "Enter your last name"
+msgstr "Введите вашу фамилию"
+
+#: users/forms.py:151
+msgid "Birth date"
+msgstr "Дата рождения"
+
+#: users/forms.py:153
+msgid "birth date: format 26.10.2006"
+msgstr "дата рождения в формате 26.10.2006"
+
+#: users/forms.py:158
+msgid "Height"
+msgstr "Рост"
+
+#: users/forms.py:186
+msgid "The value must be between 1.8 up to 8.7 ft"
+msgstr "Значение должно быть от 1,8 до 8,7 футов"
+
+#: users/forms.py:189
+msgid "The value must be between 50 up to 260 cm"
+msgstr "Значение должно быть от 50 до 260 см"
+
+#: users/managers.py:51
+msgid "Superuser must have is_staff=True."
+msgstr "Суперпользователь должен иметь is_staff=True."
+
+#: users/managers.py:53
+msgid "Superuser must have is_superuser=True."
+msgstr "Суперпользователь должен иметь is_staff=True."
+
+#: users/models.py:16
+msgid "first name"
+msgstr "Имя"
+
+#: users/models.py:17
+msgid "last name"
+msgstr "Фамилия"
+
+#: users/models.py:19
+msgid "email address"
+msgstr "email адрес"
+
+#: users/models.py:20
+msgid "confirmed email"
+msgstr "подтвержденный email"
+
+#: users/templates/email/activation.html:9
+msgid "Registration Email"
+msgstr "Регистрационный email"
+
+#: users/templates/email/activation.html:16
+msgid "Sign Up"
+msgstr "Регистрация"
+
+#: users/templates/email/activation.html:26
+msgid "Dear user"
+msgstr "Уважаемый пользователь"
+
+#: users/templates/email/activation.html:29
+#, fuzzy, python-format
+#| msgid ""
+#| "We sent you this email because you have registered on the BMI Disease "
+#| "Tracker app or our website. Click the link to verify your email address:"
+msgid ""
+"\n"
+"            We sent you this email because you have registered on the "
+"%(app_bmi)s app or our website.\n"
+"            Click the link to verify your email address:\n"
+"        "
+msgstr ""
+"Мы отправили Вам это письмо, потому что Вы зарегистрировались в приложении "
+"BMI Disease Tracker или на нашем веб-сайте. Перейдите по ссылке, чтобы "
+"подтвердить свой адрес электронной почты:"
+
+#: users/templates/email/activation.html:37
+msgid "Confirm Email"
+msgstr "Подтвердить email"
+
+#: users/templates/email/activation.html:41
+msgid "If it was not you, please ignore this email."
+msgstr "Если это были не Вы, пожалуйста проигнорируйте данное письмо."
+
+#: users/templates/email/activation.html:43
+#: users/templates/email/password_reset_email.html:38
+#, python-format
+msgid " the %(app_bmi)s team "
+msgstr ""
+
+#: users/templates/email/password_reset_email.html:9
+msgid "Password reset Email"
+msgstr "Email для cброса пароля"
+
+#: users/templates/email/password_reset_email.html:16
+#, fuzzy, python-format
+#| msgid "Reset your password"
+msgid " Reset your %(app_bmi)s password "
+msgstr "Сбросить пароль"
+
+#: users/templates/email/password_reset_email.html:26
+msgid "Hi"
+msgstr "Привет"
+
+#: users/templates/email/password_reset_email.html:28
+msgid ""
+"We sent you this email because you requested a password reset. Please click "
+"on the link to create a new password:"
+msgstr ""
+"Мы отправили Вам это письмо, потому что Вы запросили сброс пароля. Щелкните "
+"ссылку, чтобы создать новый пароль:"
+
+#: users/templates/email/password_reset_email.html:32
+msgid "Set a new password"
+msgstr "Сбросить пароль"
+
+#: users/templates/email/password_reset_email.html:36
+msgid ""
+"If you didn’t request a password reset, you can ignore this email. Your "
+"password will not be changed."
+msgstr ""
+"Если Вы не запрашивали сброс пароля, проигнорируйте данное письмо. Ваш "
+"пароль не будет изменен."
+
+#: users/templates/email_verify_done.html:17
+msgid "Your email address confirmed!"
+msgstr "Email адрес подтвержден!"
+
+#: users/templates/email_verify_done.html:19
+msgid "You can"
+msgstr "Теперь Вы можете"
+
+#: users/templates/email_verify_done.html:20
+#: users/templates/registration/password_confirmed.html:12
+msgid "log in now"
+msgstr "войти через браузер"
+
+#: users/templates/email_verify_done.html:21
+msgid "or do it in your mobile app"
+msgstr "или через мобильное приложение"
+
+#: users/templates/email_verify_done.html:25
+msgid "Something went wrong."
+msgstr "Что-то пошло не так."
+
+#: users/templates/email_verify_end_of_time.html:5
+msgid "Verify your email"
+msgstr "Подтвердите Ваш email"
+
+#: users/templates/email_verify_end_of_time.html:11
+msgid "Confirm your email address."
+msgstr "Подтвердите ваш email"
+
+#: users/templates/email_verify_end_of_time.html:12
+msgid ""
+"This e-mail confirmation link expired or is invalid. We have sent you an "
+"email with a new link. Please check your mail."
+msgstr ""
+"Эта ссылка для подтверждения email устарела или недействительна. Мы "
+"отправили вам сообщение с новой ссылкой. Пожалуйста, проверьте свою почту."
+
+#: users/templates/preorder_done.html:5
+#: users/templates/registration/signup_done.html:5
+#: users/templates/registration/signup_done.html:11
+msgid "Welcome"
+msgstr "Добро пожаловать"
+
+#: users/templates/preorder_done.html:12
+msgid "Your preorder is done"
+msgstr "Ваш предзаказ готов"
+
+#: users/templates/profile.html:46
+msgid "No photo"
+msgstr "Нет фото"
+
+#: users/templates/profile.html:51
+msgid "Upload photo"
+msgstr "Загрузить фото"
+
+#: users/templates/profile.html:65
+msgid "Rotate"
+msgstr "Повернуть"
+
+#: users/templates/profile.html:74
+msgid "Your devices"
+msgstr "Ваши устройства"
+
+#: users/templates/profile.html:91
+msgid "No registered devices"
+msgstr "Нет зарегистрированных устройств"
+
+#: users/templates/profile.html:101
+msgid "Delete all devices"
+msgstr "Удалить все устройства"
+
+#: users/templates/profile.html:122 users/templates/registration/login.html:27
+msgid "Email address"
+msgstr "Email адрес"
+
+#: users/templates/profile.html:130
+#: users/templates/registration/password_change.html:6
+#: users/templates/registration/password_change.html:13
+#: users/templates/registration/password_change.html:50
+msgid "Change password"
+msgstr "Сброс пароля"
+
+#: users/templates/profile.html:137
+msgid "First name"
+msgstr "Имя"
+
+#: users/templates/profile.html:142
+msgid "Last name"
+msgstr "Фамилия"
+
+#: users/templates/profile.html:157
+msgid "Additional data"
+msgstr "Дополнительные данные"
+
+#: users/templates/profile.html:194
+msgid "Delete profile"
+msgstr "Удалить профиль"
+
+#: users/templates/profile.html:208
+msgid "Deleting a Profile"
+msgstr "Удаление профиля"
+
+#: users/templates/profile.html:211
+msgid "Deleting your profile, you permanently lose all data on our website and in the mobile app. The operation is irreversible and you will no longer be able to log in to your account"
+msgstr "Удалив свой профиль, вы навсегда потеряете все данные на нашем веб-сайте и в мобильном приложении. Операция необратима, и вы больше не сможете войти в свою учетную запись"
+
+#: users/templates/profile.html:218
+msgid "Cancel"
+msgstr "Отменить"
+
+#: users/templates/registration/email_sent.html:5
+#: users/templates/registration/email_sent.html:11
+#: users/templates/registration/password_reset_form.html:8
+#: users/templates/registration/password_reset_form.html:16
+msgid "Password reset"
+msgstr "Сброс пароля"
+
+#: users/templates/registration/email_sent.html:13
+msgid ""
+"We have sent you an e-mail. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+"Мы отправили Вам письмо на электронную почту. Пожалуйста, свяжитесь с нами, "
+"если вы его не получили в течение нескольких минут."
+
+#: users/templates/registration/login.html:7
+#: users/templates/registration/login.html:17
+#: users/templates/registration/login.html:61
+#: users/templates/registration/password_change.html:57
+#: users/templates/registration/password_reset_form.html:45
+#: users/templates/registration/signup.html:51
+msgid "Log in"
+msgstr "Войти"
+
+#: users/templates/registration/login.html:15
+msgid "You are logged in"
+msgstr "Вы успешно вошли"
+
+#: users/templates/registration/login.html:46
+msgid "Login with Facebook"
+msgstr "Войти через Facebook"
+
+#: users/templates/registration/login.html:53
+msgid "Login with Google"
+msgstr "Войти через Google"
+
+#: users/templates/registration/login.html:70
+msgid "No account?"
+msgstr "Нет акккаунта?"
+
+#: users/templates/registration/login.html:77
+msgid "Forgotten password?"
+msgstr "Забыли пароль?"
+
+#: users/templates/registration/login.html:79
+msgid "Restore"
+msgstr "Восстановить"
+
+#: users/templates/registration/login.html:99
+msgid "Incorrect email or password"
+msgstr "Неверный email или пароль"
+
+#: users/templates/registration/login.html:105
+msgid ""
+"Check your email and follow the instructions to regain access to your "
+"account."
+msgstr ""
+"Проверьте Ваш email и  следуйте инструкциям для восстановления доступа к "
+"Вашей учетной записи."
+
+#: users/templates/registration/logout.html:5
+#: users/templates/user_does_not_exist.html:5
+msgid "User`s verification"
+msgstr "Подтверждение пользователя"
+
+#: users/templates/registration/logout.html:8
+#: users/templates/registration/logout.html:12
+msgid "Logged out"
+msgstr "Вы вышли"
+
+#: users/templates/registration/logout.html:14
+msgid "You have been successfully logged out. You can"
+msgstr "Вы успешно вышли из аккаунта. Вы можете"
+
+#: users/templates/registration/logout.html:14
+msgid "log in again"
+msgstr "войти снова"
+
+#: users/templates/registration/password_change.html:127
+#: users/templates/registration/password_reset_form.html:100
+msgid "Connection Error. Reload page and try again."
+msgstr "Ошибка подключения. Перезагрузите страницу и попробуйте снова."
+
+#: users/templates/registration/password_changed.html:5
+#: users/templates/registration/password_changed.html:12
+msgid "Password changed"
+msgstr "Пароль изменен"
+
+#: users/templates/registration/password_changed.html:14
+msgid "Your password has been successfully changed"
+msgstr "Ваш пароль был успешно изменен"
+
+#: users/templates/registration/password_confirm.html:6
+#: users/templates/registration/password_confirm.html:12
+msgid "Reset your password"
+msgstr "Сбросить пароль"
+
+#: users/templates/registration/password_confirm.html:15
+msgid "Please enter your new password twice"
+msgstr "Пожалуйста, введите Ваш новый пароль два раза"
+
+#: users/templates/registration/password_confirm.html:19
+msgid "Change my password"
+msgstr "Изменить мой пароль"
+
+#: users/templates/registration/password_confirm.html:23
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a new password reset"
+msgstr ""
+"Ссылка для сброса пароля была недействительна, возможно, потому что она уже "
+"была использована. Пожалуйста, сделайте новый запрос на сброс пароля"
+
+#: users/templates/registration/password_confirmed.html:5
+msgid "Password confirmed"
+msgstr "Пароль подтвержден"
+
+#: users/templates/registration/password_confirmed.html:11
+msgid "Password set"
+msgstr "Пароль установлен"
+
+#: users/templates/registration/password_confirmed.html:12
+msgid "Your password has been set. You can"
+msgstr "Ваш пароль успешно установлен. Вы можете"
+
+#: users/templates/registration/password_reset_form.html:22
+msgid "You are logged in as "
+msgstr "Вы вошли как "
+
+#: users/templates/registration/password_reset_form.html:37
+msgid "Reset my password"
+msgstr "Сбросить пароль"
+
+#: users/templates/registration/signup.html:50
+msgid "Has an account already?"
+msgstr "Уже есть аккаунт?"
+
+#: users/templates/registration/signup_done.html:13
+msgid ""
+"We have sent you an email for confirm your account. Please contact us if you "
+"do not receive it within a few minutes."
+msgstr ""
+"Мы отправили Вам электронное письмо для подтверждения учетной записи. "
+"Пожалуйста, свяжитесь с нами, если письмо не придет в течение нескольких "
+"минут."
+
+#: users/templates/user_does_not_exist.html:11
+msgid "User does not exist"
+msgstr "Пользователь не существует"
+
+#: users/templates/user_does_not_exist.html:13
+msgid ""
+"User does not exist. We checked our database and unfortunately did not find "
+"you in it.Please go through the "
+msgstr ""
+"Пользователь не существует. К сожалению, мы не нашли Вас в нашей базе."
+"Пожалуйста, перейдите на"
+
+#: users/templates/user_does_not_exist.html:14
+msgid "registration process"
+msgstr "форму регистрации"
+
+#: users/templates/user_does_not_exist.html:15
+msgid "Or contact with our"
+msgstr "Или свяжитесь с нашей"
+
+#: users/templates/user_does_not_exist.html:17
+msgid "customer service"
+msgstr "службой поддержки"
+
+#: users/validators.py:13 users/validators.py:18
+#, python-format
+msgid "Password must have atleast 1 special character: %s"
+msgstr "Пароль должен содержать хотя бы один специальный символ: %s"
+
+#: users/validators.py:14
+msgid "no special chars"
+msgstr "Нет специальных символов"
+
+#: users/views.py:30
+#, python-brace-format
+msgid "User with email {email} doesn't exists."
+msgstr ""
+
+#~ msgid "close"
+#~ msgstr "закрыть"
+
+#~ msgid "This field is required."
+#~ msgstr "Это обязательное поле."
+
+#~ msgid "Enter a valid value."
+#~ msgstr "Введите валидное значение"
+
+#~ msgid "Messages"
+#~ msgstr "Сообщения"
+
+#~ msgid "Enter a valid URL."
+#~ msgstr "Введите валидный URL"
+
+#~ msgid "Enter a valid integer."
+#~ msgstr "Введите число"
+
+#~ msgid "Enter a valid email address."
+#~ msgstr "Введите корректный email"
+
+#~ msgid ""
+#~ "Enter a valid “slug” consisting of letters, numbers, underscores or "
+#~ "hyphens."
+#~ msgstr ""
+#~ "Введите валидную строку, содержащую буквы, цифры, подчеркивания или тире."
+
+#~ msgid ""
+#~ "Enter a valid “slug” consisting of Unicode letters, numbers, underscores, "
+#~ "or hyphens."
+#~ msgstr ""
+#~ "Введите валидную строку, содержащую Юникод буквы, цифры, подчеркивания "
+#~ "или тире."
+
+#~ msgid "Ensure this value is greater than or equal to %(limit_value)s."
+#~ msgstr "Убедитесь, что это значение больше или равно %(limit_value)s."
+
+#~ msgid "Enter a number."
+#~ msgstr "Введите номер"
+
+#~ msgid "Null characters are not allowed."
+#~ msgstr "Пустое значение не допустимо"
+
+#~ msgid "and"
+#~ msgstr "и"
+
+#~ msgid "Value %(value)r is not a valid choice."
+#~ msgstr "Значение %(value)r не является допустимым выбором"
+
+#~ msgid "This field cannot be null."
+#~ msgstr "Это поле не может быть пустым"
+
+#~ msgid "This field cannot be blank."
+#~ msgstr "Это поле не может быть пустым"
+
+#~ msgid "IPv4 address"
+#~ msgstr "IPv4 адрес"
+
+#~ msgid "IP address"
+#~ msgstr "IP адрес"
+
+#~ msgid "Image"
+#~ msgstr "изображение"
+
+#~ msgid "One-to-one relationship"
+#~ msgstr "Отношение один-к-одному"
+
+#~ msgid "Many-to-many relationship"
+#~ msgstr "Отношение многие-ко-многим"
+
+#~ msgid "Change"
+#~ msgstr "Изменить"
+
+#~ msgid "Yes"
+#~ msgstr "Да"
+
+#~ msgid "No"
+#~ msgstr "Нет"
+
+#~ msgid "Monday"
+#~ msgstr "Понедельник"
+
+#~ msgid "Tuesday"
+#~ msgstr "Вторник"
+
+#~ msgid "Wednesday"
+#~ msgstr "Среда"
+
+#~ msgid "Thursday"
+#~ msgstr "Четверг"
+
+#~ msgid "Friday"
+#~ msgstr "Пятница"
+
+#~ msgid "Saturday"
+#~ msgstr "Суббота"
+
+#~ msgid "Sunday"
+#~ msgstr "Воскресенье"
+
+#~ msgid "Mon"
+#~ msgstr "Пон"
+
+#~ msgid "Tue"
+#~ msgstr "Вт"
+
+#~ msgid "Wed"
+#~ msgstr "Ср"
+
+#~ msgid "Thu"
+#~ msgstr "Чт"
+
+#~ msgid "Fri"
+#~ msgstr "Пт"
+
+#~ msgid "Sat"
+#~ msgstr "Сб"
+
+#~ msgid "Sun"
+#~ msgstr "Судан"
+
+#~ msgid "January"
+#~ msgstr "Январь"
+
+#~ msgid "February"
+#~ msgstr "Февраль"
+
+#~ msgid "March"
+#~ msgstr "Март"
+
+#~ msgid "April"
+#~ msgstr "Апрель"
+
+#~ msgid "May"
+#~ msgstr "Май"
+
+#~ msgid "June"
+#~ msgstr "Июнь"
+
+#~ msgid "July"
+#~ msgstr "Июль"
+
+#~ msgid "August"
+#~ msgstr "Август"
+
+#~ msgid "September"
+#~ msgstr "Сентябрь"
+
+#~ msgid "October"
+#~ msgstr "Октябрь"
+
+#~ msgid "November"
+#~ msgstr "Ноябрь"
+
+#~ msgid "December"
+#~ msgstr "дек."
+
+#~ msgid "jan"
+#~ msgstr "янв."
+
+#~ msgid "feb"
+#~ msgstr "фев."
+
+#~ msgid "mar"
+#~ msgstr "мар."
+
+#~ msgid "apr"
+#~ msgstr "апр."
+
+#~ msgid "may"
+#~ msgstr "мая"
+
+#~ msgid "jun"
+#~ msgstr "июн."
+
+#~ msgid "jul"
+#~ msgstr "июл."
+
+#~ msgid "aug"
+#~ msgstr "авг."
+
+#~ msgid "sep"
+#~ msgstr "сен."
+
+#~ msgid "oct"
+#~ msgstr "окт."
+
+#~ msgid "nov"
+#~ msgstr "нояб."
+
+#~ msgid "dec"
+#~ msgstr "дек."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Jan."
+#~ msgstr "Янв."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Feb."
+#~ msgstr "Фев."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "March"
+#~ msgstr "Март"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "April"
+#~ msgstr "Апрель"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "May"
+#~ msgstr "Май"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "June"
+#~ msgstr "Июнь"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "July"
+#~ msgstr "Июль"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Aug."
+#~ msgstr "Авг."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Sept."
+#~ msgstr "Сен."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Oct."
+#~ msgstr "Окт."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Nov."
+#~ msgstr "Нояб."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Dec."
+#~ msgstr "Дек."
+
+#~ msgctxt "alt. month"
+#~ msgid "January"
+#~ msgstr "Январь"
+
+#~ msgctxt "alt. month"
+#~ msgid "February"
+#~ msgstr "Февраль"
+
+#~ msgctxt "alt. month"
+#~ msgid "March"
+#~ msgstr "Март"
+
+#~ msgctxt "alt. month"
+#~ msgid "April"
+#~ msgstr "Апрель"
+
+#~ msgctxt "alt. month"
+#~ msgid "May"
+#~ msgstr "Май"
+
+#~ msgctxt "alt. month"
+#~ msgid "June"
+#~ msgstr "Июнь"
+
+#~ msgctxt "alt. month"
+#~ msgid "July"
+#~ msgstr "Июль"
+
+#~ msgctxt "alt. month"
+#~ msgid "August"
+#~ msgstr "Август"
+
+#~ msgctxt "alt. month"
+#~ msgid "September"
+#~ msgstr "Сентябрь"
+
+#~ msgctxt "alt. month"
+#~ msgid "October"
+#~ msgstr "Октябрь"
+
+#~ msgctxt "alt. month"
+#~ msgid "November"
+#~ msgstr "Ноябрь"
+
+#~ msgctxt "alt. month"
+#~ msgid "December"
+#~ msgstr "Декабрь"
+
+#~ msgid "“%(path)s” does not exist"
+#~ msgstr "“%(path)s” не существует"
+
+#~ msgid "the BMI Disease Tracker team"
+#~ msgstr "команда BMI Disease Tracker"
+
+#~ msgid "Reset your BMI Disease Tracker password"
+#~ msgstr "Сброс Вашего пароля в BMI Disease Tracker"
+
+#, fuzzy
+#~| msgid "Select gender"
+#~ msgid "Select all"
+#~ msgstr "Выберите пол"
+
+#, fuzzy
+#~| msgid "Download for iOS"
+#~ msgid "Download"
+#~ msgstr "Скачать для iOS"
+
+#, fuzzy
+#~| msgid "This account is inactive."
+#~ msgid "User is inactive"
+#~ msgstr "Этот аккаунт неактивен"
+
+#, fuzzy
+#~| msgid "Dear user"
+#~ msgid "user"
+#~ msgstr "Уважаемый пользователь"
+
+#, fuzzy
+#~| msgid "Viewing as an anonymous user"
+#~ msgid "Viewing as an anoymous user"
+#~ msgstr "Просмотр в режиме анонимного пользователя"
+
+#~ msgid "AntiVirus"
+#~ msgstr "АнтиВирус"
+
+#~ msgid "Obesity level"
+#~ msgstr "Уровень ожирения"
+
+#~ msgid "Show recommendations"
+#~ msgstr "Показать рекомендации"
+
+#~ msgid "Password Reset"
+#~ msgstr "Сброс пароля"
+
+#~ msgid "kg"
+#~ msgstr "кг"
+
+#~ msgid "lb"
+#~ msgstr "фунты"
+
+#~ msgid "cm"
+#~ msgstr "см"
+
+#~ msgid "inch"
+#~ msgstr "дюймы"
+
+#~ msgid "mmHg"
+#~ msgstr "мм рт.ст."
+
+#~ msgid "kPa"
+#~ msgstr "кПа"
+
+#~ msgid "mmol/L"
+#~ msgstr "ммоль/л"
+
+#~ msgid "mg/cm3"
+#~ msgstr "мг.см3"
+
+#~ msgid "ft"
+#~ msgstr "фут"
+
+#~ msgid ""
+#~ "Forgotten your password? Enter your e-mail address below, and we'll send "
+#~ "you an e-mail allowing you to reset it."
+#~ msgstr ""
+#~ "Забыли пароль? Введите email ниже, и мы вышлем Вам электронное письмо для "
+#~ "сброса пароля."
+
+#~ msgid "Please contact us if you have any trouble resetting your password."
+#~ msgstr ""
+#~ "Пожалуйста, свяжитесь с нами если у Вас есть трудности со сбросом пароля."

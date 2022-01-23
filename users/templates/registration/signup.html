@@ -1,0 +1,86 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+
+{% block head %}
+<title>Longevity InTime - {% trans 'Sign up' %}</title>
+{% endblock head %}
+
+{% block content %}
+<section class="main sign-up container-fluid d-flex align-items-center px-0">
+    <div class="container py-4">
+        <form name = 'user_form' method="post" class="card shadow p-4">
+            <h2 class="section-heading mb-4 w-100">{% trans 'Sign up' %}</h2>
+
+            {% csrf_token %}
+
+            <div class="form-group mb-0">
+                {% bootstrap_field user_form.email %}
+            </div>
+
+            <div class="form-group mb-0">
+            {% if LANGUAGE_CODE == 'en' %}
+                <span
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    data-html="true"
+                    data-title="<div class='text-left'>The password must contain:<div class='text-left'>- at least 8 characters</div><div class='text-left'>- at least 1 digit</div></div>">
+                    {% bootstrap_field user_form.password1 %}
+                </span>
+            {% endif %}
+
+            {% if LANGUAGE_CODE == 'ru' %}
+                <span
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    data-html="true"
+                    data-container="body"
+                    data-title="<div class='text-left'>Пароль должен содержать:<div class='text-left'>- не менее 8 символов</div><div class='text-left'>- не менее 1 цифры</div><div>">
+                    {% bootstrap_field user_form.password1 %}
+                </span>
+            {% endif %}
+            </div>
+
+            <div class="form-group mb-0">
+                {% bootstrap_field user_form.password2 %}
+            </div>
+            
+            <div class="row sign-up__footer align-items-center">
+                <div class="col-12 col-lg-6 text-secondary text-left px-0">
+                    {% trans 'Has an account already?' %}
+                    <a href="{% url 'users:login' %}" class="text-primary">{% trans 'Log in' %}</a> 
+                </div>
+
+                <div class="col-12 col-lg-6 text-secondary text-center text-lg-right px-0 mt-4 mt-lg-0">
+                    <button class="btn btn-primary" type="submit" disabled>{% trans 'Sign up' %}</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script>
+const submitButton = document.querySelector('button[type="submit"]')
+
+const emailInput = document.querySelector('#id_email')
+const passwordInputOne = document.querySelector('#id_password1')
+const passwordInputTwo = document.querySelector('#id_password2')
+
+function checkButtonActivity() {
+  const inputAllFilled = emailInput.value && passwordInputOne.value && passwordInputTwo.value
+  const valuesMatch = (passwordInputOne.value === passwordInputTwo.value)
+
+  if (inputAllFilled && valuesMatch) {
+    submitButton.removeAttribute("disabled")
+  } else {
+    submitButton.setAttribute("disabled", "true")
+  }
+}
+
+checkButtonActivity()
+
+for (const input of [emailInput, passwordInputOne, passwordInputTwo]) {
+  input.addEventListener('input', checkButtonActivity)
+}
+</script>
+{% endblock content %}

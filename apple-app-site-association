@@ -1,0 +1,20 @@
+{
+    "webcredentials": {
+        "apps": [
+            "PJJAS8RWC7.digital.intime.ios.antiobesity"
+        ]
+    },
+    "applinks": {
+        "apps": [
+            "PJJAS8RWC7.digital.intime.ios.antiobesity"
+        ],
+        "details": [
+            {
+                "appID": "PJJAS8RWC7.digital.intime.ios.antiobesity",
+                "paths": [
+                    "/t/*"
+                ]
+            }
+        ]
+    }
+}

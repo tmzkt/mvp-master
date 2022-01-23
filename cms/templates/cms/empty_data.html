@@ -1,0 +1,32 @@
+{% extends '_base.html' %} {% load i18n %} {% block head %}
+<title>Longevity InTime - {% trans 'Email address confirmed' %}</title>
+{% endblock head %} {% block content %}
+
+<section class="main empty-data container-fluid d-flex align-items-center">
+  <div class="container justify-content-center mt-4">
+    <section class="my-4">
+      <a href="{% url 'cms:dashboard' %}">
+        {% include 'includes/back-button.html' %}
+        <span class="mx-4">{% trans 'Dashboard' %}</span>
+      </a>
+    </section>
+
+    <section class="container justify-content-center py-4 py-md-0 mt-4">
+      <h1 class="text-uppercase section-heading text-dark text-center mb-4 py-4">
+        {% trans 'You did not enter any data' %}
+      </h1>
+
+      {% for key in data %}
+      <p class="mx-lg-5 px-lg-5">{{ key }}</p>
+      {% endfor %}
+    </section>
+
+    <section class="my-4 pb-4">
+      <a href="{% url 'cms:dashboard' %}">
+        {% include 'includes/back-button.html' %}
+        <span class="mx-4">{% trans 'Dashboard' %}</span>
+      </a>
+    </section>
+  </div>
+</section>
+{% endblock content %}

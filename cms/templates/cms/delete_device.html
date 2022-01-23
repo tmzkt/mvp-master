@@ -1,0 +1,20 @@
+{% extends '_base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "delete device" %}{% endblock title %}
+
+{% block content %}
+<section class="main profile container-fluid d-flex align-items-center">
+    <div class="container justify-content-center py-4 py-md-0 mt-4">
+        <h2 class="text-center">{% trans "Are you sure delete " %}{{ device.device_model }}?</h2>
+        
+        <div class="row">
+            <form method="post" class="text-center">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-outline-danger my-4">{% trans "Delete" %}</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock content %}

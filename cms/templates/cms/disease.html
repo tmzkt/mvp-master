@@ -1,0 +1,53 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+
+{% block head %}
+    <title>Longevity InTime - {% trans 'Disease' %}</title>
+{% endblock head %}
+
+{% block content %}
+<section class="main disease container-fluid d-flex align-items-center">
+    <div class="container align-items-center mt-4">
+        <section class="text-left text-secondary my-4 py-4 mx-lg-5 px-lg-5">
+            <div class="mb-4 py-4 row px-lg-5 mx-lg-5">
+                <div class="col-12 col-lg-3 text-left pt-2 mb-4">
+                    <a href="{% url 'users:profile' %}">
+                        {% include 'includes/back-button.html' %}
+                    </a>
+                </div>
+
+                <h1 class="col text-uppercase section-heading text-dark text-center">
+                    {% trans 'Disease' %}
+                </h1>
+
+                <div class="col-12 col-lg-3 text-right mt-4 mt-lg-0"></div>
+            </div>
+
+            <form method="post" class="text-secondary text-left my-4 py-4">
+                <h4 class="text-uppercase section-heading text-dark text-center mb-4 py-4">
+                    {% trans 'Diseases of the cardiovascular system' %}
+                </h4>
+
+                {% csrf_token %}
+
+                <div>{% trans 'Blood pressure related' %}</div>
+                {% bootstrap_field form.disease_blood_pressure show_label=False %}
+
+                <div>{% trans 'Associated with abnormal heart rhythm' %}</div>
+                {% bootstrap_field form.disease_heart_rate show_label=False %}
+
+                <h4 class="text-uppercase section-heading text-dark text-center mb-4 py-4">
+                    {% trans 'Diseases associated with nutritional and metabolic disorders' %}
+                </h4>
+
+                {% bootstrap_field form.disease_obesity show_label=False %}
+
+                <div class="text-center">
+                    <button class="btn btn-primary my-3" type="submit">{% trans 'Save' %}</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends '_base.html' %}
+{% load static %}
+{% load i18n %}
+{% load bootstrap4 %}
+
+{% block head %}
+<title>Longevity InTime - {% trans 'Dashboard' %}</title>
+{% endblock head %}
+
+{% block content %}
+<section class="main about container-fluid d-flex align-items-center">
+    <div class="container justify-content-center mt-4 pt-4">
+
+
+    <a href="{{ product.get_absolute_url }}">
+        <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}">
+    </a>
+        <h2>
+      <a href="{{ product.get_absolute_url }}">
+        {{ product.name }}
+      </a>
+    </h2>
+        {{ product.price }}
+    {{ product.description|linebreaks }}
+
+    <p>купить</p>
+</div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,172 @@
+{% load i18n %}
+{% load static %}
+{# Load the tag library #}
+{% load bootstrap4 %}
+{% load yandex_metrica %}
+{% load google_analytics_gtag %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+
+<html lang="{{ LANGUAGE_CODE }}">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{% static 'css/landing_styles.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}" />
+
+    {% yandex_metrica %}
+    {% google_analytics_gtag %}
+    {% include 'includes/google-site-tag.html' %}
+    {% include 'includes/vk-pixel-tag.html' %}
+
+    {% block head %}{% endblock head %}
+</head>
+
+<body>
+    <!-- Petitions -->
+    <section>
+        <div class="container-fluid text-center justify-content-center"
+            style="padding-bottom: 173px; padding-top: 100px;">
+            <h1 class="mb-3"
+                style="line-height: 3rem; font-weight:700; font-family: Roboto, sans-serif; font-size: 36px;">Petition
+                By <span class="text-primary font-weight-bold">Country Name</span></h1>
+            <div class="d-flex bg-primary m-auto" style="width: 52px; height: 6px;">&nbsp;</div>
+            <div class="container mt-5 py-5">
+                <div class="row justify-content-between d-flex
+                flex-wrap">
+                    <div id="America" class="d-flex flex-column text-left mr-2">
+                        <h2><span style="color:#5C9BFE">America</span></h2>
+                        <a href="http://chng.it/7WZbBvGzpk">USA</a>
+                        <a href="http://chng.it/tnHkSzLxMN">Canada</a>
+                        <a href="http://chng.it/WRskvV6Syy">Brazil</a>
+                        <a href="http://chng.it/DgPZmhpKgt">Chile</a>
+                        <a href="http://chng.it/QVR8fgKkvN">Mexico</a>
+                    </div>
+                    <div id="Europe" class="d-flex flex-column text-left mr-2">
+                        <h2><span style="color:#5C9BFE">Europe</span></h2>
+                        <a href="http://chng.it/TRC6TjVpyn">United Kingdom</a>
+                        <a href="http://chng.it/hfT62Gx62Z">Ireland</a>
+                        <a href="http://chng.it/DPkZjsJdjB">Finland</a>
+                        <a href="http://chng.it/2zbnmvJPRC">Russia</a>
+                        <a href="http://chng.it/KhPLBbyWVn">Ukraine</a>
+                        <a href="http://chng.it/X5LSQnwWpm">France</a>
+                        <a href="http://chng.it/vNN6mtXm5z">Germany</a>
+                        <a href="http://chng.it/BhnDCPDDBr">Portugal</a>
+                        <a href="http://chng.it/p92Tdnk2SK">Greece</a>
+                        <a href="http://chng.it/DPkZjsJdjB">Finland</a>
+                    </div>
+                    <div id="Asia" class="d-flex flex-column text-left mr-2">
+                        <h2><span style="color:#5C9BFE">Asia & Australia</span></h2>
+                        <a href="http://chng.it/nrnsZBTGN5">Australia</a>
+                        <a href="http://chng.it/Y2TynvjD4v">Afganistan</a>
+                        <a href="http://chng.it/pvsdrfgnyx">Bangladesh</a>
+                        <a href="http://chng.it/XxPBkDWYFK">Cambodia</a>
+                        <a href="http://chng.it/tdkcgqH9X6">India</a>
+                        <a href="http://chng.it/gvbQ95SdGn">Maldives</a>                        
+                        <a href="http://chng.it/F7QsL4XcrR">East Timor</a>
+                        <a href="http://chng.it/XcYWvdm5hp" ~>Vietnam</a>
+                    </div>
+                    <div id="Middle East" class="d-flex flex-column text-left mr-2">
+                        <h2><span style="color:#5C9BFE">Middle East</span></h2>
+                        <a href="http://chng.it/Cb2pvh26tx">Israel</a>
+                        <a href="http://chng.it/RLV6wgpnMQ">Turkey</a>
+                    </div>
+                    <div id="Africa" class="d-flex flex-column text-left mr-2">
+                        <h2><span style="color:#5C9BFE">Africa</span></h2>
+                        <a href="http://chng.it/wpZZpdfwRf">Angola</a>
+                        <a href="http://chng.it/CwrLgVpZC4">Guinea Bissau</a>
+                        <a href="http://chng.it/7gQhYC5Qbw">Mozambique</a>
+                        <a href="http://~chng.it/rfQr2gycWS">Sao Tome & Principe</a>
+                        <a href="http://chng.it/b8hVnky78w">Equatorial Guinea</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Petitions -->
+    <section>
+        <div class="w-100 d-flex flex-row"
+            style="background-color: #f5f5f5; padding-top: 30px;">
+            <div class="col-sm-1 col-md-1 col-lg-2 col-xl-2">&nbsp;</div>
+            <div class="d-flex flex-row flex-wrap">
+                <div id="leftColumn" class="col-12 col-md-6 d-flex flex-column">
+                    <div class="mt-5 pt-5 mb-5" style="width: 80%;">
+                        <div class="bg-primary ml-1 mb-5" style="width: 52px; height: 6px;">&nbsp;</div>
+                        <h1 class="mb-3"
+                            style="line-height: 3rem; font-weight:700; font-family: Roboto, sans-serif; font-size: 36px;">
+                            Help Yourself. <span class="text-primary font-weight-bold">Sign Petition</span></h1>
+                        <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">Despite the fact that
+                            this article was published in 2015, it is still relevant:</p>
+                        <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;"><a
+                                href="https://www.sciencedirect.com/science/article/pii/S0079610715000115">Unsolved
+                                problems in biology—The state of current thinking!</a></p>
+                        <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">Scientists agree on
+                            the importance of applying a systems approach in biology when studying processes in living
+                            organisms, incl. aging.</p>
+                        <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">On 27 of April 2021,
+                            in Nature Scientific Report was published an article about the study of fish - largemouth
+                            buffalo (Ictiobus cyprinellus). Their life expectancy is more than 100 years, they are the
+                            longest-living freshwater bony fish (out of 12,000 species). This study shows that the
+                            potential of evolutionary-comparative biology has not been revealed even by 1%.</p>
+                        <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">To unlock this
+                            potential, funding is required at the state level of all countries of the world.</p>
+                        <p class="mb-5"
+                            style="font-family: Roboto, sans-serif; font-size: 14px; color: rgb(255, 153, 0);">The aim is to collect 
+                            at least 1000 from each of 252 countries & then summarized results to file to United Nation (UN), World 
+                            Health Organization (WHO) & world's leaders for further consideration. It (252 000 signatures) will become 
+                            the biggest longevity focused petition ever.</p>
+                        <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">If you want to help us file a petition
+                            in your country please email to support@intime.digital and we will contact you.</p>    
+                        <a class="btn btn-primary" href="{% url 'landing:petitions' %}" target="_blank">
+                            <label>Other 247 Countries</label>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="mt-5 pt-5 mb-5">
+                    <div class="d-flex align-items-center">
+                        <img src="{% static 'landing/img/iconfinder_United-States-Flag_32364 1.png' %}"
+                            class="img-flyout mr-2" alt="US Flag">
+                        <a target="_blank" href="http://chng.it/7WZbBvGzpk"
+                            style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 18px;">Sign
+                            Petition</a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="{% static 'landing/img/iconfinder_Russia_92303 1.png' %}" class="img-flyout mr-2" alt="Russia Flag">
+                        <a href="http://chng.it/2zbnmvJPRC"
+                            style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 18px;">Sign
+                            Petition</a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="{% static 'landing/img/svg/uk_flag.svg' %}" width="195px" height="155px" class="img-flyout mt-3 mr-2" alt="UK Flag">
+                        <a target="_blank" href="http://chng.it/TRC6TjVpyn"
+                            style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 18px;">Sign
+                            Petition</a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="{% static 'landing/img/iconfinder_Ukraine-Flag_32361 1.png' %}"
+                            class="img-flyout mr-2" alt="Ukraine Flag">
+                        <a target="_blank" href="http://chng.it/KhPLBbyWVn"
+                            style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 18px;">Sign
+                            Petition</a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="{% static 'landing/img/iconfinder_Ireland-Flag_32244 1.png' %}"
+                            class="img-flyout mr-2" alt="Ireland Flag">
+                        <a target="_blank" href="http://chng.it/hfT62Gx62Z"
+                            style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 18px;">Sign
+                            Petition</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

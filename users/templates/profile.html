@@ -1,0 +1,377 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load static %}
+{% load bootstrap4 %}
+{% block head %}
+
+<title>Longevity InTime - {% trans 'Profile' %}</title>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
+<link
+  href="{% static '/components/image-upload/js/chunk-vendors.js' %}"
+  rel="preload"
+  as="script"
+/>
+<link
+  href="{% static '/components/image-upload/js/app.js' %}"
+  rel="preload"
+  as="script"
+/>
+<link
+  href="{% static '/components/image-upload/css/app.css' %}"
+  rel="stylesheet"
+/>
+{% endblock head %}
+
+{% block content %}
+<section class="main profile container-fluid d-flex align-items-center">
+  <div class="container justify-content-center py-4 py-md-0 mt-4 px-0">
+    <h1 class="text-uppercase section-heading text-dark text-center my-4 py-4">
+      {% trans 'Profile' %}
+    </h1>
+
+    <form
+      class="profile-form text-secondary"
+      enctype="multipart/form-data"
+      action="{% url 'v1:image' %}"
+    >
+      {% csrf_token %}
+
+      <div class="row justify-content-between text-secondary py-4 py-md-0 py-4 flex-wrap">
+        <div class="col-12 col-md-auto px-md-3 pb-4 pb-md-0 text-center d-flex flex-column align-items-start justify-content-between">
+          {% if user.image %}
+          <div class="avatar mx-auto" style="background-image: url({{ user.image.url }});"></div>
+          {% else %}
+          <div class="avatar d-flex align-items-center justify-content-center text-uppercase mx-auto">
+            <span id="no-photo">{% trans 'No photo' %}</span>
+          </div>
+          {% endif %}
+
+          <label for="image" class="image-upload-button btn  btn-light border-secondary mt-4 mb-0">
+            {% trans 'Upload photo' %}
+            <input
+              id="id_image"
+              type="file"
+              name="image"
+              accept="image/*"
+              class="form-control-file"
+              title=""
+            />
+          </label>
+
+          <div
+            id="app"
+            hidden
+            rotatetext="{% trans 'Rotate' %}"
+            savetext="{% trans 'Save' %}"
+          ></div>
+        </div>
+
+        <div
+          class="devices col-12 col-md text-secondary py-4 ml-md-4 mt-4 mt-md-0"
+        >
+          <div class="card-title text-uppercase text-center">
+            <b>{% trans "Your devices" %}</b>
+          </div>
+
+          <div class="container">
+            {% for device in user.device.all %}
+            <div class="row align-items-center">
+              <div class="col">{{ device.device_model }}</div>
+              <div class="col text-right">
+                <a
+                  href="{% url 'cms:delete_device' device.pk %}"
+                  class="btn btn-outline-danger px-3"
+                  >{% trans "Delete" %}</a
+                >
+              </div>
+            </div>
+            {% empty %}
+            <div class="my-4 text-center">
+              {% trans "No registered devices" %}
+            </div>
+            {% endfor %}
+          </div>
+
+          {% if user.device.all %}
+          <div class="text-center">
+            <a
+              href="{% url 'cms:delete_all_devices' %}"
+              class="btn btn-outline-danger mt-4"
+              >{% trans "Delete all devices" %}</a
+            >
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </form>
+    <form
+      class="profile-form text-secondary"
+      method="post"
+      enctype="multipart/form-data"
+      action="{% url 'users:profile' %}"
+      novalidate
+    >
+      {% csrf_token %}
+      <div class="py-4">
+        <div class="form-group row pt-4 mx-0">
+          {% bootstrap_form_errors form_data layout='inline' %}
+
+          <div class="col-8">
+            <label for="id_email">{% trans 'Email address' %}</label>
+            {% bootstrap_field form.email show_label=False %}
+          </div>
+
+          <div class="col-4 text-right d-flex align-items-end justify-content-end pb-3">
+            <a
+              class="btn  btn-light border-secondary"
+              href="{% url 'users:password_change' %}">
+              {% trans 'Change password' %}
+            </a>
+          </div>
+        </div>
+
+        <div class="row mx-0">
+          <div class="form-group col-12 col-lg-6">
+            <label for="id_first_name">{% trans 'First name' %}</label>
+            {% bootstrap_field form.first_name show_label=False placeholder=''%}
+          </div>
+
+          <div class="form-group col-12 col-lg-6">
+            <label for="id_last_name">{% trans 'Last name' %}</label>
+            {% bootstrap_field form.last_name show_label=False placeholder='' %}
+          </div>
+        </div>
+
+        <div class="card mx-0 mt-4 mb-0">
+          <div class="row mx-0">
+            <button
+              class="col btn btn-secondry text-left text-secondary mx-0 font-weight-bold"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              {% trans 'Additional data' %}
+              <span id="collapseSign" class="font-weight-bold"></span>
+            </button>
+          </div>
+
+          <div id="collapseOne" class="row mx-0 collapse mb-0 mt-3">
+            <div class="form-group col">
+              {% bootstrap_field form_data.birth_date %}
+
+              {% bootstrap_field form_data.country %}
+
+              <div class="row mx-0 align-items-start">
+                <div class="col-6 p-0">
+                  {% bootstrap_field form_data.gender %}
+                </div>
+
+                <div class="col-6 pl-3 mb-1 pr-0">
+                  {% bootstrap_field form_data.smoker %}
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group col">
+              {% bootstrap_field form_data.height %}
+
+              {% bootstrap_field form_data.measuring_system %}
+
+              <div class="text-right mt-4 pt-4">
+                <a href="{% url 'cms:disease' %}" class="btn btn-light border-secondary">
+                  {% trans "Disease" %}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between my-4">
+          <button class="btn btn-danger" id="confirm" type="button">
+            {% trans 'Delete profile' %}
+          </button>
+          <button class="btn btn-primary" type="submit">
+            {% trans 'Save' %}
+          </button>    
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header p-4">
+          <h5 class="modal-title"> {% trans 'Deleting a Profile' %}</h5>
+        </div>
+        <div class="modal-body px-4">
+            {% blocktrans %}Deleting your profile, you permanently lose all data on our website and in the mobile app. The operation is irreversible and you will no longer be able to log in to your account{% endblocktrans %}
+        </div>
+        <div class="modal-footer p-4">
+          <button class="btn btn-danger" id="delete">
+            {% trans 'Delete' %}
+          </button>
+          <button type="button" class="btn btn-primary" id="cancel">
+            {% trans 'Cancel' %}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script
+  type="text/javascript"
+  src="{% static '/components/image-upload/js/chunk-vendors.js' %}"
+></script>
+
+<script
+  type="text/javascript"
+  src="{% static '/components/image-upload/js/app.js' %}"
+></script>
+
+<script>
+// Open/close additional fields block
+const collapseOne = document.querySelector('#collapseOne')
+const collapseSign = document.querySelector('#collapseSign')
+const collapseButton = document.querySelector('[data-toggle="collapse"]')
+
+setSign()
+
+$('#collapseOne').on('hidden.bs.collapse', function(e) {
+  collapseSign.innerText = '+'
+})
+
+$('#collapseOne').on('show.bs.collapse', function(e) {
+  collapseSign.innerText = '-'
+})
+
+function setSign() {
+  if (collapseOne.classList.contains('show')) {
+    collapseSign.innerText = '-'
+  } else {
+    collapseSign.innerText = '+'
+  }
+}
+</script>
+
+<script>
+/// Recalculate height value on measuring system change
+var RESULT;
+$(document).ready(function() {
+  RESULT = $("#id_height").val();
+});
+$("#id_height").change(function() {
+  RESULT = $("#id_height").val();
+});
+$( "#id_measuring_system" ).change(function() {
+  let inch, flag;
+  let firstPart, secondPart = "";
+  if ($("#id_measuring_system").val() == 1){
+    flag = RESULT.indexOf(",");
+    RESULT = Number(RESULT.slice(0, flag) * 30.48) + Number(RESULT.slice(flag + 1, flag + 9) * 2.54);
+    $("#id_height").val(Math.round(RESULT))
+  } else {
+    inch = (RESULT % 30.48) / 2.54;
+    $("#id_height").val(Math.floor(RESULT / 30.48) + "," + Math.round(inch))
+    RESULT = Math.floor(RESULT / 30.48) + "," + inch;
+  }
+});
+</script>
+
+<script>
+  const confirmBtn = document.getElementById("confirm");
+  const modal = document.getElementById("modal");
+  const cancelBtn = document.getElementById("cancel");
+  const deleteBtn = document.getElementById("delete");
+
+  function getCookie(name) {
+    var matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+  }
+
+  async function deleteProfile() {
+    const params = {
+        method : "GET",
+        headers: {
+            "Content-Type": "application/json;charset=utf-8",
+            "X-CSRFToken": getCookie("csrftoken"),
+            "sessionid": getCookie("sessionid"),
+            "Access-Control-Allow-Origin": "*"
+        }
+    }
+    let res = await fetch('/api/v2/profile', params , {})
+    if (res.ok) {
+      window.location.href = '/'
+    }
+    return await res.json()
+  }
+
+  confirmBtn.addEventListener("click", () => {
+    modal.classList.add("show")
+    document.body.style.overflowY = "hidden"
+  })
+
+  cancelBtn.addEventListener("click", () => {
+    modal.classList.remove("show")
+    document.body.style.overflowY = "auto"
+  })
+
+  deleteBtn.addEventListener("click", async () => {
+    try {
+      let res = await deleteProfile()
+    } catch (error) {
+      alert(error)
+    }
+  })
+</script>
+
+
+<style>
+  small.form-text {
+    display: none;
+  }
+
+  #collapseSign {
+    float: right;
+  }
+
+  .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.336);
+    opacity: 0;
+    transition: opacity .3s;
+    pointer-events: none;
+  }
+
+  .modal-content {
+    border-radius: 20px;  
+  }
+  .modal.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .modal-dialog {
+    width: 100%;
+  }
+
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .modal-header, .modal-footer {
+    border: none;
+  }
+  .modal-footer .delete-form {
+    width: auto;
+    margin: 0;
+  }
+</style>
+{% endblock content %}

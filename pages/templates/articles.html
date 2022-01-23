@@ -1,0 +1,37 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block head %}
+<title>Longevity InTime - {% trans 'Pre order' %}</title>
+{% endblock head %}
+
+{% block content %}
+<div class="container align-items-center" style="margin-top: 100px">
+
+    {% for article in articles %}
+        <div class="alert alert-primary" role="alert">
+{#            <a href="{% url 'pages:article_detail' article.fields.article_title|slugify %}">{{ article.fields.article_title }}</a>#}
+            <a href="{% url 'pages:article_detail' article.fields.article_id_pubmed %}">{{ article.fields.article_title }}</a>
+        </div>
+    {% endfor %}
+
+    <nav aria-label="...">
+        <ul class="pagination">
+            <li class="page-item {% if prev_page == "0" %} disabled {% else %} enabled {% endif %}">
+                <a class="page-link" href="?page={{ prev_page }}" tabindex="-1">Previous</a>
+            </li>
+{#            <li class="page-item"><a class="page-link" href="#">1</a></li>#}
+            <li class="page-item active">
+                <a class="page-link" href="#">{{ page }}<span class="sr-only">(current)</span></a>
+            </li>
+{#            <li class="page-item"><a class="page-link" href="?page=">3</a></li>#}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ next_page }}">Next</a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+{% endblock content %}

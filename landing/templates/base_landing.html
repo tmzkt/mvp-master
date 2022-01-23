@@ -1,0 +1,817 @@
+{% load i18n %}
+{% load static %}
+{# Load the tag library #}
+{% load bootstrap4 %}
+{% load yandex_metrica %}
+{% load google_analytics_gtag %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+
+<html lang="{{ LANGUAGE_CODE }}">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{% static 'landing/css/styles.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'landing/img/favicon.png' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    {% yandex_metrica %}
+    {% google_analytics_gtag %}
+    {% include 'includes/google-site-tag.html' %}
+    {% include 'includes/vk-pixel-tag.html' %}
+
+    {% block head %}{% endblock head %}
+</head>
+<title>Longevity InTime</title>
+<body>
+    <header id="sticky_nav" class="mb-5 w-100 d-flex flex-row">
+        <div class="col-1 col-sm-1 col-md-1 col-lg-2 col-xl-2 mr-xl-3">&nbsp;</div>
+        <div  class="d-flex flex-row w-100">
+            <div class="flex-fill logo_title">
+                <a href="/">
+                    <img src="{% static 'landing/img/svg/logo.svg' %}" alt="logo_image" />                 
+                </a>       
+                <p>
+                    Longevity InTime <br/>
+                    <span>Since 2018</span>
+                </p>                   
+            </div>
+            <nav class="navbar navbar-expand-sm navbar-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+                <div class="collapse navbar-collapse  mr-xl-5 pr-xl-1" id="navbarNav">
+                    <div class="navbar-nav  mr-auto justify-content-between">
+                        <a id="about_link" class="navbar-link text-dark mr-1 mr-sm-2 mr-xl-4"
+                            style="line-height: 3rem; font-weight:400; font-family: Roboto, sans-serif; font-size: 18px;"
+                            href="#about">About</a>
+                        <a id="contact_link" class="navbar-link text-dark mr-1 mr-sm-3 mx-xl-5"
+                            style="line-height: 3rem; font-weight:400; font-family: Roboto, sans-serif; font-size: 18px;"
+                            href="#contact">Contact</a>
+                        <a id="app_link" class="navbar-link mr-1 mr-sm-2 ml-xl-4"
+                            style="line-height: 3rem; font-weight:400; font-family: Roboto, sans-serif; font-size: 18px;"
+                            href="#app">App<span class="sr-only">(current)</span></a>
+                        <a class="navbar-link mr-1 mr-sm-2 ml-1 ml-xl-5"
+                            style="line-height: 3rem; font-weight:400; font-family: Roboto, sans-serif; font-size: 18px;"
+                            href="/web" target="_blank">Web</a>
+                        <a class="navbar-link mr-1 mr-sm-2 ml-1 ml-xl-5"
+                            style="line-height: 3rem; font-weight:400; font-family: Roboto, sans-serif; font-size: 18px;"
+                            href="https://longevityscientificresort.com/" target="_blank">Resort</a>
+                        <a class="navbar-link mr-1 mr-sm-2 ml-1 ml-xl-5"
+                            style="line-height: 3rem; font-weight:400; font-family: Roboto, sans-serif; font-size: 18px;"
+                            href="https://longevitycoin.org/" target="_blank">Coin</a>
+                        <div><a type="button" class="btn btn-primary mr-1 mr-sm-2 ml-1 ml-xl-5" style="color: #fff;font-weight: bolder;" data-toggle="modal" data-target="#exampleModal">Donate</a></div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">                                    
+                                    <div class="row justify-content-around">
+                                        <a target="_blank" class="donate-with-crypto"  href="https://commerce.coinbase.com/checkout/940111d6-1d9f-49b2-b294-e95d8258903a"> 
+                                            Donate with LongevityCoin 
+                                        </a>
+                                        <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807"></script>               
+                                        <a target="_blank" class="donate-with-paypal" style="line-height: 3rem; font-weight:400; font-family: Roboto, sans-serif; font-size: 16px;"  href="https://www.paypal.com/donate?hosted_button_id=5G3HF223S3N4Wa"> 
+                                            Donate with PayPal
+                                        </a> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="col-1 col-lg-2 col-xl-1 ml-xl-5">&nbsp;</div>
+    </header>
+    <!-- Start -->
+    <div class="d-flex flex-row w-100" id="start_section">
+        <div class="col-sm-1 col-lg-2">&nbsp;</div>
+        <div class="d-flex flex-row mt-5">
+            <div id="leftColumn" class="col-12 col-md-6 d-flex">
+                <div class="mt-5 pt-5" style="width: 100%;">
+                    <div class="bg-primary ml-1 mb-5" style="width: 52px; height: 6px;">&nbsp;</div>
+                    <h1 class="mb-3" 
+                        style="line-height: 3rem; font-weight:700; font-family: Roboto, sans-serif; font-size: 36px;">
+                        Your Data Can Cure You</h1>
+                    <p style="font-family: Roboto, sans-serif; font-size: 18px;">Reverse aging, extend active lifespan now
+                        with Longevity InTime</p>
+                    <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">Early stages prediction & 
+                        prevention of severe diseases that can significantly extend your health span. Powered by 
+                        artificial intelligence, verified by scientists, generated by Big Data obtained from evidence 
+                        based only clinical trials.</p>
+                    <a class="btn btn-primary mb-5"
+                        style="width: 170px; font-family: Roboto, sans-serif; font-size: 18px;" href="#app">Download
+                        <span class="font-weight-bold">App</span></a>
+                    <!-- <a class="btn border-primary rounded text-primary" style="width: 170px; font-family: Roboto, sans-serif; font-size: 18px;">View <span class="font-weight-bold">Blog</span></a> -->
+                </div>
+            </div>
+            <div id="rightColumn" class="flex-fill col-0 col-md-6 d-none d-md-flex overflow-hidden">
+                <img src="{% static 'landing/img/beautiful-young-female-doctor-looking-camera-office-cropped.png' %}"
+                    class="img-fluid" alt="Young Female Doctor Looking"/>
+            </div>
+        </div>
+        <div class="text-right justify-content-center d-none d-xl-flex">
+            <img src="{% static 'landing/img/svg/dots.svg' %}" alt="Styling Dots"/>
+        </div>
+    </div>
+    <!-- Delimiter -->
+    <div class="container-fluid" style="bottom: 0;height: 150px;line-height: 150px; background-color: #f5f5f5;">&nbsp;
+    </div>
+    <!-- Awards -->
+    <section>
+        <div class="w-100 d-flex flex-row my-4 py-4" style="padding-top: 25px;" id="awards">
+            <div class="col-sm-1 col-md-1 col-lg-2 col-xl-2">&nbsp;</div>
+            <div class="d-flex flex-row awrad-item">
+                <img  src="{% static 'landing/img/award_1_1.png' %}" class="benefit_img mr-5" alt="BioTechnology Awards">
+                <div class="ml-5">
+                    <h1 class="mb-3 col-8"
+                        style="line-height: 3rem; font-weight:normal; font-family: Roboto, sans-serif; font-size: 36px;">
+                        Biotechnology Award</h1>
+                    <p class="mb-5 col-10" style="font-family: Roboto, sans-serif; font-size: 18px;">Best Severe Disease
+                        Real-Time Remote Tracking Tech Company 2021... <a target="_blank" type="button" class="btn btn-primary"
+                        style="padding: 2px 5px 2px 5px;" href="https://www.ghp-news.com/winners/longevity-intime-biotech-llc-2">Read More</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="w-100 d-flex flex-row my-4 py-4">
+            <div class="col-sm-1 col-md-1 col-lg-2 col-xl-2">&nbsp;</div>
+            <div class="d-flex flex-row awrad-item">
+                <img src="{% static 'landing/img/award_2.png' %}" class="benefit_img mr-5" alt="Health & Pharmaceutical Award">
+                <div class="ml-5">
+                    <h1 class="mb-3 col-8"
+                        style="line-height: 3rem; font-weight:normal; font-family: Roboto, sans-serif; font-size: 36px;">
+                        Health & Pharmaceutical Award</h1>
+                    <p class="mb-5 col-10" style="font-family: Roboto, sans-serif; font-size: 18px;">Most Innovative AI
+                        Health Tech Company 2020 & Award for Excellence in Disease Tracking Applications 2020 ... <a
+                        target="_blank"   type="button" class="btn btn-primary" style="padding: 2px 5px 2px 5px;" href="https://www.ghp-news.com/winners/longevity-intime-biotech-llc">Read More</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="w-100 d-flex flex-row my-4 py-4">
+            <div class="col-sm-1 col-md-1 col-lg-2 col-xl-2">&nbsp;</div>
+            <div class="d-flex flex-row awrad-item">
+                <img src="{% static 'landing/img/award_3_1.png' %}" class="benefit_img mr-5" alt="Private Healthcare Award">
+                <div class="ml-5">
+                    <h1 class="mb-3 ml-3"
+                        style="line-height: 3rem; font-weight:normal; font-family: Roboto, sans-serif; font-size: 36px;">
+                        Private Healthcare Award</h1>
+                    <p class="mb-5 ml-3" style="font-family: Roboto, sans-serif; font-size: 18px;">Best COVID-19 Mobile
+                        Application 2021: AntiCoronaVirus ... <a target="_blank" type="button" class="btn btn-primary"
+                        style="padding: 2px 5px 2px 5px;" href="https://www.ghp-news.com/winners/longevity-intime-biotech-llc-3">Read More</a></p>
+                </div>
+            </div>
+        </div>
+        <style>
+            @media (max-width: 768px) {
+                .awrad-item {
+                    flex-wrap: wrap;
+                }
+            }
+        </style>
+    </section>
+    <!-- Testimonials -->
+    <section>
+        <div class="w-100 d-flex flex-row" style="padding-top: 20px;" id="testimonials">
+            <div class="col-sm-1 col-md-1 col-lg-2 col-xl-2">&nbsp;</div>
+            <div class="mt-5 pt-5">
+                <div class="bg-primary ml-1 mb-5" style="width: 52px; height: 6px;">&nbsp;</div>
+                <h1 class="mb-3"
+                    style="line-height: 3rem; font-weight:700; font-family: Roboto, sans-serif; font-size: 36px;">
+                    Testimonials</h1>
+                <div class="testimonials_wrapper d-xl-flex mt-3" style="margin-left: -2.1rem;">
+                    <img src="{% static 'landing/img/svg/dots_around_card_vertical.svg' %}"
+                        class=" mr-2 align-self-end">
+                    <div>
+                        <div class="d-flex nowrap w-100 justify-content-end pr-5">
+                            <div style="width: 200px; overflow: hidden;">
+                                <img src="{% static 'landing/img/svg/dots_around_card.svg' %}" class="mb-2" alt="Dots Styling">
+                            </div>
+                        </div>
+                        <div class="testimonial_item card mr-lg-5">
+                            <div class="card-body">
+                                <p style="font-family: Roboto, sans-serif; font-size: 18px; font-weight: 400;">“Seems to
+                                    have a promising future. I'm ecstatic about keeping on track my health in such an
+                                    easy manner (having this app). Can't wait for the next features! Many thanks for
+                                    your efforts developing this app.”</p>
+                                <p style="font-family: Roboto, sans-serif; font-size: 18px; font-weight: 700;">DD<br />
+                                    <span style="font-family: Roboto, sans-serif; font-size: 14px;">User of <span
+                                            style="color:#5C9BFE">BMI Disease Tracker</span></span>
+                                </p>
+                            </div>
+                        </div>
+                        <img src="{% static 'landing/img/svg/dots_around_card.svg' %}" class="ml-1 mt-2" alt="Dots areound cards">
+
+                    </div>
+                    <div class="testimonial_item"
+                    >
+                        <div class="card-body">
+                            <p style="font-family: Roboto, sans-serif; font-size: 18px; font-weight: 400;">
+                                “User-friendly minimalistic interface. You need to enter several parameters, and the
+                                program will calculate your data. Waiting for updates and new features. Recommend to
+                                everyone, who cares about their health.”</p>
+                            <p style="font-family: Roboto, sans-serif; font-size: 18px; font-weight: 700;">Semaff<br />
+                                <span style="font-family: Roboto, sans-serif; font-size: 14px;">User of <span
+                                        style="color:#5C9BFE">AntiObesit‪y‬</span></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none d-md-flex nowrap w-100 align-items-center justify-content-end pt-5">
+                <div>
+                    <img src="{% static 'landing/img/svg/dots.svg' %}" class="pt-4" alt="Dots for styling"/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About -->
+    <section class="what_is my-5" style="padding-top: 120px;">
+        <div id="about_section">
+            <div class="d-flex flex-column align-items-center mr-5">
+                <img id="about" class="d-none d-md-flex"
+                    src="{% static 'landing/img/medium-shot-doctor-holding-tablet.png' %}" width="650px" alt="Doctor holding a tablet and showing to a women and her son"/>
+                <img class="d-none d-md-flex mt-2" src="{% static 'landing/img/svg/hdots.svg' %}" width="401px" alt="Dots"/>
+            </div>
+            <div class="d-flex flex-row ml-5">
+                <div class="col-12 col-md-10 d-flex flex-column">
+                    <div class="mt-5 pt-5 mb-5">
+                        <div class="bg-primary ml-1 mb-5" style="width: 52px; height: 6px;">&nbsp;</div>
+                        <h1 class="mb-3"
+                            style="line-height: 3rem; font-weight:700; font-family: Roboto, sans-serif; font-size: 36px;">
+                            What is <span class="text-primary font-weight-bold">Longevity InTime?</span></h1>                       
+                        <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">
+                            Longevity InTime is a four verticals company developing online technologies, which enables early 
+                            diagnosis of diseases using real-time biometrics from your human body to cure you.</p>
+                        <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">
+                            Personal electronic gadgets (smart-watches, fitness-bracelets, etc.), portable containers for 
+                            remote sampling of seven biomaterials (blood, urine, etc.), software code, proprietary machine 
+                            learning algorithms and mobile apps help to diagnose and predict the likelihood of developing 
+                            serious diseases in the extremely early, formerly diagnosable stages, and provide personalized 
+                            recommendations for their prevention. 
+                            Early diagnosis of diseases and taking in time the necessary measures when they are detected 
+                            can have a positive effect on a person's life expectancy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Screenshots -->
+    <section class="d-none">
+        <div class="w-100 d-flex flex-row" style="padding-bottom: 100px; padding-top: 100px;">
+            <div class="col-1 col-sm-1 col-md-1 col-lg-2 col-xl-2"></div>
+            <div class="d-flex flex-row justify-content-start align-items-start">
+                <img src="{% static 'landing/img/Analysis bad.png' %}" class="m-auto img-flyout" alt="Analysis">
+                <img src="{% static 'landing/img/Settings.png' %}" class="img-flyout" alt="Settings">
+                <img src="{% static 'landing/img/Report.png' %}" class="img-flyout" alt="Report">
+                <img src="{% static 'landing/img/Recommended.png' %}" class="img-flyout" alt="Recommended">
+            </div>
+            <div class="flex-fill col-0 col-md-4 d-none d-md-flex">&nbsp;</div>
+        </div>
+    </section>
+    <!-- App -->
+    <section>
+        <div class="w-100 d-flex flex-row" id="app">
+            <div class="col-1 col-sm-1 col-md-1 col-lg-2 col-xl-2 text-left d-flex align-items-center">
+                <img class="d-none d-xl-flex" width="49px" src="{% static 'landing/img/svg/dots.svg' %}" alt="Dots"/>
+            </div>
+            <div class="d-flex flex-row">
+                <div id="leftColumn" class="col-12 col-md-6 d-flex flex-column">
+                    <div class="mt-5 pt-5 mb-5" style="width: 80%;">
+                        <div class="bg-primary ml-1 mb-5" style="width: 52px; height: 6px;">&nbsp;</div>
+                        <h1 class="mb-3"
+                            style="line-height: 3rem; font-weight:700; font-family: Roboto, sans-serif; font-size: 36px;">
+                            Mobile <span class="text-primary font-weight-bold">App.</span></h1>
+                        <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">
+                            The proprietary technology is in beta testing and analyzes today 17 parameters. We plan to add 
+                            more than 400 parameters of the physical state of the human body for personalized real-time risk
+                            assessment report. The user receives data on his health status in easy to understand mobile 
+                            application and in his encrypted personal web account, as well as personal recommendations aimed 
+                            at improving his health span. </p>
+                        <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">
+                            All evidence based risks & recommendation reports are updated due to patent pending AI methods 
+                            as frequent as indicators of parameters change. We form your personal digital biobank account 
+                            with tracking history of your parameters.</p>
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.application.bmiobesity&hl=en_US">
+                            <img class="mb-3" src="{% static 'landing/img/svg/google.svg' %}" alt="Google Play Store Logo"/>
+                        </a>
+                        <a target="_blank" href="https://apps.apple.com/ru/app/antiobesity/id1511198472">
+                            <img class="mb-3" src="{% static 'landing/img/svg/apple.svg' %}" alt="Apple Store Logo"/>
+                        </a>
+                        <!-- <button class="btn border-primary rounded text-primary" style="width: 170px; font-family: Roboto, sans-serif; font-size: 18px;">View <span class="font-weight-bold">Blog</span></button> -->
+                    </div>
+                    <div class="d-flex flex-row align-items-start">
+                        <img class="mr-2" src="{% static 'landing/img/svg/star.svg' %}" alt="Star"/>
+                        <img class="mr-2" src="{% static 'landing/img/svg/star.svg' %}" alt="Star"/>
+                        <img class="mr-2" src="{% static 'landing/img/svg/star.svg' %}" alt="Star"/>
+                        <img class="mr-2" src="{% static 'landing/img/svg/star.svg' %}" alt="Star"/>
+                        <img class="mr-2" src="{% static 'landing/img/svg/star-disabled.svg' %}" />
+                        <p style="font-family: Roboto, sans-serif; font-size: 18px; font-weight: 400;">App Store Rating:
+                            4.5</p>
+                    </div>
+                    <div class="d-flex flex-row align-items-start">
+                        <img class="mr-2" src="{% static 'landing/img/svg/star.svg' %}" alt="Star"/>
+                        <img class="mr-2" src="{% static 'landing/img/svg/star.svg' %}" alt="Star"/>
+                        <img class="mr-2" src="{% static 'landing/img/svg/star.svg' %}" alt="Star"/>
+                        <img class="mr-2" src="{% static 'landing/img/svg/star.svg' %}" alt="Star"/>
+                        <img class="mr-2" src="{% static 'landing/img/svg/star.svg' %}" alt="Star"/>
+                        <p style="font-family: Roboto, sans-serif; font-size: 18px; font-weight: 400;">Google Play
+                            Store: 4.7</p>
+                    </div>
+                </div>
+                <div id="rightColumn" class="flex-fill col-0 col-md-6 d-none d-md-flex overflow-hidden">
+                    <img src="{% static 'landing/img/18837903-cropped.png' %}" alt="Hand holding Longevity App on phone"/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our mission -->
+    <section>
+        <div class="container-fluid text-center justify-content-center"
+            style="background-color: #f5f5f5; padding-bottom: 130px; padding-top: 130px;" id="mission">
+            <h1 class="mb-3"
+                style="line-height: 3rem; font-weight:700; font-family: Roboto, sans-serif; font-size: 36px;">Our <span
+                    class="text-primary font-weight-bold">Mission.</span></h1>
+            <div class="d-flex bg-primary m-auto" style="width: 52px; height: 6px;">&nbsp;</div>
+            <div class="container mt-5">
+                <p style="font-family: Roboto, sans-serif; font-size: 22px; font-weight: 300;">The team of 40 developers
+                    from 12 countries all over the world working on the sweat for equity model
+                    is probably the largest biotech company in the world. Each and
+                    every member of which believes in the company's goals and global mission.</p>
+                <p style="font-family: Roboto, sans-serif; font-size: 22px; font-weight: 300;">Our goal is to extend a
+                    person's life by more than 20 active and happy years without any restrictions to him. We respond to
+                    both the personal and public interests of every country on Earth.</p>
+                <p style="font-family: Roboto, sans-serif; font-size: 22px; font-weight: 300;">We believe that you want
+                    to see how your children will raise their grandchildren. We intend to deliver you this product
+                    InTime!</p>
+            </div>
+        </div>
+    </section>
+    <!-- Video -->
+    <section>
+        <div class="w-100 d-flex flex-row" id="video">
+            <div class="col-sm-1 col-md-1 col-lg-2 col-xl-2">&nbsp;</div>
+            <div class="col-xl-8 mt-5 pt-5 mb-5">
+
+                <h1 class="mb-3"
+                    style="line-height: 3rem; font-weight:500; font-family: Roboto, sans-serif; font-size: 24px;">Video:</h1>
+                <div class="bg-primary ml-1" style="width: 52px; height: 6px;">&nbsp;</div>
+                <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">&nbsp;</p>
+                <div id="carouselExampleIndicators" class="carousel slide">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" 
+                                        src="https://www.youtube.com/embed/xQytP22d3sA" title="YouTube video player" 
+                                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                                        gyroscope; picture-in-picture" allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="embed-responsive embed-responsive-16by9">                                 
+                                    <iframe class="embed-responsive-item" 
+                                        src="https://www.youtube.com/embed/1TEYTNI9UEo" title="YouTube video player" 
+                                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                                        gyroscope; picture-in-picture" allowfullscreen>
+                                    </iframe>
+                                </div>                           
+                            </div>
+                            <div class="carousel-item">
+                                <div class="embed-responsive embed-responsive-16by9">                                 
+                                    <iframe class="embed-responsive-item" 
+                                        src="https://www.youtube.com/embed/TsA4SHhUzt4" title="YouTube video player" 
+                                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                                        gyroscope; picture-in-picture" allowfullscreen>
+                                    </iframe>
+                                </div>                           
+                            </div>
+                            <div class="carousel-item">
+                                <div class="embed-responsive embed-responsive-16by9">                                 
+                                    <iframe class="embed-responsive-item" 
+                                        src="https://www.youtube.com/embed/IEz1P4i1P7s" title="YouTube video player" 
+                                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                                        gyroscope; picture-in-picture" allowfullscreen>
+                                    </iframe>
+                                </div>                           
+                            </div>
+                            <div class="carousel-item">
+                                <div class="embed-responsive embed-responsive-16by9">                                 
+                                    <iframe class="embed-responsive-item" 
+                                        src="https://www.youtube.com/embed/yefzqDpJ5Oc" title="YouTube video player" 
+                                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                                        gyroscope; picture-in-picture" allowfullscreen>
+                                    </iframe>
+                                </div>                           
+                            </div>
+                            <div class="carousel-item">
+                                <div class="embed-responsive embed-responsive-16by9">                                 
+                                    <iframe class="embed-responsive-item" 
+                                        src="https://www.youtube.com/embed/Q3lAyf3fKyY" title="YouTube video player" 
+                                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                                        gyroscope; picture-in-picture" allowfullscreen>
+                                    </iframe>
+                                </div>                           
+                            </div>
+                            <div class="carousel-item">
+                                <div class="embed-responsive embed-responsive-16by9">                                 
+                                    <iframe class="embed-responsive-item" 
+                                        src="https://www.youtube.com/embed/06Z2SRQxrhc" title="YouTube video player" 
+                                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                                        gyroscope; picture-in-picture" allowfullscreen>
+                                    </iframe>
+                                </div>                           
+                            </div>
+                            <div class="carousel-item">
+                                <div class="embed-responsive embed-responsive-16by9">                                 
+                                    <iframe class="embed-responsive-item" 
+                                        src="https://www.youtube.com/embed/tpIgW3Vzir8" title="YouTube video player" 
+                                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                                        gyroscope; picture-in-picture" allowfullscreen>
+                                    </iframe>
+                                </div>                           
+                            </div>
+                            <div class="carousel-item">
+                                <div class="embed-responsive embed-responsive-16by9">                                 
+                                    <iframe class="embed-responsive-item" 
+                                        src="https://www.youtube.com/embed/Fk606xInIU" title="YouTube video player" 
+                                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                                        gyroscope; picture-in-picture" allowfullscreen>
+                                    </iframe>
+                                </div>                           
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div> 
+            </div>
+            <div class="d-none d-md-flex nowrap w-100 align-items-center justify-content-end pt-5">
+                <div>
+                    <img src="{% static 'landing/img/svg/dots.svg' %}" class="pt-4" alt="Dots"/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Life expectations -->
+    <section>
+        <div class="w-100 d-flex flex-row">
+            <div class="col-sm-1 col-md-1 col-lg-2 col-xl-2">&nbsp;</div>
+            <div class="col-xl-8 mt-5 pt-5 mb-5">
+
+                <h1 class="mb-3"
+                    style="line-height: 3rem; font-weight:500; font-family: Roboto, sans-serif; font-size: 24px;">Life
+                    Expectancy Chart<span class="text-primary font-weight-bold"></span></h1>
+                <div class="bg-primary ml-1 mb-5" style="width: 52px; height: 6px;">&nbsp;</div>
+                <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">Reported as the annual per
+                    capita health expenditure and is adjusted for inflation and price level differences between
+                    countries (measured in dollars)...<a href="https://ourworldindata.org/life-expectancy#how-strong-is-the-link-between-healthcare-expenditure-and-life-expectancy">Read more</a>
+                </p>
+                <div class="embed-responsive embed-responsive-4by3">
+                    <iframe class="embed-responsive-item"
+                        src="https://ourworldindata.org/grapher/life-expectancy-vs-healthcare-expenditure?endpointsOnly=1&time=1995..latest"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="d-none d-md-flex nowrap w-100 align-items-center justify-content-end pt-5">
+                <div>
+                    <img src="{% static 'landing/img/svg/dots.svg' %}" class="pt-4" alt="Dots"/>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Partners -->
+    <section>
+        <div class="our_apps container-fluid text-center justify-content-center"
+            style="padding-bottom: 120px; padding-top: 120px;">
+            <h1 class="mb-3"
+                style="line-height: 3rem; font-weight:700; font-family: Roboto, sans-serif; font-size: 36px;">Our App
+                <span class="text-primary font-weight-bold">Partners.</span>
+            </h1>
+            <div class="d-flex bg-primary m-auto" style="width: 52px; height: 6px;">&nbsp;</div>
+            <div class="container mt-5 py-5">
+                <div class="row justify-content-center nowrap">
+                    <div class="hover_zoom">
+                        <a target="_blank" href="https://consumer.huawei.com/en/mobileservices/health/##">
+                            <img src="{% static 'landing/img/unnamed 1.png' %}" class="mb-3" alt="Heartrate Logo">
+                        </a>
+                    </div>
+                    <div class="hover_zoom">
+                        <a target="_blank"
+                            href="https://play.google.com/store/apps/details?id=com.garmin.android.apps.connectmobile&hl=ru&gl=US">
+                            <img src="{% static 'landing/img/unnamed 2.png' %}" class="mb-3" alt="Smart watch image">
+                        </a>
+                    </div>
+                    <div class="hover_zoom">
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.sec.android.app.shealth&hl=ru&gl=US">
+                            <img src="{% static 'landing/img/unnamed 3.png' %}" class="mb-3" alt="Fitness logo">
+                        </a>
+                    </div>
+                    <div class="hover_zoom">
+                        <a target="_blank" href="https://www.ito-technologies.com/eng/">
+                            <img src="{% static 'landing/img/unnamed 4.png' %}" class="mb-3" alt="Footsteps logo">
+                        </a>
+                    </div>
+                    <div class="hover_zoom">
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.xiaomi.hm.health&hl=ru&gl=US">
+                            <img src="{% static 'landing/img/unnamed 5.png' %}" class="mb-3" alt="Mi watch logo">
+                        </a>
+                    </div>
+                    <div class="hover_zoom">
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.xiaomi.smarthome&hl=ru&gl=US">
+                            <img src="{% static 'landing/img/unnamed 6.png' %}" class="mb-3" alt="Shield logo">
+                        </a>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+    <!-- Petitions -->
+    <section>
+        <div class="w-100 d-flex flex-row"
+            style="background-color: #f5f5f5; padding-top: 30px;">
+            <div class="col-sm-1 col-md-1 col-lg-2 col-xl-2">&nbsp;</div>
+            <div class="d-flex flex-row flex-wrap">
+                <div id="leftColumn" class="col-12 col-md-6 d-flex flex-column">
+                    <div class="mt-5 pt-5 mb-5" style="width: 80%;">
+                        <div class="bg-primary ml-1 mb-5" style="width: 52px; height: 6px;">&nbsp;</div>
+                        <h1 class="mb-3"
+                            style="line-height: 3rem; font-weight:700; font-family: Roboto, sans-serif; font-size: 36px;">
+                            Help Yourself. <span class="text-primary font-weight-bold">Sign Petition</span></h1>
+                        <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">Despite the fact that
+                            this article was published in 2015, it is still relevant:</p>
+                        <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;"><a
+                                href="https://www.sciencedirect.com/science/article/pii/S0079610715000115">Unsolved
+                                problems in biology—The state of current thinking!</a></p>
+                        <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">Scientists agree on
+                            the importance of applying a systems approach in biology when studying processes in living
+                            organisms, incl. aging.</p>
+                        <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">On 27 of April 2021,
+                            in Nature Scientific Report was published an article about the study of fish - largemouth
+                            buffalo (Ictiobus cyprinellus). Their life expectancy is more than 100 years, they are the
+                            longest-living freshwater bony fish (out of 12,000 species). This study shows that the
+                            potential of evolutionary-comparative biology has not been revealed even by 1%.</p>
+                        <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">To unlock this
+                            potential, funding is required at the state level of all countries of the world.</p>
+                        <p class="mb-5"
+                            style="font-family: Roboto, sans-serif; font-size: 14px; color: rgb(255, 153, 0);">The aim is to collect 
+                            at least 1000 from each of 252 countries & then summarized results to file to United Nation (UN), World 
+                            Health Organization (WHO) & world's leaders for further consideration. It (252 000 signatures) will become 
+                            the biggest longevity focused petition ever.</p>
+                        <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">If you want to help us file a petition
+                            in your country please email to support@intime.digital and we will contact you.</p>    
+                        <a class="btn btn-primary" href="{% url 'landing:petitions' %}" target="_blank">
+                            <label>Other 247 Countries</label>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="mt-5 pt-5 mb-5">
+                    <div class="d-flex align-items-center">
+                        <img src="{% static 'landing/img/iconfinder_United-States-Flag_32364 1.png' %}"
+                            class="img-flyout mr-2" alt="US Flag">
+                        <a target="_blank" href="http://chng.it/7WZbBvGzpk"
+                            style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 18px;">Sign
+                            Petition</a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="{% static 'landing/img/iconfinder_Russia_92303 1.png' %}" class="img-flyout mr-2" alt="Russia Flag">
+                        <a href="http://chng.it/2zbnmvJPRC"
+                            style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 18px;">Sign
+                            Petition</a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="{% static 'landing/img/svg/uk_flag.svg' %}" width="195px" height="155px" class="img-flyout mt-3 mr-2" alt="UK Flag">
+                        <a target="_blank" href="http://chng.it/TRC6TjVpyn"
+                            style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 18px;">Sign
+                            Petition</a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="{% static 'landing/img/iconfinder_Ukraine-Flag_32361 1.png' %}"
+                            class="img-flyout mr-2" alt="Ukraine Flag">
+                        <a target="_blank" href="http://chng.it/KhPLBbyWVn"
+                            style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 18px;">Sign
+                            Petition</a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="{% static 'landing/img/iconfinder_Ireland-Flag_32244 1.png' %}"
+                            class="img-flyout mr-2" alt="Ireland Flag">
+                        <a target="_blank" href="http://chng.it/hfT62Gx62Z"
+                            style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 18px;">Sign
+                            Petition</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Recommendations -->
+    <section>
+        <div class="container-fluid text-center justify-content-center"
+            style="background-color: #f5f5f5; padding-bottom: 130px; padding-top: 130px;">
+            <h1 class="mb-3"
+                style="line-height: 3rem; font-weight:700; font-family: Roboto, sans-serif; font-size: 36px;">Our Book
+                <span class="text-primary font-weight-bold">Recommendations.</span>
+            </h1>
+            <div class="d-flex bg-primary m-auto" style="width: 52px; height: 6px;">&nbsp;</div>
+            <div class="container mt-5 py-5">
+                <div class="row justify-content-between nowrap">
+                    <div class="d-flex flex-column text-center">
+                        <img src="{% static 'landing/img/51xmccmJqbL 1.png' %}" class="mb-3" alt="What the Health book">
+                        <a target="_blank" href="https://www.amazon.com/WHAT-HEALTH-EUNICE-WONG/dp/1524575747"><img
+                                src="{% static 'landing/img/svg/books.svg' %}" /></a>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                        <img src="{% static 'landing/img/9781921844584 1.png' %}" class="mb-3" alt="Good Health 21st-Century book">
+                        <a target="_blank" href="https://www.amazon.com/Good-Health-21st-Century-unconventional/dp/1921844582"><img
+                                src="{% static 'landing/img/svg/books.svg' %}" /></a>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                        <img src="{% static 'landing/img/9781482242317 1.png' %}" class="mb-3" alt="Lipids Nutrition Health Claude Leray ebook">
+                        <a target="_blank"
+                            href="https://www.amazon.com/Lipids-Nutrition-Health-Claude-Leray-ebook/dp/B00OKUG3MA/ref=sr_1_1?dchild=1&keywords=LIPIDS+Nutrition+and+health&qid=1620980149&s=books&sr=1-1"><img
+                                src="{% static 'landing/img/svg/books.svg' %}" /></a>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                        <img src="{% static 'landing/img/9780393712872_300 1.png' %}" class="mb-3" alt="Brain Health Book Neuroscience Improve book">
+                        <a target="_blank" href="https://www.amazon.com/Brain-Health-Book-Neuroscience-Improve/dp/0393712877"><img
+                                src="{% static 'landing/img/svg/books.svg' %}" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Books -->
+    <section>
+        <div class="w-100 d-flex flex-row">
+            <div class="col-sm-1 col-md-1 col-lg-2 col-xl-2">&nbsp;</div>
+            <div class="col-xl-8 mt-5 pt-5 mb-5">
+                <h1 class="mb-3"
+                    style="line-height: 3rem; font-weight:500; font-family: Roboto, sans-serif; font-size: 24px;">Alexey
+                    Moskalev And Jose Cordeiro Books<span class="text-primary font-weight-bold"></span></h1>
+                <div class="bg-primary ml-1 mb-5" style="width: 52px; height: 6px;">&nbsp;</div>
+                <div class="container mt-5 py-5">
+                    <div class="row justify-content-between nowrap">
+                        <div class="d-flex flex-column text-center">
+                            <img src="{% static 'landing/img/61u-Zs5079L 1.png' %}" class="mb-3" alt="Biomarkers Human Ageing">
+                            <a target="_blank" href="https://www.amazon.com/gp/product/B07XWJ8QKP/ref=dbs_a_def_rwt_bibl_vppi_i0"><img
+                                    src="{% static 'landing/img/svg/books.svg' %}" /></a>
+                            <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">By Alexey Moskalev
+                            </p>
+                        </div>
+                        <div class="d-flex flex-column text-center">
+                            <img src="{% static 'landing/img/41wOTuokr7L 1.png' %}" class="mb-3" alt="Life Extension Book">
+                            <a target="_blank" href="https://www.amazon.com/gp/product/B00ZBMHFKU/ref=dbs_a_def_rwt_bibl_vppi_i1"><img
+                                    src="{% static 'landing/img/svg/books.svg' %}" /></a>
+                            <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">By Alexey Moskalev
+                            </p>
+                        </div>
+                        <div class="d-flex flex-column text-center">
+                            <img src="{% static 'landing/img/9789806073333-us 1.png' %}" class="mb-3" alt="The Great Taboo book">
+                            <a target="_blank"
+                                href="https://www.abebooks.com/servlet/BookDetailsPL?bi=30737537732&searchurl=isbn%3D9806073339%26sortby%3D17&cm_sp=snippet-_-srp1-_-title1"><img
+                                    src="{% static 'landing/img/svg/books.svg' %}" /></a>
+                            <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">By Jose Cordeiro
+                            </p>
+                        </div>
+                        <div class="d-flex flex-column text-center">
+                            <img src="{% static 'landing/img/41uQNwiBebL 1.png' %}" class="mb-3" alt="La Muerete De La Muerete book">
+                            <a target="_blank"
+                                href="https://www.amazon.com/muerte-posibilidad-cient%C3%ADfica-inmortalidad-defensa-ebook/dp/B07B5TKLGR/ref=sr_1_1?dchild=1&qid=1620981585&refinements=p_27%3AJose+Luis+Cordeiro&s=books&sr=1-1"><img
+                                    src="{% static 'landing/img/svg/books.svg' %}" /></a>
+                            <p class="mb-5" style="font-family: Roboto, sans-serif; font-size: 18px;">By Jose Cordeiro
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <section id="contact">
+        <div class="w-100 d-flex flex-row" style="padding-bottom: 50px; padding-top: 50px;">
+            <div class="col-sm-1 col-md-1 col-lg-2 col-xl-2">&nbsp;</div>
+            <div class="d-flex flex-row flex-wrap">
+                <div id="leftColumn" class="footer_top_wrapper">
+                    <div class="footer_logo_adress">     
+                        <div>
+                            <img src="{% static 'landing/img/svg/logo.svg' %}" width="148px" alt="logo_image" />
+                        </div>
+                        <div>
+                            <p class="mb-5 justify-content-end" style="font-family: Roboto, sans-serif; font-weight: 300; font-size: 18px;">
+                                InTime BioTech LLC. DBA Longevity InTime
+                                <br/>
+                                <span style="font-family: 'Poppins'; font-size: 14px; font-weight: 400; color: #808080;">
+                                    300 Delaware Avenue, Suite 210-A, Wilmington, Delaware, 19801, USA
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footer_links">
+                        <a target="_blank" href="http://test.intime.digital/ru/petitions/"
+                            style="font-family: 'Poppins'; font-size: 14px; font-weight: 400; color: #808080;">Petitions</a><br />                        
+                        <a target="_blank" href="#awards"
+                            style="font-family: 'Poppins'; font-size: 14px; font-weight: 400; color: #808080;">Awards</a><br />
+                        <a target="_blank" href="#testimonials"
+                            style="font-family: 'Poppins'; font-size: 14px; font-weight: 400; color: #808080;">Testimonials</a><br />
+                        <a target="_blank" href="#top"
+                            style="font-family: 'Poppins'; font-size: 14px; font-weight: 400; color: #808080;">InTime
+                            BioTech</a><br />
+                        <a target="_blank" href="#app"
+                            style="font-family: 'Poppins'; font-size: 14px; font-weight: 400; color: #808080;">Mobile
+                            App</a><br />
+                        <a target="_blank" href="#mission"
+                            style="font-family: 'Poppins'; font-size: 14px; font-weight: 400; color: #808080;">Mission</a><br />
+                        <a target="_blank" href="#video"
+                            style="font-family: 'Poppins'; font-size: 14px; font-weight: 400; color: #808080;">Video</a><br />
+                    </div>
+                    <div class="footer_apps">
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.application.bmiobesity&hl=en_US">
+                            <img width="216" class="mb-3" src="{% static 'landing/img/svg/google.svg' %}" alt="Google Play Store logo"/>
+                        </a>
+                        <a target="_blank" href="https://apps.apple.com/ru/app/antiobesity/id1511198472">
+                            <img width="216" class="mb-3" src="{% static 'landing/img/svg/apple.svg' %}" alt="Apple Store logo"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer_text">
+                    <p class="mb-2" style="font-family: Roboto, sans-serif; font-weight: 300; font-size: 18px;">
+                        Powered by artificial intelligence, verified by scientists, generated by Big Data obtained from evidence based
+                         only clinical trials.</p>
+                    <p class="mb-2" style="font-family: Roboto, sans-serif; font-weight: 300; font-size: 18px;">If you
+                        have questions or want to become a partner please contact us <a
+                            href="mailto:support@intime.digital">support@intime.digital</a> </p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <div class="go_top">
+        <img src="https://i.pinimg.com/564x/c4/f0/4b/c4f04b83f93836a05b4f188180708e0e.jpg" alt="">
+    </div>
+
+
+    <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 150) {
+                $('#sticky_nav').addClass('fixed');
+            } else {
+                $('#sticky_nav').removeClass('fixed');
+            }
+            if ($(this).scrollTop() > 400) {
+                $('.go_top').addClass('fixed');
+            } else {
+                $('.go_top').removeClass('fixed');
+            }
+        });
+        $(".go_top").click(function(){
+            $('body, html').animate({ scrollTop: $('#start_section').offset().top - 100}, 800);
+        });
+        $("#about_link").click(function(e){
+            e.preventDefault();
+            $('body, html').animate({ scrollTop: $('#about_section').offset().top - 100}, 800);
+        });
+        $("#contact_link").click(function(e){
+            e.preventDefault();
+            $('body, html').animate({ scrollTop: $('#contact').offset().top - 100}, 800);
+        });
+        $("#app_link").click(function(e){
+            e.preventDefault();
+            $('body, html').animate({ scrollTop: $('#app').offset().top - 100}, 800);
+        });
+        $('.navbar-toggler').click(function() {
+            $(".flex-fill.logo_title").toggleClass("none");
+        });
+    </script>
+</body>
+
+</html>

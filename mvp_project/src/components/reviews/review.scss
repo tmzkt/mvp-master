@@ -1,0 +1,99 @@
+@import '../../scss/constants';
+@import '../../scss/animations';
+
+.review {
+  $-can-animate: '.can-animate';
+  $-gutter: 16px;
+  $-bg: #e9e9e9;
+  $-screen-phone: 380px;
+
+  opacity: 0;
+  margin: 38px auto 18px;
+  max-width: 700px;
+  padding: 9px 18px;
+
+  &#{$-can-animate} {
+    animation: fadeOutDown 0.6s ease-in 3.8s forwards;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    text-align: center;
+    font-family: $font-sans;
+    font-size: 25px;
+    line-height: 1.3;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+  }
+
+  &__wrap {
+    background-color: transparent;
+  }
+
+  &__item {
+    margin: 0;
+    padding: $-gutter;
+    display: flex;
+    border: 1px solid darken($-bg, 4);
+    background-color: rgba(#fafafa, 0.84);
+    font-size: 18px;
+    border-radius: 3px;
+
+    @media (--max-small) {
+      flex-direction: column;
+    }
+  }
+
+  &__item-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: flex-end;
+    width: 100%;
+    color: #333;
+  }
+
+  &__item-text {
+    margin-bottom: 18px;
+    width: 100%;
+    font-size: 16px;
+    color: #151515;
+  }
+
+  &__item-author {
+    padding: 6px 0 0 10px;
+    border-top: 1px solid darken($-bg, 35);
+    color: #4b4b4b;
+    text-align: right;
+    font-family: $font-sans;
+    font-size: 14px;
+    line-height: 1.25;
+    font-weight: 700;
+  }
+
+  &__ava {
+    margin-right: $-gutter;
+    max-width: 220px;
+
+    @media (--max-small) {
+      margin: 0 auto $-gutter;
+    }
+  }
+
+  &__ava-img {
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  /* customize VueCarousel */
+  .VueCarousel {
+    &-dot {
+      margin-top: 0 !important;
+    }
+
+    &-dot-container {
+      margin-top: 4px !important;
+    }
+  }
+
+}

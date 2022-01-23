@@ -1,0 +1,51 @@
+{% load i18n %}
+{% load static %}
+{# Load the tag library #}
+{% load bootstrap4 %}
+{% load yandex_metrica %}
+{% load google_analytics_gtag %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+
+<html lang="{{ LANGUAGE_CODE }}">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        {% comment %} <meta name="yandex-verification" content="9ff11439fd86908c" /> {% endcomment %}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&subset=cyrillic&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script&subset=cyrillic&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic&subset=cyrillic&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap&subset=cyrillic">
+
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
+
+        {% yandex_metrica %}
+        {% google_analytics_gtag %}
+        {% include 'includes/google-site-tag.html' %}
+        {% include 'includes/vk-pixel-tag.html' %}
+
+        {% block head %}{% endblock head %}
+    </head>
+
+    <body id="page-top">
+        {% include 'includes/linkedin-tag.html' %}
+        {% include 'includes/app-menu.html'  %}
+
+        <div class="d-flex flex-column">
+            <div class="content d-flex">
+                {% block content %}{% endblock content%}
+            </div>
+
+            {% include 'includes/app-footer.html' %}
+        </div>
+
+        {% include 'includes/ticker.html' %}
+        {% include 'includes/cookie-policy.html' %}
+
+    <body>
+</html>

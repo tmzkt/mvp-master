@@ -1,0 +1,27 @@
+# Автор: Владимир Фефилатьев <vladimir@intime.digital>
+# Дата: 2020.06.20
+# Версия: v0.1
+
+Файлы настроек организованы таким образом, чтобы иметь возможность запускать приложение в разных окружениях,
+не меняя при этом настроек settings.py
+
+1. Для запуска в локальном окружении использовать:
+
+    export DJANGO_SETTINGS_MODULE=mvp_project.settings.local
+
+в каждом новом сеансе терминала,
+либо добавить эту команду в .bashrc и .bash_profile,
+либо в командам добавлять параметр --settings с указанием файла настроек, например:
+
+    python manage.py runserver --settings=mvp_project.settings.local
+
+2. Для запуска в тестовом окружении использовать
+
+    export DJANGO_SETTINGS_MODULE=mvp_project.settings.test
+или
+    python manage.py runserver --settings=mvp_project.settings.test
+
+соответственно.
+
+3. Для запуска в боевом окружении существует отдельный settings.py
+

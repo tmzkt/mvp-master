@@ -1,0 +1,20 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block head %}
+<title>Longevity InTime - {% trans 'Pre order' %}</title>
+{% endblock head %}
+
+{% block content %}
+<div class="container align-items-center" style="margin-top: 100px">
+
+    {% for fields in article %}
+        <h2>{{ fields.fields.article_title }}</h2>
+
+        <p>{{ fields.fields.abstract_text }}</p>
+    {% endfor %}
+
+</div>
+{% endblock content %}

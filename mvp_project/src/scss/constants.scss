@@ -1,0 +1,10 @@
+$color-base: #051522;
+$color-dark: #212529;
+$color-secondary: #6c757d;
+$font-sans: 'Montserrat', Arial, Helvetica, Verdana, sans-serif;
+
+@custom-media --max-small (width <= 400px);
+@custom-media --max-phone (width <= 540px);
+@custom-media --max-tablet (width <= 700px);
+@custom-media --max-middle (width <= 860px);
+@custom-media --max-laptop (width <= 1100px);

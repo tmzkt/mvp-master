@@ -1,0 +1,21 @@
+{% load i18n %}
+
+<script>$(function () { $('[data-toggle="tooltip"]').tooltip() })</script>
+
+<li class="nav-item" role="presentation">
+  <a
+    {% url 'shop:products_list' as shopUrl %}
+    {% if request.path == shopUrl %}
+      {% comment %} class="nav-link active" {% endcomment %}
+    {% endif %}
+    class="nav-link text-black-50"
+    href="#"
+    <span
+        data-toggle="tooltip"
+        data-placement="bottom"
+        data-html="true"
+        data-title="{% trans 'Order longevity products and services here. Soon.' %}">
+        {% trans 'Shop' %}
+    </span>
+  </a>
+</li>

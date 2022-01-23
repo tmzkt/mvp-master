@@ -1,0 +1,37 @@
+{% load i18n %}
+{% load static %}
+
+<div id="cookie-policy" hidden class="fixed-bottom alert bg-light alert-dismissible fade show" role="alert">
+  <p class="pb-2">
+  {% if LANGUAGE_CODE == 'en' %}
+    We use cookies to analyze website traffic and optimize your website experience. By clicking "Accept", you agree to the storing of cookies on your device to enhance site navigation and analyze its usage.
+  {% endif %}
+            
+  {% if LANGUAGE_CODE == 'ru' %}
+    Мы используем cookies для анализа трафика сайта и улучшения использования сайта. Нажимая "Принять", вы соглашаетесь с сохранением файлов cookie на вашем устройстве для улучшения навигации по сайту и анализа его использования.
+  {% endif %}
+  </p>
+
+  <div class="text-right">
+    <button type="button" class="btn btn-success" data-dismiss="alert" aria-label="Accept" onclick="document.cookie = 'cookie-policy-accepted=true; max-age=31536000‬; path=/'">
+      <span aria-hidden="true">{% trans 'Accept' %}</span>
+    </button>
+
+    <a type="button" class="btn btn-info" aria-label="More info" href={% static 'docs/Intime-Cookie-Policy.docx' %}>
+      <span aria-hidden="true">{% trans 'More info' %}</span>
+    </a>
+  </div>
+  
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<script>
+if (document.cookie.includes('cookie-policy-accepted=true')) {
+  console.log('cookies accepted')
+} else {
+  document.getElementById('cookie-policy').hidden = false
+  console.log('cookies not accepted')
+}
+</script>

@@ -1,0 +1,162 @@
+{% extends '_base.html' %}
+{% load static %}
+{% load i18n %}
+{% load bootstrap4 %}
+
+{% block head %}
+<title>Longevity InTime - {% trans 'Shop' %}</title>
+{% endblock head %}
+
+{% block content %}
+<section class="main doctor-relations container-fluid d-flex align-items-center">
+    <div class="container justify-content-center my-4 py-4">
+        <h1 class="col text-uppercase section-heading text-dark text-center mb-4 py-4">
+            BMI Disease Tracker
+        </h1>
+
+        <section class="text-left text-secondary mb-2 pb-2 px-lg-5 mx-lg-5">
+            {% if LANGUAGE_CODE == 'en' %}
+                <div>
+                    <div class="image-container">
+                        <div class="image-inner-container">
+                            <img src="{% static '/img/shop/screenshots/en/android-screenshot-1.png' %}" />
+                            <img src="{% static '/img/shop/screenshots/en/android-screenshot-2.png' %}" />
+                            <img src="{% static '/img/shop/screenshots/en/android-screenshot-3.png' %}" />
+                        </div>
+                    </div>
+
+                    <p>BMI Disease Tracker is an application created by our company. It's main purpose is to diagnose obesity-related diseases in the early stages. In the modern world, obesity is the most common problem not only among the adult population of the world, but also among young people. The situation is so acute that this disease has been equated to the level of an epidemic.</p></p>
+                    <p>How can the app diagnose in the early stages of the disease? Thanks to artificial intelligence trained on thousands of anonymous data from around the world, including from the G20 countries. The application will be useful to everyone who cares about their health and wants to keep it for years to come.</p>
+                    <p>The purpose of the application is for the user to conveniently receive timely diagnosis and personalized recommendations based on his medical data for the prevention and treatment of possible development of diseases. The collection of body parameters in the future will be performed in real time using smart watches, fitness trackers and other portable devices.</p>
+                    <p>At the moment, data is entered into the application manually, but the development team is working on adding support for more and more devices and companion applications to the application to automate the process of receiving data. After specifying your medical data, you can almost immediately get the results of the analysis of your health, as well as learn about the risks of the possible development of diseases associated with weight disorder, and not only. Also, when using the application, you receive personal recommendations on nutrition and physical activity aimed at maintaining health and preventing the development of new and existing diseases. At the moment, another important function is in development - "Communication with the doctor". Thanks to it, in the future, in just a couple of clicks, you will be able to share with your attending physician the data on the state of health taken from your body in automatic mode using portable devices. These data include heart rate, blood pressure, and more.</p>
+                    <p>This technology will allow you to save time, keep abreast of changes in health status, and also, which is important to keep it. After all, the value of both health and time can hardly be overestimated.</p>
+                    <p>The company pays great attention to the prevention of thedevelopment of diseases, as well as their diagnosis in the early stages, since the earlier the disease is diagnosed, the easier it is to cure it and the higher the chances of a full recovery of the body. On average, obesity andrelated diseases can reduce life expectancy to 5 years, with moderateexcess weight, and with pronounced overweight and for all 15 years or more. Obesity can be accompanied by such diseases as:
+                        <ul>
+                            <li>arterial hypertension;</li>
+                            <li>diabetes;</li>
+                            <li>atherosclerosis and coronary heart disease;</li>
+                            <li>osteocondritis of the spine;</li>
+                            <li>polyarthritis and gallstone disease;</li>
+                            <li>tumors and other serious and incurable diseases.</li>
+                        </ul>
+                    </p>
+                    <p>Currently, doctors around the world are seriously concerned about the number of people who are overweight, including children and adolescents. Obesity can be caused by both chronic diseases and metabolic disorders, and in some cases even by the psycho-emotional state of a person. With the help of modern technologies, knowledge, experience of scientists and doctors, collected in one application andsupported by the power of artificial intelligence, it is possible to get rid ofthe problems associated with overweight and related diseases once and for all.</p>
+                </div>
+            {% endif %}
+
+            {% if LANGUAGE_CODE == 'ru' %}
+                <div>
+                    <div class="image-container">
+                        <div class="image-inner-container">
+                            <img src="{% static '/img/shop/screenshots/ru/android-screenshot-1.png' %}" />
+                            <img src="{% static '/img/shop/screenshots/ru/android-screenshot-2.png' %}" />
+                            <img src="{% static '/img/shop/screenshots/ru/android-screenshot-3.png' %}" />
+                        </div>
+                    </div>
+
+                    <p>BMI Disease Tracker - это приложение, созданное нашей компанией. Основной его целью является диагностика на ранних стадиях заболеваний, связанных с ожирением. В современном мире ожирение является наиболее распространенной проблемой не только среди взрослого населения стран мира, но и среди молодежи. Положение стоит настолько остро, что эта болезнь была приравнена к уровню эпидемии.</p>
+                    <p>Как приложение может диагностировать на ранних стадиях заболевания? Благодаря искусственному интелекту, обученному на многотысячных анонимных данных со всего мира, в том числе и со стран G20. Приложение будет полезным всем, кто заботится о своем здоровье и хочет сохранить его на долгие годы.</p>
+                    <p>Цель приложения в том, чтобы пользователь удобно получал своевременное диагностирование и персонализированные рекомендации, основанные на его медицинских данных для предотвращения и лечения возможного развития заболеваний. Сбор параметров организма в будущем будет выполняться в режиме реального времени при помощи умных часов, фитнес трекеров и других портативных устройств.</p>
+                    <p>В данный момент данные в приложение вводятся в ручном режиме, но команда разработчиков работает над добавлением в приложение поддержки все новых и новых устройств и приложений компаньенов для автоматизации процесса получения данных. После указания своих медицинских данных Вы можете практически незамедлительно получить результаты анализа состояния Вашего здоровья, а также узнать риски о возможном развитии заболеваний, связанных с нарушением веса, и не только. Также при использовании приложения Вы получаете персональные рекомендации по питанию и физической активности нацеленные на поддержание здоровья и предотвращение развития новых и уже существующих заболеваний. В данный момент в разработке находится еще одна немаловажня функция - "Связь с доктором". Благодаря ей в будущем всего в пару кликов Вы сможете поделиться со своим лечащим врачом данными о состоянии здоровья, снимаемыми с Вашего тела в автоматическом режиме при помощи портативных устройств. Такими данными являются частота сердечного ритма, давление и многое другое.</p>
+                    <p>Данная технология позволит Вам сохранить время, быть в курсе изменений состояния здоровья. А также, что не мало важно, сохранить его. Ведь ценность как здоровья, так и времени сложно переоценить.</p>
+                    <p>В компании уделяется огромное внимание профилактике развития заболеваний, а также их диагностике на ранних стадиях, так как чем раньше заболевание дагностировано, тем проще его вылечить и тем выше шансы на полное восстановление организма. В среднем ожирение и сопутствующие ему заболевания способны сократить продолжительность жизни до 5-ти лет, при умеренном избытке веса. А при выраженном избыточном весе и на все 15 лет и более. Ожирению могут сопутствовать такие заболевания как:
+                        <ul>
+                            <li>артериальная гипертензия;</li>
+                            <li>сахарный диабет;</li>
+                            <li>атеросклероз и ишемическая болезнь сердца;</li>
+                            <li>остеохондроз позвоночника;</li>
+                            <li>полиартрит и желчнокаменная болезнь;</li>
+                            <li>опухоли и другие серьезные и неизлечимые заболевания.</li>
+                        </ul>
+                    </p>
+                    <p>В настоящее время врачи всех стран мира серьезно обеспокоены числом людей, страдающих избыточным весом, в том числе детей и подростков. Ожирение может быть вызвано как хроническими заболеваниями, так и нарушением обмена веществ, а в некоторых случаях даже психо-эмоциональным состоянием человека. С помощью современных технологий, знаний, опыта ученых и врачей, собранных в одном приложении и подкрепленных мощью искуственного интелекта, возможно, раз и навсегда избавиться от проблем, связанных с избыточным весом и сопутствующим ему заболеванием.</p>
+                </div>
+            {% endif %}
+
+            <section class="row px-2">
+                <div class="my-4 text-center col video-container col-12 col-xl-8">
+                    <iframe src="https://www.youtube.com/embed/pnXXX4bu0ug" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="row col-12 col-xl-4 align-items-center justify-content-center">
+                    {% include 'includes/download-mobile-apps.html' %}
+                </div>
+            </section>
+        </section>
+    </div>
+</section>
+
+{% comment %} <section class="main about container-fluid d-flex align-items-center">
+ <div class="container justify-content-center mt-4 pt-4">
+
+{% for product in products %}
+
+ <a href="{{ product.get_absolute_url }}">
+  <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}">
+ </a>
+  <h2>
+  <a href="{{ product.get_absolute_url }}">
+  {{ product.name }}
+  </a>
+ </h2>
+ {{ product.description|truncatewords:30|linebreaks }}
+ {{ product.price }}
+ {% endfor %}
+  {% include "pagination.html" with page=products %}
+ </div>
+</section> {% endcomment %}
+
+<style>
+.image-container {
+    width: 224px;
+    height: 252px;
+    float: left;
+}
+
+.image-inner-container {
+    position: relative;
+    width: 224px;
+    height: 252px;
+}
+
+.image-container img {
+    width: 120px;
+    position: absolute;
+}
+
+.image-container img:nth-child(2) {
+    left: 42px;
+    top: 12px;
+}
+
+.image-container img:nth-child(3) {
+    left: 84px;
+    top: 24px;
+}
+
+@media screen and (max-width: 540px) {
+    .image-container {
+       width: 100%;
+    }
+
+    .image-inner-container {
+        margin: auto;
+    }
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+{% endblock content %}

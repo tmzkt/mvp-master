@@ -1,0 +1,44 @@
+{% load i18n %}
+
+<footer class="app-footer dark bg-secondary transparent container-fluid py-5 py-lg-2">
+    <div class="row">
+        <div class="col-12 col-md-4 px-4 py-4 py-md-0 text-center text-md-right">
+            <div class="mb-1">
+                <a href="mailto:support@intime.digital" target="_blank">
+                    support@intime.digital
+                </a>
+            </div>
+
+            <div>
+                <span class="mb-1 copyright text-light">© InTime BioTech 2018-2021</span>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4 px-4 d-flex align-items-center justify-content-center">
+            {% include "includes/social-icons.html" %}
+        </div>
+
+        <div class="col-12 col-md-4 px-4 py-4 py-md-0 text-center text-md-left text-secondary">
+            <div class="mb-1">
+                <a
+                    {% url 'pages:privacy' as privacyUrl %}
+                    {% if request.path == privacyUrl %}
+                    class="active"
+                    {% endif %}
+                    href={% url 'pages:privacy' %}>
+                    {% trans 'Privacy policy' %}
+                </a>
+            </div>
+
+            <div class="mb-1">
+                <a
+                    {% url 'pages:terms' as termsUrl %}
+                    {% if request.path == termsUrl %}
+                    class="active"
+                    {% endif %}
+                    href={% url 'pages:terms' %}>{% trans 'Terms of use' %}
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>

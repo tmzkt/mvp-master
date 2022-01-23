@@ -1,0 +1,230 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+
+{% block head %}
+    <title>Longevity InTime - {% trans 'Dashboard' %}</title>
+{% endblock head %}
+
+{% block content %}
+<section class="main dashboard container-fluid d-flex align-items-center">
+    <div class="container justify-content-center mt-4 pt-4 px-0 position-relative">
+        <h1 class="text-uppercase section-heading text-dark text-center mb-4 py-4">
+          {% trans 'Dashboard' %}
+        </h1>
+
+        <form method="post" class="text-secondary my-4 py-4">
+            {% csrf_token %}
+
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <label>
+                        <span>{{ form.weight.label }}</span>
+                    </label>
+                    {% bootstrap_field form.weight show_label=False %}
+                    <small class="form-text text-muted mt-n3 mb-3">
+                        {% if measuring_system == 1 %}
+                                {% trans 'Weight in kg' %}
+                        {% else %}
+                            {% trans 'Weight in kg' %}
+                        {% endif %}
+                    </small>
+
+                    <label>
+                        <span>{{ form.hip.label }}</span>
+                    </label>
+                    {% bootstrap_field form.hip show_label=False%}
+                    <small class="form-text text-muted mt-n3 mb-3">{% trans 'Thigh circumference in cm' %}</small>
+
+                    <label>
+                        <span>{{ form.waist.label }}</span>
+                    </label>
+                    {% bootstrap_field form.waist show_label=False%}
+                    <small class="form-text text-muted mt-n3 mb-3">{% trans 'Waist circumference in cm' %}</small>
+
+                    <label>
+                        <span>{{ form.neck.label }}</span>
+                    </label>
+                    {% bootstrap_field form.neck show_label=False %}
+                    <small class="form-text text-muted mt-n3 mb-3">{% trans 'Neck circumference in cm' %}</small>
+
+                    <label>
+                        <span>{{ form.wrist.label }}</span>
+                    </label>
+                    {% bootstrap_field form.wrist show_label=False %}
+                    <small class="form-text text-muted mt-n3 mb-3">{% trans 'Wrist circumference at thinnest point in cm' %}</small>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <label>
+                        {% trans 'Blood pressure' %}
+                    </label>
+
+                    <div class="row no-gutters">
+                        <div class="col-5">
+                            {% bootstrap_field form.blood_pressure_sys show_label=False %}
+                        </div>
+
+                        <div class="col-2 text-center py-2">/</div>
+
+                        <div class="col-5">
+                            {% bootstrap_field form.blood_pressure_dia  show_label=False %}
+                        </div>
+
+                        <small class="form-text text-muted mt-n3 mb-3">{% trans 'Systolic' %} / {% trans 'Diastolic pressure in mmHg Art.' %}</small>
+                    </div>
+
+                    <label>
+                        {{ form.heart_rate_alone.label }}
+                    </label>
+                    {% bootstrap_field form.heart_rate_alone show_label=False %}
+                    <small class="form-text text-muted mt-n3 mb-3">{% trans 'Pulse in beats per minute' %}</small>
+
+                    <label>
+                        {{ form.cholesterol.label }}
+                    </label>
+                    {% bootstrap_field form.cholesterol show_label=False %}
+                    <small class="form-text text-muted mt-n3 mb-3">{% trans 'Blood cholesterol level in mmol/l' %}</small>
+
+                    <label>
+                        {{ form.glucose.label }}
+                    </label>
+                    {% bootstrap_field form.glucose show_label=False %}
+                    <small class="form-text text-muted mt-n3 mb-3">{% trans 'Blood glucose level in mmol/l' %}</small>
+
+                    <label>
+                        {{ form.daily_activity_level.label }}
+                    </label>
+                    {% bootstrap_field form.daily_activity_level show_label=False %}
+                    <small id="activityLevelHelpText" class="form-text text-muted mt-n3 mb-3">
+                        {% if LANGUAGE_CODE == 'en' %}
+                            <div class='text-left'></div>
+                        {% endif %}
+
+                        {% if LANGUAGE_CODE == 'ru' %}
+                            <div class='text-left'></div>
+                        {% endif %}
+                    </small>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-primary my-3" type="submit">{% trans 'Save' %}</button>
+            </div>
+        </form>
+
+
+        {% if form_unfilled|length < 1 %}
+          <div class="popup-message-container shadow rounded-lg bg-white">
+            <div class="text-right">
+              <button type="button" class="close text-secondary">
+                {% include 'includes/close-button.html' %}
+              </button>
+            </div>
+
+            <div class="p-3">
+              <div class="popup-message text-center">
+                {% trans 'Data saved.' %}
+               </div>
+
+              <a href={% url 'cms:parameters' %} class="text-primary">
+                {% trans 'Open Parameters.' %}
+              </a>
+
+              <a href={% url 'cms:result' %} class="text-primary">
+                {% trans 'Open Analisys.' %}
+              </a>
+            </div>
+          </div>
+        {% endif %}
+    </div>
+</section>
+
+<script>
+  // Popup message
+  const popupMessageContainer = document.querySelector('.popup-message-container')
+  const popupCloseButton = popupMessageContainer.querySelector('button')
+
+  function closePopupMessage() {
+    popupMessageContainer.setAttribute('hidden', 'true')
+  }
+
+  popupCloseButton.addEventListener('click', closePopupMessage)
+
+  setTimeout(closePopupMessage, 5000)
+
+  // Set and change select activity level help text
+  const activityLevelHelpText = document.querySelector('#activityLevelHelpText')
+  const activityLevelSelect = document.querySelector('#id_daily_activity_level')
+
+  function updateDailyActivity(value) {
+      const options = Array.from(document.querySelectorAll('#id_daily_activity_level option'))
+      const helpText = [
+          {% if LANGUAGE_CODE == 'en' %}
+              "",
+              "Passive lifestyle",
+              "Light physical labor, walking",
+              "Physical labor or training 3-5 times a week",
+              "Heavy physical labor or training 6-7 times a week",
+              "I unload wagons day and night"
+          {% endif %}
+
+          {% if LANGUAGE_CODE == 'ru' %}
+              "",
+              "Пассивный образ жизни",
+              "Легкий физический труд, пешие прогулки",
+              "Физический труд или тренировки 3-5 раз в неделю",
+              "Тяжелый физический труд или тренировки 6-7 раз в неделю",
+              "Разгружаю вагоны днем и ночью"
+          {% endif %}
+      ]
+
+      options.forEach((option, index) => {
+          if (value === option.value) {
+              activityLevelHelpText.innerText = helpText[index]
+          }
+      })
+  }
+
+  window.addEventListener('load', () => updateDailyActivity(activityLevelSelect.value))
+  activityLevelSelect.addEventListener('change', event => updateDailyActivity(event.target.value))
+</script>
+
+<script>
+  // Switch save button activity based on form filling
+  const saveButton = document.querySelector('button[type=submit')
+  const inputList = document.querySelectorAll('.dashboard form input')
+
+  for (const input of inputList) {
+      input.addEventListener('input', checkIfFormFilled)
+      input.addEventListener('input', closePopupMessage)
+  }
+
+  function checkIfFormFilled() {
+      const unnecessaryInputs = ['glucose', 'cholesterol']
+
+      const unfilledIntputs = Array.from(inputList)
+          .filter(input => !input.value.length)
+          .filter(input => !unnecessaryInputs.includes(input.name))
+
+      if (unfilledIntputs.length === 0) {
+          saveButton.removeAttribute('disabled')
+      } else {
+          saveButton.setAttribute('disabled', 'disabled')
+      }
+  }
+
+  checkIfFormFilled()
+</script>
+
+<style>
+  .dashboard form p,
+  .dashboard form div,
+  .dashboard form,
+  .dashboard .form-control,
+  .dashboard .form-group {
+    max-width: 60rem;
+  }
+</style>
+{% endblock content %}

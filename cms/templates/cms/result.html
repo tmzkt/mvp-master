@@ -1,0 +1,61 @@
+{% extends '_base.html' %}
+{% load filter_type %}
+{% load i18n %}
+{% load bootstrap4 %}
+
+{% block head %}
+<title>Longevity InTime - {% trans 'Dashboard' %}</title>
+{% endblock head %}
+
+{% block content %}
+<section class="main result container-fluid d-flex align-items-center">
+    <div class="container align-items-center mt-4 px-0">
+        <section class="text-left text-secondary my-4 py-4 mx-lg-5 px-lg-5">
+            <div class="mb-4 py-4 row px-lg-5 mx-lg-5">
+                <div class="col-12 col-lg-3 text-left pt-2 mb-4"></div>
+
+                <h1 class="col text-uppercase section-heading text-dark text-center px-0" style="font-size: 29px;">
+                    {% trans 'Analysis results' %}
+                </h1>
+
+                <div class="col-12 col-lg-3 text-right mt-4 mt-lg-0">
+                    <a href="{% url 'cms:recommendation' %}" class="btn  btn-light border-secondary">{% trans 'Recommendations' %}</a>
+                </div>
+            </div>
+
+            <section class="text-left text-secondary mb-2 pb-2 px-lg-5 mx-lg-5">
+                {% bootstrap_messages %}
+
+                <section class="text-left text-secondary mt-4 pt-4">
+                    {% for i in risks %}
+                        <div class="card card-body shadow mb-2" style="background: {{ i.risk_string }}">
+                            {% if i.message %}{{ i.message }}
+                                {% if i.risk_percents %}{{ i.risk_percents }}{% endif %}
+                            {% endif %}<br>
+                            {% if i.recomendation %}{{ i.recomendation }}{% endif %}
+                        </div>
+                    {% endfor %}
+                </section>
+
+                <section class="text-left text-secondary mb-4 pb-4">
+                    {% for i in recomendations %}
+                        <div class="card card-body shadow mb-2" style="background: {{ i.importance_level }}">
+                            <div class="font-weight-bold">{% if i.message_short %}{{ i.message_short }}{% endif %}</div>
+                            <br>
+                            {% if i.message_long %}{{ i.message_long }}{% endif %}
+                        </div>
+                    {% endfor %}
+                </section>
+
+                <hr class="w-100" />
+
+                <div class="my-2 py-2 px-2">
+                    <small class="text-secondary">
+                        <em>{% trans 'Consult a specialist. It is not a medical application.' %}</em>
+                    </small>
+                </div>
+            </section>
+        </section>
+    </div>
+</section>
+{% endblock content %}

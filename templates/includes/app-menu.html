@@ -1,0 +1,325 @@
+{% load i18n %}
+
+<nav class="app-menu fixed-top navbar navbar-expand-lg navbar-light bg-light nav-down shadow d-flex flex-column p-0">
+  <div class="ticker">
+    <div class="ticker__wrap" id="ticker"></div>
+  </div>
+
+  <div class="container-fluid px-4 pt-1 pb-4 pb-lg-0">
+    <button data-toggle="collapse"
+      class="navbar-toggler navbar-toggler-right text-dark"
+      data-target="#navbarResponsive"
+      type="button"
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="nav navbar-nav ml-auto text-uppercase">
+        <li class="nav-item" role="presentation">
+          <a
+            {% url 'pages:index' as landingUrl %}
+            {% if request.path == landingUrl %}
+              class="nav-link active"
+            {% else %}
+              class="nav-link"
+            {% endif %}
+
+            href={% url 'pages:index' %}>
+              {% trans 'Main' %}
+          </a>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <a
+            {% url 'pages:about' as aboutUrl %}
+            {% if request.path == aboutUrl %}
+              class="nav-link active"
+            {% else %}
+              class="nav-link"
+            {% endif %}
+
+            href={% url 'pages:about' %}>
+              {% trans 'About' %}
+          </a>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <a
+            {% url 'pages:contact' as contactUrl %}
+            {% if request.path == contactUrl %}
+              class="nav-link active"
+            {% else %}
+              class="nav-link"
+            {% endif %}
+
+            href={% url 'pages:contact' %}>
+              {% trans 'Contacts' %}
+          </a>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <a
+            {% url 'publication:publication' as publicationUrl %}
+            {% if request.path == publicationUrl %}
+              class="nav-link active"
+            {% else %}
+              class="nav-link"
+            {% endif %}
+
+            href={% url 'publication:publication' %}>
+              {% trans 'Press' %}
+          </a>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <a
+            {% url 'pages:antivirus' as antivirusUrl %}
+            {% if request.path == antivirusUrl %}
+            class="nav-link active"
+            {% else %}
+            class="nav-link"
+            {% endif %}
+
+            href={% url 'pages:antivirus' %}>
+              {% trans 'AntiCoronaVirus' %}
+          </a>
+        </li>
+
+        <li class="nav-item" role="presentation">
+            <a
+                {% url 'shop:products_list' as shopUrl %}
+
+                {% if request.path == shopUrl %}
+                class="nav-link active"
+                {% else %}
+                class="nav-link"
+                {% endif %}
+
+                href={% url 'shop:products_list' %}>
+                    {% trans 'Shop' %}
+            </a>
+        </li>
+
+        {% if user.is_active %}
+          {% if request.user.is_authenticated %}
+
+          <li class="nav-item" role="presentation">
+            <a
+              {% url 'users:profile' as profileUrl %}
+              {% if request.path == profileUrl %}
+                class="nav-link active font-weight-bold"
+              {% else %}
+                class="nav-link font-weight-bold"
+              {% endif %}
+
+              href={% url 'users:profile' %}>
+                {% trans 'Profile' %}
+            </a>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <a
+              {% url 'cms:dashboard' as dashboardUrl %}
+              {% if request.path == dashboardUrl %}
+                class="nav-link active font-weight-bold"
+              {% else %}
+                class="nav-link font-weight-bold"
+              {% endif %}
+
+              href={% url 'cms:dashboard' %}>
+                {% trans 'Dashboard' %}
+            </a>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <a
+              {% url 'cms:parameters' as parametersUrl %}
+              {% if request.path == parametersUrl %}
+                class="nav-link active font-weight-bold"
+              {% else %}
+                class="nav-link font-weight-bold"
+              {% endif %}
+
+              {% if not data_filled or not result_filled %}
+                hidden
+              {% endif %}
+
+              href={% url 'cms:parameters' %}>
+                {% trans 'Parameters' %}
+            </a>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <a
+              {% url 'cms:result' as resultUrl %}
+              {% if request.path == resultUrl %}
+                class="nav-link active font-weight-bold"
+              {% else %}
+                class="nav-link font-weight-bold"
+              {% endif %}
+              {% if not data_filled or not result_filled %}
+                hidden
+              {% endif %}
+
+              href={% url 'cms:result' %}>
+                {% trans 'Analysis' %}
+            </a>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <span class="nav-link">
+              <a
+                class="log-out-button btn btn-primary text-light"
+                href={% url 'users:logout' %}>
+                  {% trans 'Log out' %}
+              </a>
+            </span>
+          </li>
+        {% endif %}
+
+        {% else %}
+          <li class="nav-item" role="presentation">
+            <span class="nav-link">
+              <a class="log-in-button btn btn-primary" href={% url 'users:login' %}>{% trans 'LOG IN' %}</a>
+            </span>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" href={% url 'users:signup' %}>{% trans 'Sign up' %}</a>
+          </li>
+        {% endif %}
+
+        <li class="nav-item" role="presentation">
+          <span class="nav-link">
+            <form class="language p-0 mb-1" action="{% url 'set_language' %}" method="post">
+              {% csrf_token %}
+
+              <input name="next" type="hidden" value="{{ redirect_to }}" />
+
+              <select class="form-control form-control-sm bg-secondary border-dark text-white text-uppercase"
+                name="language" onchange='if(this.value != 0) { this.form.submit(); }'>
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                <option class="text-uppercase bg-secondary" value="{{ language.code }}"
+                  {% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+                  {{ language.code }}
+                </option>
+                {% endfor %}
+              </select>
+            </form>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Hide Navbar on scroll down
+  var didScroll;
+  var lastScrollTop = 0;
+  var delta = 5;
+  var navbarHeight = $('.app-menu').outerHeight();
+
+  $(window).scroll(function(event){
+      didScroll = true;
+  });
+
+  setInterval(function() {
+      if (didScroll) {
+          hasScrolled();
+          didScroll = false;
+      }
+  }, 250);
+
+  function hasScrolled() {
+      const st = $(this).scrollTop();
+      const wh = window.innerHeight;
+      const dh = $(document).height();
+
+      // Make sure they scroll more than delta
+      if (Math.abs(lastScrollTop - st) <= delta) return;
+
+      // If they scrolled down and are past the navbar, add class .nav-up.
+      // This is necessary so you never see what is "behind" the navbar.
+      if (st > lastScrollTop && st > navbarHeight){
+          // Scroll Down
+          $('.app-menu').removeClass('nav-down').addClass('nav-up');
+      } else {
+          // Scroll Up
+          if (st + wh < dh) {
+              $('.app-menu').removeClass('nav-up').addClass('nav-down');
+          }
+      }
+
+      lastScrollTop = st;
+  }
+  </script>
+
+  <script>
+  // Hide Navbar by click outside (for mobile screens)
+  $(function() {
+    $('.main').click(function (event) {
+      $('.navbar-collapse').collapse('hide');
+    });
+  });
+
+  $(function() {
+    $('.app-footer').click(function (event) {
+      $('.navbar-collapse').collapse('hide');
+    });
+  });
+</script>
+
+<style lang="css">
+  .app-menu {
+    position: fixed;
+    transition: top .2s ease-in-out !important;
+  }
+
+  .nav-down {
+    top: 0;
+  }
+
+  .nav-up {
+    top: -80px;
+  }
+
+  .navbar-toggler {
+      color: white;
+  }
+
+  .nav .active {
+    color: #007bff !important;
+  }
+
+  .nav-link {
+    color: #6c757d;
+  }
+
+  .nav-link::hover {
+    color: #ffc107;
+  }
+
+  #ticker .ticker__link {
+    color: #f8f9fa;
+  }
+
+  #ticker .ticker__link:hover {
+    color: #ffc107;
+  }
+  form.language {
+    width: 64px;
+    align-items: start;
+  }
+  form.language .form-control {
+    width: 80px;
+    font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+    height: 22px;
+    padding: 0 0.75rem;
+  }
+</style>

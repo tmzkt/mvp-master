@@ -1,0 +1,58 @@
+{% extends '_base.html' %}
+{% load i18n %}
+
+{% block head %}
+<title>Longevity InTime - {% trans 'Support research' %}</title>
+{% endblock head %}
+
+{% block content %}
+<section class="main about container-fluid d-flex align-items-center">
+    <div class="container justify-content-center my-4 py-4">
+        <div class="mb-4 py-4 row px-lg-5 mx-lg-5">
+            <div class="col-12 col-lg-3 text-left pt-2 mb-4">
+                <a href="{% url 'pages:about' %}">
+                    {% include 'includes/back-button.html' %}
+                </a>
+            </div>
+
+            <h4 class="col text-uppercase section-heading text-dark text-center">
+                {% if LANGUAGE_CODE == 'en' %}        
+                    Support fundamental research in the fight against aging
+                {% endif %}
+
+                {% if LANGUAGE_CODE == 'ru' %}
+                    Поддержите фундаментальные исследования по борьбе со старением
+                {% endif %}
+            </h4>
+
+            <div class="col-12 col-lg-3 text-right mt-4 mt-lg-0"></div>
+        </div>
+
+        <section class="text-left text-secondary mb-2 pb-2 px-lg-5 mx-lg-5">
+            {% if LANGUAGE_CODE == 'en' %}
+                <p>Longevity InTime BioTech calls for helping the scientific communities of all countries in the world related to aging research, whose goal is to significantly extend life (120+).</p>
+                <p>The paradox is that the average cost of research can be no more than the cost of an apartment in the center of the European capital, however, thousands of apartments are bought daily, but it takes 0 to spend on aging research that could extend the lives of apartment buyers themselves.</p>
+                <p>Here are some studies that require investment. We will replenish this list. You can contact the authors of the research groups directly or <a href="{% url 'pages:send_email' %}?get_parameter_name={{ 'Supporting of fundamental research' }}">by emailing us</a>.
+                <ol>
+                    <li>Analysis of many scientific publications on the topic of cell aging has led experts to conclude that it is closely associated with translation impairments. (Recall that translation is the process of protein synthesis by a matrix from RNA, which, in turn, is copied from DNA). However, the mechanisms of this relationship have not yet been clarified.</li>
+                    <li>The older a person is, the more divisions his cells have gone through and the more errors have accumulated in their DNA. Therefore, the number of defective proteins also increases with age. Is this process one of the aging mechanisms? How exactly does it lead to the transformation of a cell into a more "older" one? Is it possible to slow down or even stop this "accumulation of errors"? This is a little-studied question.</li>
+                    <li>So, in a number of studies it was shown that blocking individual stages of translation or the intracellular signaling pathways that trigger it prolongs the life of a wide variety of organisms, from yeast to mammals. This gives hope that someday in the near future protein synthesis modulators will appear that will have the necessary selectivity and help humanity to prolong an active and healthy period of life without any side effects.</li>
+                    <li>Studies of the CD36 gene - "the main age gene".</li>
+                </ol>
+            {% endif %}
+
+            {% if LANGUAGE_CODE == 'ru' %}
+                <p>Компания Longevity InTime BioTech призывает помогать научным сообществам любых стран мира, связанных с исследованиями старения, целью которых является значительное продление жизни (120+).</p>
+                <p>Парадокс в том, что средняя стоимость исследования может составлять не более стоимости квартиры в центре европейской столицы, однако ежедневно покупаются тысячи квартир, но на исследования по старению, которые могли бы продлить жизни самим покупателям квартир, тратится 0.</p>
+                <p>Вот некоторые исследования, которые требуют инвестиций. Мы будем пополнять данный список. Вы можете связаться с авторами исследовательских групп напрямую или <a href="{% url 'pages:send_email' %}?get_parameter_name={{ 'Поддержка фундаментальных исследований' }}" >написав нам на почту</a>.
+                <ol>
+                    <li>Анализ множества научных публикаций по теме старения клетки привёл экспертов к выводу, что оно тесно связано с нарушениями трансляции. (Напомним, что трансляцией называется процесс синтеза белка по матрице из РНК, которая, в свою очередь, скопирована с ДНК). Однако механизмы этой взаимосвязи до сих пор не выяснены.</li>
+                    <li>Чем старше человек, тем больше делений прошли его клетки и тем больше ошибок накопилось в их ДНК. Поэтому количество дефектных белков с возрастом тоже увеличивается. Является ли этот процесс один из механизмов старения? Как именно он приводит к превращению клетки в более "пожилую"? Можно ли замедлить или даже остановить это "накопление ошибок"? Это малоизученный вопрос.</li>
+                    <li>Так, в ряде исследований было показано, что блокирование отдельных этапов трансляции или запускающих её внутриклеточных сигнальных путей продлевает жизнь самых разных организмов, от дрожжей до млекопитающих. Это даёт надежду, что когда-нибудь в недалёком будущем появятся модуляторы белкового синтеза, которые будут обладать нужной избирательностью и помогут человечеству без каких-либо побочных эффектов продлить активный и здоровый период жизни.</li>
+                    <li>Исследования гена CD36 -"главного по старению".</li>
+                </ol>
+            {% endif %}
+        </section>
+    </div>
+</section>
+{% endblock %}

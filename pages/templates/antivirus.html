@@ -1,0 +1,28 @@
+{% extends '_base.html' %}}
+{% load i18n %}
+{% load static %}
+{% load bootstrap4 %}
+
+{% block head %}
+
+<title> Longevity InTime - {% trans 'AntiCoronaVirus' %} </title>
+<link rel="stylesheet" href="{% static 'css/common.css' %}">
+
+{% endblock head %}
+
+{% block content %}
+
+<section class="main antivirus">
+    <div class="container-fluid pt-4">
+        <h1 class="text-uppercase section-heading text-dark  text-center justify-content-center my-4 py-4">{% trans 'AntiCoronaVirus' %}</h1>
+        <div id="antivirus"></div>
+    </div>
+
+    <section class="container d-flex align-items-center">
+      <div class="my-4 text-center col video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/m9nhyESz0Gs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+  </section>
+</section>
+<script src={% static 'components/stats/js/app.js' %}></script>
+{% endblock %}

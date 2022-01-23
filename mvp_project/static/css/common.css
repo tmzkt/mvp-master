@@ -1,0 +1,4 @@
+@-webkit-keyframes fadeOutDown{0%{transform:translateY(80%);
+  opacity:0}to{transform:none;opacity:1}};
+  @keyframes fadeOutDown{0%{transform:translateY(80%);
+    opacity:0}to{transform:none;opacity:1}}.chart{margin:0 auto;padding:12px 18px};

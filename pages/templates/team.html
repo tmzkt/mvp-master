@@ -1,0 +1,42 @@
+{% extends '_base.html' %}
+{% load i18n %}
+
+{% block head %}
+<title>Longevity InTime - {% trans 'Vacancies' %}</title>
+{% endblock head %}
+
+{% block content %}
+<section class="main about container-fluid d-flex align-items-center">
+    <div class="container justify-content-center mt-4">
+        <section class="my-4">
+            <a href={% url 'pages:about' %}>
+                {% include 'includes/back-button.html' %}
+                <span class="mx-4">{% trans 'About' %}</span>
+            </a>
+        </section>
+        
+        <h1 class="text-uppercase section-heading text-dark text-center mb-4 py-4">
+            {% trans 'Our team' %}
+        </h1>
+        
+        <section class="mb-4 pb-4 text-secondary">
+            {% if LANGUAGE_CODE == 'en' %}
+            <p>Longevity InTime BioTech team:</p>
+            
+            {% endif %}
+
+            {% if LANGUAGE_CODE == 'ru' %}
+            <p>Команда Longevity InTime BioTech:</p>
+
+            {% endif %}
+        </section>
+
+        <section class="my-4 pb-4">
+            <a href={% url 'pages:about' %}>
+                {% include 'includes/back-button.html' %}
+                <span class="mx-4">{% trans 'About' %}</span>
+            </a>
+        </section>
+    </div>
+</section>
+{% endblock %}

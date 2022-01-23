@@ -1,0 +1,45 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+
+{% block head %}
+<title>Longevity InTime - {% trans 'Recommendations' %}</title>
+{% endblock head %}
+
+{% block content %}
+<section class="main dashboard container-fluid d-flex align-items-center">
+    <div class="container align-items-center mt-4 px-0">
+        <section class="text-left text-secondary my-4 py-4 mx-lg-5 px-lg-5">
+            <div class="mb-4 py-4 row px-lg-5 mx-lg-5">
+                <div class="col-12 col-lg-2 text-left pt-2 mb-4">
+                    <a href="{% url 'cms:dashboard' %}">
+                        {% include 'includes/back-button.html' %}
+                    </a>
+                </div>
+
+                <h1 class="col text-uppercase section-heading text-dark text-center">
+                    {% trans 'Recommendations' %}
+                </h1>
+
+                <div class="col-12 col-lg-2 text-right mt-4 mt-lg-0"></div>
+            </div>
+
+            <section class="text-left text-secondary mb-2 pb-2 px-lg-5 mx-lg-5">
+                <section class="text-left text-secondary mb-4 pb-4">
+                    {% for r in rec %}
+                        <div class="card card-body shadow mb-2">{{ r }}</div>
+                    {% endfor %}
+                </section>
+
+                <hr width="100%" />
+
+                <div class="my-2 py-2 px-2">
+                    <small class="text-secondary">
+                        <em>{% trans 'Consult a specialist. It is not a medical application.' %}</em>
+                    </small>
+                </div>
+            </section>
+        </section>
+    </div>
+</section>
+{% endblock content %}

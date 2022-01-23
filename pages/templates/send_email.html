@@ -1,0 +1,114 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+
+{% block head %}
+<title>Longevity InTime - {% trans 'Send email' %}</title>
+{% endblock head %}
+
+{% block content %}
+<section class="main contact container-fluid d-flex align-items-center">
+    <div class="container justify-content-center my-4 py-4 px-0">
+
+        <form method="post" enctype="multipart/form-data" content="text/html; charset=UTF-8" class="card shadow p-4">
+            <h2 class="section-heading text-dark mb-4 w-100">{% trans 'Send email' %}</h2>
+
+            {% csrf_token %}
+            {% bootstrap_messages %}
+            <div class="form-group mb-3">
+                {% bootstrap_field form.title %}
+            </div>
+            {% if request.user.is_authenticated %}
+                <div class="form-group  mb-3">
+                    <input type="text" class="form-control" id="email" name="email" placeholder='Введите Ваш email' value='{{ user.email }}' >
+                </div>
+            {% if user.first_name %}
+                <div class="form-group  mb-3">
+                    <input type="text" class="form-control" id="name" name="name" placeholder='Введите Ваше Имя' value='{{ user.first_name }} {% if user.last_name %}{{ user.last_name }}{% endif %}' >
+                </div>
+            {% else %}
+            <div class="form-group mb-3">
+                {% bootstrap_field form.name %}
+            </div>
+            {% endif %}
+            {% else %}
+                <div class="form-group  mb-0">
+                    {% bootstrap_field form.email %}
+                </div>
+                <div class="form-group mb-3">
+                    {% bootstrap_field form.name %}
+                </div>
+            {% endif %}
+
+            <div class="form-group mb-3">
+                {% bootstrap_field form.message %}
+            </div>
+
+            <div class="send-email__file-input form-group">
+                <label for="file" class="image-upload-button btn  btn-light border-secondary">
+                    Прикрепить файл
+                    <input type="file" name="file" class="form-control-file" title="" id="id_file">
+                </label>
+                <span class="send-email__filename-container text-dark ml-4"></span>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-primary" type="submit">{% trans 'Send' %}</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script>
+const fileInput = document.querySelector('.send-email__file-input input[name=file]')
+const fileNameContainer = document.querySelector('.send-email__filename-container')
+fileInput.addEventListener('change', () => { fileNameContainer.innerText = fileInput.value})
+</script>
+
+<script>
+const submitButton = document.querySelector('button[type="submit"]')
+
+const nameInput = document.querySelector('#name')
+const messagelnput = document.querySelector('#id_message')
+const emailInput = document.querySelector('#email')
+
+function checkButtonActivity() {
+  const inputAllFilled = nameInput.value && emailInput.value && messagelnput.value
+
+  if (inputAllFilled) {
+    submitButton.removeAttribute("disabled")
+  } else {
+    submitButton.setAttribute("disabled", "true")
+  }
+}
+
+checkButtonActivity()
+
+for (const input of [nameInput, messagelnput, emailInput]) {
+  input.addEventListener('input', checkButtonActivity)
+}
+</script>
+
+<style>
+.send-email__file-input label {
+    position: relative;
+    overflow: hidden;
+}
+
+.send-email__filename-container {
+
+}
+
+.send-email__file-input input {
+    width: 1000%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+}
+</style>
+{% endblock content %}

@@ -1,0 +1,30 @@
+When building the model, the AutoML library flaml was used.
+.pkl file contains description, model and scaler.
+
+Model itself for prediction (presence of stroke); model was buit on data of 5000 people.
+its input:
+* Age (years) (age of the patient)
+* Avg_glucose_level (mg/dL) (avg_glucose_level: average glucose level in blood)
+* BMI: body mass index
+* Hypertension (Resting blood pressure is persistently at or above 140/90 mmHg)
+
+
+* All gathered features (except 'Hypertension' - it's binary feature) must be transformed by scaler before input
+
+- scaler. Use it as scaler.transform(X)
+
+Scores of the model:
+f-1 measure: 0.1492537313432836
+
+
+How to load a model:
+from pickle import load
+with open('Stroke.pkl', 'rb') as f:
+    description, model, scaler = load(f)
+
+
+How to make predictions:
+sample=[Age, Avg_glucose_level, BMI]
+standard_X_without_hypertension = scaler.transform(np.array([[Age, Avg_glucose_level, BMI]]))
+standard_X = np.concatenate((standard_X_without_hypertension, Hypertension.values.reshape((number_of_rows,1))), axis=1)
+prediction = model.predict(standard_sample)

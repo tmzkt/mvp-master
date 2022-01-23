@@ -1,0 +1,83 @@
+{% extends '_base.html' %}}
+{% load i18n %}
+{% load bootstrap4 %}
+
+{% block head %}
+<title>Longevity InTime - {% trans 'Contact us' %}</title>
+{% endblock head %}
+
+{% block content %}
+<section class="main contact container-fluid d-flex align-items-center px-0">
+    <div class="container my-4 py-4 px-0">
+
+        <form method="post" class="card shadow p-4">
+            <h2 class="section-heading mb-4 w-100">{% trans 'Contact us' %}</h2>
+
+            {% csrf_token %}
+            {% bootstrap_messages %}
+
+            <div class="form-group mb-0">
+                {% bootstrap_field form.name %}
+            </div>
+
+            <div class="form-group  mb-0">
+                {% bootstrap_field form.message %}
+            </div>
+
+            {% if request.user.is_authenticated %}
+                <div class="form-group  mb-0">
+                    <input type="text" class="form-control" id="email" name="email" placeholder='{% trans "Enter your email" %}' value='{{ user.email }}' >
+                </div>
+            {% else %}
+                <div class="form-group  mb-0">
+                    {% bootstrap_field form.email %}
+                </div>
+            {% endif %}
+
+            <div class="form-group mb-0">
+                <span
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    data-html="true"
+                    data-title="<div class='text-left'>{% trans 'The phone number must be in +xxxxxxxxxxx format' %}</div>" >
+                    {% bootstrap_field form.phone_number %}
+                </span>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-primary mt-3" type="submit">{% trans 'Send' %}</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script>
+const submitButton = document.querySelector('button[type="submit"]')
+
+const nameInput = document.querySelector('#id_name')
+const messagelnput = document.querySelector('#id_message')
+const emailInput = document.querySelector('#email')
+
+function checkButtonActivity() {
+  const inputAllFilled = nameInput.value && emailInput.value && messagelnput.value
+
+  if (inputAllFilled) {
+    submitButton.removeAttribute("disabled")
+  } else {
+    submitButton.setAttribute("disabled", "true")
+  }
+}
+
+checkButtonActivity()
+
+for (const input of [nameInput, messagelnput, emailInput]) {
+  input.addEventListener('input', checkButtonActivity)
+}
+</script>
+
+<style>
+textarea {
+    max-height: 300px;
+}
+</style>
+{% endblock %}

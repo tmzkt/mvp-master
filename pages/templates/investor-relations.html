@@ -1,0 +1,103 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block head %}
+<title>Longevity InTime - {% trans 'Investor relations' %}</title>
+{% endblock head %}
+
+{% block content %}
+<section class="main investor-relations container-fluid d-flex align-items-center">
+    <div class="container justify-content-center my-4 py-4">
+        <div class="mb-4 py-4 row px-lg-5 mx-lg-5">
+            <div class="col-12 col-lg-3 text-left pt-2 mb-4">
+                <a href="{% url 'pages:about' %}">
+                    {% include 'includes/back-button.html' %}
+                </a>
+            </div>
+
+            <h1 class="col text-uppercase section-heading text-dark text-center">
+                {% trans 'Investor relations' %}
+            </h1>
+
+            <div class="col-12 col-lg-3 text-right mt-4 mt-lg-0"></div>
+        </div>
+
+        <section class="text-left text-secondary mb-2 pb-2 px-lg-5 mx-lg-5">
+            <div class="my-4 py-4">
+                <a 
+                    href="https://drive.google.com/file/d/1RIdHtyZQrFXKitYSch4nCTdFtnoOcoCv/view?usp=sharing" 
+                    target="_blank">
+                    {% trans 'Download Longevity InTime presentation' %} 
+                </a>
+            </div>
+            
+            {% if LANGUAGE_CODE == 'en' %}
+                <p>Longevity InTime BioTech creates a conglomerate of companies in the Longevity area and offering swap of equity to the leading Biotech, AI, computer vision, medtech, big data, life sciences startups.</p>
+                <p>Have a longevity product or service, {% include 'includes/send-pitch-deck.html' %}</p>
+            {% endif %}
+            
+            {% if LANGUAGE_CODE == 'ru' %}
+                <p>Longevity InTime BioTech создаёт конгломерат компаний в области Longevity и предлагает инвестиции ведущим стартапам в области Biotech, AI, компьютерного зрения, медтехники, big data, life sciences.</p>
+                <p>Если у вас есть продукт или сервис, нацеленный на продление жизни, {% include 'includes/send-pitch-deck.html' %}</p>
+            {% endif %}
+        </section>
+
+        <section class="my-4 pb-4 text-center">
+            <a 
+                href="https://www.f6s.com/intimedigitizemetolive120?follow=1" 
+                target="_blank" 
+                title="Follow Longevity InTime BioTech on F6S"
+                data-toggle="tooltip"
+                data-placement="top"
+                data-html="true"
+                data-title="Follow Longevity InTime BioTech on F6S."
+                class="investor-link mx-2">
+
+                <img 
+                    src="{% static 'img/third-part/f6s-follow-white.png' %}" 
+                    alt="Follow Longevity InTime BioTech on F6S" 
+                    style="width: 78px; height: 22px; padding: 0px;" />
+            </a>
+            
+            <a
+                href="https://www.crunchbase.com/organization/longevity-intime-digital" 
+                target="_blank" 
+                title="Longevity InTime BioTech on Crunchbase"
+                data-toggle="tooltip"
+                data-placement="top"
+                data-html="true"
+                data-title="Longevity InTime BioTech on Crunchbase."
+                class="investor-link mx-2">
+                
+                <img
+                    src="{% static 'img/third-part/crunchbase.png' %}"
+                    alt="Follow Longevity InTime BioTech on Crunchbase"
+                    style="width: 78px; height: 22px; padding: 0px;" />
+            </a>
+            
+            <a 
+                href="https://gust.com/companies/intime-digitize-me-to-live-120-1-stage" 
+                target="_blank" 
+                title="Longevity InTime BioTech on Gust"
+                data-toggle="tooltip"
+                data-placement="top"
+                data-html="true"
+                data-title="Longevity InTime BioTech on Gust."
+                class="investor-link mx-2">
+                <img
+                    src="{% static 'img/third-part/gust.png' %}"
+                    alt="Follow Longevity InTime BioTech on Gust"
+                    style="width: 78px; height: 22px; padding: 0px;" />
+            </a>
+        </section>
+    </div>
+</section>
+<style>
+.investor-link img {
+    height: 22px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+}
+</style>
+{% endblock %}

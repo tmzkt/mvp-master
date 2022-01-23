@@ -1,0 +1,105 @@
+{% extends '_base.html' %}
+{% load i18n %}
+
+{% block head %}
+<title>Longevity InTime - {% trans 'Vacancies' %}</title>
+{% endblock head %}
+
+{% block content %}
+<section class="main about container-fluid d-flex align-items-center">
+    <div class="container justify-content-center my-4 py-4">
+        <div class="mb-4 py-4 row px-lg-5 mx-lg-5">
+            <div class="col-12 col-lg-3 text-left pt-2 mb-4">
+                <a href="{% url 'pages:about' %}">
+                    {% include 'includes/back-button.html' %}
+                </a>
+            </div>
+
+            <h1 class="col text-uppercase section-heading text-dark text-center">
+                {% trans 'Vacancies' %}
+            </h1>
+            
+            <div class="col-12 col-lg-3 text-right mt-4 mt-lg-0"></div>
+        </div>
+
+        <section class="mb-4 pb-4 text-secondary mx-lg-5 px-lg-5">
+            {% if LANGUAGE_CODE == 'en' %}
+            <p>Longevity InTime BioTech (AI backed severe diseases real-time tracker) is permanently inviting:</p>
+            
+            <ul>
+                <li>DevOps</li>
+                <li>IT security</li>
+                <li>Back End developer (Python, Django)</li>
+                <li>iOS developers</li>
+                <li>Android developers</li>
+                <li>Front-end developers (HTML, JavaScript, Vue.js)</li>
+                <li>Sales Executives</li>
+                <li>Managers</li>
+                <li>Designer (graphic, mobile, web)</li>
+                <li>SMM manager</li>
+                <li>Lawyer (any jurisdiction)</li>
+                <li>Corporate lawyer (US law)</li>
+                <li>Hardware developer</li>
+                <li>Computer vision developer</li>
+                <li>Data scientists</li>
+                <li>Data mining developers</li>
+                <li>Neural network scientists</li>
+                <li>Medics</li>
+                <li>Scientists (mathematics, biology, physics, chemistry)</li>
+                <li>Researchers</li>
+                <li>Business Analytics</li> 
+                <li>Representatives in each of 251 countries</li> 
+            </ul>
+
+            <p>We offer equity in our Delaware, USA company from the current valuation of $34,1M. In 3-5 months after generating revenue we can move successful partners to paying in cash, keeping earned shares.</p>
+            <p>Company has a buy back option during 18 months out of the same valuation of the company with 10% interest. Terms are subject to individual negotiations and has the only aim to give mutual guarantees keeping the work done prior revenue.</p>
+            <p>Since 2018 the diverse team from 11 countries (USA, Finland, Great Britain, India, Indonesia, Russia, Nigeria, Kazakhstan, Azerbaijan, Belorussia, Uzbekistan) is building a $100B company, which plans to use “coding” for saving people lives detecting on early stages TOP 20 severe diseases.</p>
+            <p>To learn more please contact <a href="mailto:jobsforequity@intime.digital?subject=Job" target="_blank">JobsForEquity@intime.digital</a></p>
+            <p><a href='https://www.longevity.technology/real-time-tracking-of-400-longevity-biomarkers/' target="_blank">Latest article about us from leading longevity media</a></p>
+            <p><a href="https://teterin6.wixsite.com/olegteterin" target="_blank">More about main founder</a></p>
+            <p>Please spread a word of mouth about this opportunity.</p>
+            <p>Thanks.</p>
+
+            {% endif %}
+
+            {% if LANGUAGE_CODE == 'ru' %}
+            <p>Longevity InTime BioTech (AI система отслеживания тяжелых заболеваний) приглашает следующих специалистов:</p>
+
+            <ul>
+                <li>DevOps</li>
+                <li>Специалиста по ИТ безопасности</li>
+                <li>Разработчиков Back End (Python, Django)</li>
+                <li>iOS разработчиков</li>
+                <li>Android разработчиков</li>
+                <li>Front-end разработчиков (HTML, JavaScript, Vue.js)</li>
+                <li>Менеджеры по продажам</li>
+                <li>Менеджеры</li>
+                <li>UI/UX Дизайнеров</li>
+                <li>SMM менеджеров</li>
+                <li>Юристов (любая юрисдикция)</li>
+                <li>Корпоративных юристов (американское право)</li>
+                <li>Разработчиков переносного оборудования (носимая электроника, био контейнеры)</li>
+                <li>Разработчиков компьютерного зрения</li>
+                <li>Data scientists</li>
+                <li>Data mining</li>
+                <li>Ученых нейронных сетей</li>
+                <li>Медиков</li>
+                <li>Ученых (математиков, биологов, физиков, химиков)</li>
+                <li>Исследователей</li>
+                <li>Бизнес-аналитиков</li>
+                <li>Представители в каждой из 251 стран</li>
+            </ul>
+
+            <p>Мы предлагаем оплату работы акциями нашей компании (Делавэр, США), из текущей оценки в ​​$34,1 млн. Через 3-5 месяцев после получения дохода мы можем перевести успешных партнеров на зарплату, сохраняя заработанные акции.</p>
+            <p>Компания имеет возможность выкупа акций в течение 18 месяцев из той же оценки компании, по которой зашел партнер с 10% премией. Условия подлежат переговорам и имеют единственную цель - дать взаимные гарантии до получения выручки.</p>
+            <p>С 2018 года команда из 11 стран (США, Финляндия, Великобритания, Индия, Индонезия, Россия, Нигерия, Казахстан, Азербайджан, Беларусь, Узбекистан) создает компанию стоимостью $100 млрд., которая использует «программный код» для спасения жизней людей, выявляющих на ранних стадиях ТОП 20 тяжелых заболеваний.</p>
+            <p>Чтобы узнать больше, пожалуйста, свяжитесь с <a href="mailto:jobsforequity@intime.digital?subject=Job" target="_blank">JobsForEquity@intime.digital</a></p>
+            <p><a href='https://www.longevity.technology/real-time-tracking-of-400-longevity-biomarkers/' target="_blank">Последняя статья о нас от ведущего СМИ по вопросам долголетия</a></p>
+            <p><a href="https://teterin6.wixsite.com/olegteterin" target="_blank">Подробнее о главном основателе</a></p>
+            <p>Пожалуйста, поделитесь этой информацией.</p>
+            <p>Спасибо.</p>
+            {% endif %}
+        </section>
+    </div>
+</section>
+{% endblock %}

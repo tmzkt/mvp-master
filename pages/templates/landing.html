@@ -1,0 +1,41 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load static %}
+{% load bootstrap4 %}
+
+{% block head %}
+<title>Longevity InTime</title>
+<link rel="stylesheet" href="{% static 'css/common.css' %}">
+{% endblock head %}
+
+{% block content %}
+<section class="main promo container-fluid d-flex align-items-end bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+          {% include 'includes/download-mobile-apps.html' %}
+      </div>
+    </div>
+    {% comment %} Reviews
+    <div class="container">
+
+      {% include 'includes/reviews.html' %}
+    </div>
+    {% endcomment %}
+  </div>
+</section>
+
+{% include 'includes/chat-bot.html' %}
+
+
+<style>
+.col{
+    min-height: 11em;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+</style>
+
+
+{% endblock content %}

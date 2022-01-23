@@ -1,0 +1,133 @@
+{% load i18n %}
+{% load static %}
+
+{% if LANGUAGE_CODE == 'en' %}
+    <a href="#" data-toggle="modal" data-target="#sendPitchDeckModal">send us your pitch deck</a> for fundraising options.
+{% endif %}
+
+{% if LANGUAGE_CODE == 'ru' %}
+    <a href="#" data-toggle="modal" data-target="#sendPitchDeckModal">отправьте нам вашу презентацию</a> и мы рассмотрим возможность инвестиций.
+{% endif %}
+
+<!--  Modal windows -->
+<div id="sendPitchDeckModal" class="modal hide fade in" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-light--transparent">
+          <div class="modal-header">
+            <button type="button" class="close text-secondary" data-dismiss="modal" aria-hidden="true">{% include 'includes/close-button.html' %}</button>
+          </div>
+
+          <div class="modal-body text-dark pb-2 pb-md-4 mb-2 mb-md-4 px-4 mx-4">
+            {% if LANGUAGE_CODE == 'en' %}
+              <p class="text-left">
+                As part of your registration process, applicants are required to share the status of their registration through social media with the following caption. E.g.
+
+                <blockquote class="blockquote">
+                  Our team just applied to @LongevityInTime #InvestInLongevity #LongevityInTime www.intime.digital
+                </blockquote>
+
+                The registration is confirmed once the LongevityInTime Twitter Account or Facebook post "Liked" your post or Tweet.
+              </p>
+
+              <div id="checkList" class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <input class="form-check-input" type="checkbox" value="" id="check1">
+                  <label class="form-check-label" for="check1">
+                    I understand that in order for my application to be considered I must tweet
+                  </label>
+                </div>
+
+                <div class="input-group-prepend">
+                  <input class="form-check-input" type="checkbox" value="" id="check2">
+                  <label class="form-check-label" for="check2">
+                    I have read and agreed to the <a href="{% url 'pages:terms' %}" target="_blank">terms and conditions<a>
+                  </label>
+                </div>
+              </div>
+
+              <div class="text-center mt-4 pt-4 mb-0 pb-0">
+                <a id="sendButton" href="{% url 'pages:send_email' %}?get_parameter_name={{ 'Investor relations' }}" class="btn btn-secondary border-secondary disabled" >Send pitch deck</a>
+              </div>
+            {% endif %}
+
+            {% if LANGUAGE_CODE == 'ru' %}
+              <p>
+                В рамках вашего процесса регистрации кандидаты должны сообщить о статусе своей регистрации через социальные сети со следующей подписью. Например:
+
+                <blockquote class="blockquote">
+                  Наша команда только что подала заявку на @LongevityInTime #InvestInLongevity #LongevityInTime www.intime.digital
+                </blockquote>
+
+                <span>Регистрация подтверждается после того, как учетная запись LongevityInTime в Твиттере или посте Facebook "лайкнет" ваш пост или твит.</span>
+              </p>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <input class="form-check-input" type="checkbox" value="" id="check1">
+                  <label class="form-check-label text-left" for="check1">
+                    Я прочитал и согласен с <a href="{% url 'pages:terms' %}" target="_blank">условиями использования</a>
+                  </label>
+                </div>
+
+                <div class="input-group-prepend">
+                  <input class="form-check-input" type="checkbox" value="" id="check2">
+                  <label class="form-check-label text-left" for="check2">
+                    Я понимаю, что для рассмотрения моей заявки я должен написать в Твиттере
+                  </label>
+                </div>
+              </div>
+
+              <div class="text-center mt-4 pt-4 mb-0 pb-0">
+                <a id="sendButton" href="{% url 'pages:send_email' %}?get_parameter_name={{ 'Investor relations' }}" class="btn btn-secondary border-secondary disabled" >Отправить презентацию</a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const sendButton = document.querySelector('#sendButton')
+const check1 = document.querySelector('#check1')
+const check2 = document.querySelector('#check2')
+
+function watchCheckList(event) {
+  if (check1.checked && check2.checked) {
+    sendButton.classList.remove('disabled')
+    sendButton.classList.remove('btn-secondary')
+    sendButton.classList.add('btn-light')
+  } else if (!sendButton.classList.contains('disabled')) {
+    sendButton.classList.add('disabled')
+
+    if (!sendButton.classList.contains('btn-secondary')) {
+      sendButton.classList.remove('btn-light')
+      sendButton.classList.add('btn-secondary')
+    }
+  }
+}
+
+check1.addEventListener('change', event => watchCheckList(event))
+check2.addEventListener('change', event => watchCheckList(event))
+</script>
+
+<style>
+#sendPitchDeckModal {
+  padding-right: 0 !important;
+}
+
+.modal-dialog .bg-light--transparent {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  border: solid 1px rgba(0, 0, 0, 0.2);
+
+  font-family: 'Montserrat', Arial, Helvetica, Verdana, sans-serif;
+}
+
+.modal-dialog .bg-light--transparent * {
+  animation: nav-icons 0s forwards !important;
+}
+
+.modal-dialog .bg-light--transparent div {
+  border: none;
+}
+</style>

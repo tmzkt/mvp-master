@@ -1,0 +1,122 @@
+{% load i18n %}
+{% load static %}
+
+<div class="d-flex jusify-content-center">
+  <a href="#" data-toggle="modal" role="button" data-target="#downloadAppsModal" class="btn action-btn mx-auto my-4 px-3 py-2 text-uppercase shadow">
+    <div class="text-secondary">{% trans 'Download mobile apps' %}</div>
+    <div class="font-weight-bold" style="color: #1AB2FD;">iOS & Android</div>
+  </a>
+</div>
+
+<!--  Modal windows -->
+<div id="downloadAppsModal" class="modal hide fade in px-0" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-light">
+            <div class="modal-header">
+                <button type="button" class="close text-secondary" data-dismiss="modal" aria-hidden="true">{% include 'includes/close-button.html' %}</button>
+            </div>
+
+            <div class="modal-body text-dark text-center pt-0">
+              {% if LANGUAGE_CODE == 'en' %}
+              This is test version. Hope for your understanding. In case some bugs, please report on <a href="{% url 'pages:send_email' %}?get_parameter_name={{ 'Bug report' }}" target="_blank">support@intime.digital</a>
+              {% endif %}
+
+              {% if LANGUAGE_CODE == 'ru' %}
+                Это тестовая версия. Надеемся на понимание о наличии возможных ошибок. Будем благодарны за обратную связь на
+                <a href="{% url 'pages:send_email' %}?get_parameter_name={{ 'Bug report' }}" target="_blank">support@intime.digital</a>
+              {% endif %}
+            </div>
+
+            <div class="text-center pb-4">
+              <a href="https://play.google.com/store/apps/details?id=com.application.bmiobesity" target="_blank" role="button" class="btn action-btn shadow my-4 px-3 py-2 mx-3">
+                <div class="text-secondary">{% trans 'Download for Android' %}</div>
+                <div class="text-dark font-weight-bold">BMI Disease Tracker</div>
+              </a>
+
+              <a href="https://apps.apple.com/ru/app/antiobesity/id1511198472" target="_blank" role="button" class="btn action-btn shadow my-4 px-3 py-2 mx-3">
+                <div class="text-secondary">{% trans 'Download for iOS' %}</div>
+                <div class="text-dark font-weight-bold">AntiObesity</div>
+              </a>
+
+              <a target="_blank" role="button" data-toggle="modal" data-target="#downloadInstructionModal" class="btn action-btn shadow my-4 px-3 py-2 mx-3">
+                <div class="text-secondary">{% trans 'Download for Android' %}</div>
+                <div class="text-dark font-weight-bold">AntiCoronaVirus</div>
+              </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="downloadInstructionModal" class="modal hide fade in px-0" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg shadow">
+        <div class="modal-content bg-light">
+            <div class="modal-header">
+                <button type="button" class="close text-secondary" data-dismiss="modal" aria-hidden="true">{% include 'includes/close-button.html' %}</button>
+            </div>
+
+            <div class="modal-body text-dark pt-0 text-center">
+              {% if LANGUAGE_CODE == 'en' %}
+                <p class="text-center px-4">
+                  Thank you for downloading our <span class="font-weight-bold">Anti Corona Virus</span> app.
+                </p>
+
+                <div class="text-justify px-4">
+                  We apologize for the lack of this application on Google Play.
+                  This is Google's policy and we are committed to addressing this temporary inconvenience as soon as possible.
+                  Please watch this video.
+                  It provides step-by-step instructions for installing the application from the file you downloaded.
+                </div>
+              {% endif %}
+
+              {% if LANGUAGE_CODE == 'ru' %}
+                <p class="text-center px-4">
+                  Благодарим Вас за скачивание нашего приложения <span class="font-weight-bold">Anti Corona Virus</span>.
+                </p>
+
+                <div class="text-justify px-4">
+                  Приносим свои извинения за отсутствие данного приложения в Google Play.
+                  Это связано с политикой Google и мы стремимся как можно скорее устранить это временное неудобство.
+                  Пожалуйста, посмотрите данное видео.
+                  В нем представлена пошаговая инструкция по установке приложения со скачаного Вами файла.
+                </div>
+              {% endif %}
+
+              <div class="my-4 text-center col video-container">
+                <video controls width="100%" height="300">
+                  <source src="{% static '/android/AntiVirusApp-video-instruction.webm' %}" type="video/webm">
+                  {% trans "Sorry, but your browser doesn't support HTML5 video." %}
+                </video>
+              </div>
+
+              <a href={% static '/android/AntiVirusApp-release version-0.5.8.apk' %} target="_blank" role="button" class="btn action-btn shadow my-4 px-3 py-2 mx-3">
+                <div class="text-secondary">{% trans 'Download for Android' %}</div>
+                <div class="text-dark font-weight-bold">AntiCoronaVirus</div>
+              </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+  .modal-dialog .bg-light {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    font-family: 'Montserrat', Arial, Helvetica, Verdana, sans-serif;
+  }
+
+  .modal-dialog .bg-light * {
+    animation: nav-icons 0s forwards !important;
+  }
+
+  .modal-dialog .bg-light div {
+    border: none;
+  }
+
+  .modal-content {
+      border-radius: 20px;
+  }
+
+  #downloadInstructionModal .modal-dialog {
+    max-width: 585px;
+  }
+</style>

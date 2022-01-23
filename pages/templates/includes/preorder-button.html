@@ -1,0 +1,13 @@
+{% load i18n %}
+
+<a href={% url 'pages:application' %} role="button" class="preorder-button btn action-btn mx-auto my-4 px-3 py-2 text-uppercase shadow">
+  {% if LANGUAGE_CODE == 'en' %}
+    <div class="text-secondary font-weight-normal">Pre order</div>
+    <div class="text-dark font-weight-bold">Full version</div>
+  {% endif %}
+
+  {% if LANGUAGE_CODE == 'ru' %}
+    <div class="text-secondary font-weight-normal">Предзаказ</div>
+    <div class="text-dark font-weight-bold">Полная версия</div>
+  {% endif %}
+</a>

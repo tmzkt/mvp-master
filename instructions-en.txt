@@ -1,0 +1,90 @@
+1.mkdir gitlab_mvp && cd gitlab_mvp
+2.git clone https://gitlab.com/teterin/mvp.git (Enter your username / password)
+3.cd mvp
+4.git checkout backend
+5.sh local_instance_install.sh (Follow console prompts)
+  / for windows:
+    5.1 virtualenv env
+    5.2 Install rabbitmq separately from the official site (before installing erlang and setting ERLANG_HOME in system variables)
+  / for mac:
+    5.1a install homebrew => /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    5.1b if already installed then => brew update
+    5.2 brew install rabbitmq
+
+6.source venv / bin / activate / for window (env \ Scripts \ activate)
+7.pip install --upgrade pip
+8.pip install -r requirements.txt
+9.mkdir -p logs / django / for windows (mkdir logs, cd logs, mkdir django)
+
+10.export DJANGO_SETTINGS_MODULE = mvp_project.settings.local / for windows (use "set" instead of "export")
+11.python manage.py migrate --run-syncdb
+12.python manage.py runserver
+
+In a new console window
+13.source venv / bin / activate
+14.export DJANGO_SETTINGS_MODULE = mvp_project.settings.local
+15.sudo service rabbitmq-server start
+16. celery -A mvp_project worker -l info / for windows (first run the command "pip install gevent", for linux "-P gevent")
+
+************************************************* ****************
+************************************************* ****************
+************************************************* ****************
+
+If celery cannot connect to rabbitmq-server then
+uncomment the line NO_IP_ADDRESS = 127.0.0.1 in
+/etc/rabbitmq/rabbitmq-env.conf
+
+************************************************* ****************
+************************************************* ****************
+************************************************* ****************
+
+17. Complete user registration. Email confirmation email
+show up in console with celery
+
+************************************************* ****************
+************************************************* ****************
+************************************************* ****************
+
+If you need user data to work, you need to execute in a new terminal window:
+
+source venv / bin / activate
+export DJANGO_SETTINGS_MODULE = mvp_project.settings.local
+sudo service rabbitmq-server start
+celery -A mvp_project worker -l info
+
+celery -A mvp_project worker -l info -P gevent (Win10 + Pycharm options gevent enabled)
+
+************************************************* ****************
+************************************************* ****************
+************************************************* ****************
+
+After updating the database structure, you need to delete the cache files (000 *. *) And make migrations:
+python manage.py makemigrations
+python manage.py migrate
+python manage.py migrate --run-syncdb
+
+************************************************* ****************
+************************************************* ****************
+************************************************* ****************
+
+To fill in user data, run the commands:
+python manage.py loaddata cat.json
+python manage.py loaddata rec.json
+
+************************************************* ****************
+************************************************* ****************
+************************************************* ****************
+
+In case of problems with the django-admin utility, localization commands can be executed in the following way:
+python manage.py makemessages -a
+python manage.py compilemessages
+
+************************************************* ****************
+************************************************* ****************
+************************************************* ****************
+
+All further launches of the application are carried out by the commands:
+
+source venv / bin / activate
+export DJANGO_SETTINGS_MODULE = mvp_project.settings.local
+python manage.py runserver

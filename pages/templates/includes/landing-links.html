@@ -1,0 +1,113 @@
+{% load i18n %}
+{% load static %}
+
+{% if LANGUAGE_CODE == 'en' %}
+<div class="articles p-2">
+  <h5 class="d-none d-md-block text-secondary">Articles</h5>
+  &#9679;
+
+  <a
+    class="font-weight-normal"
+    target="_blank"
+    href="https://www.longevity.technology/real-time-tracking-of-400-longevity-biomarkers/">
+    Longevity technology
+  </a>
+</div>
+
+<div class="interviews mt-md-2 p-2">
+  <h5 class="d-none d-md-block text-secondary">Interviews</h5>
+
+  <div>
+    &#9679;
+
+    <a
+      class="font-weight-normal"
+      target="_blank"
+      href="https://www.linkedin.com/posts/olegteterin_3q-racefields-bigdata-activity-6711997044938084352-MGfr">
+      David Gammond Podcast
+    </a>
+  </div>
+
+  <div>
+    &#9679;
+
+    <a
+      class="font-weight-normal"
+      target="_blank"
+      href="https://www.linkedin.com/posts/olegteterin_the-leadership-in-business-podcast-episode-activity-6709868738478391296-sgRQ">
+      The Leadership In Business Podcast
+    </a>
+  </div>
+</div>
+
+<div class="awards mt-md-2 p-2">
+  <h5 class="d-none d-md-block text-secondary">Awards</h5>
+
+  &#9679;
+  <a
+    class="font-weight-normal"
+    target="_blank"
+    href="https://www.linkedin.com/posts/olegteterin_longevity-intime-biotech-llc-the-usa-2020-activity-6745037922069733376-c5H_">
+    International Life Sciences Award
+  </a>
+</div>
+{% endif %}
+
+{% if LANGUAGE_CODE == 'ru' %}
+<div class="interviews p-2">
+  <h5 class="d-none d-md-block text-secondary">Статьи</h5>
+  &#9679;
+
+  <a
+    class="font-weight-normal"
+    target="_blank"
+    href="https://www.longevity.technology/real-time-tracking-of-400-longevity-biomarkers/">
+    Longevity technology
+  </a>
+</div>
+
+<div class="interviews mt-md-2 p-2">
+  <h5 class="d-none d-md-block text-secondary">Интервью</h5>
+
+  <div>
+    &#9679;
+
+    <a
+      class="font-weight-normal"
+      target="_blank"
+      href="https://www.linkedin.com/posts/olegteterin_3q-racefields-bigdata-activity-6711997044938084352-MGfr">
+      David Gammond Podcast
+    </a>
+  </div>
+
+  <div>
+    &#9679;
+
+    <a
+      class="font-weight-normal"
+      target="_blank"
+      href="https://www.linkedin.com/posts/olegteterin_the-leadership-in-business-podcast-episode-activity-6709868738478391296-sgRQ">
+      The Leadership In Business Podcast
+    </a>
+  </div>
+</div>
+
+<div class="awards mt-md-2 p-2">
+  <h5 class="d-none d-md-block text-secondary">Награды</h5>
+
+  &#9679;
+  <a
+    class="font-weight-normal"
+    target="_blank"
+    href="https://www.linkedin.com/posts/olegteterin_longevity-intime-biotech-llc-the-usa-2020-activity-6745037922069733376-c5H_">
+    International Life Sciences Award
+  </a>
+</div>
+{% endif %}
+
+<style>
+.articles, .awards, .interviews {
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.8)
+}
+</style>

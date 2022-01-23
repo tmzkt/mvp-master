@@ -1,0 +1,368 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load static %}
+
+
+{% block content %}
+
+<section class="main container">
+  <div class="row">
+
+    {% if LANGUAGE_CODE == 'en' %}
+    <div class="col my-4" id="accordion" >
+            <!-- Articles -->
+          <h3>
+            <p class="text-start text-primary mb-0">
+              {% trans 'Articles' %}
+            </p>
+          </h3>
+
+
+          <div class="border-top ml-0 mr-0" id="headingOne">
+            <div class="float-right" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
+                {% include 'includes/publication-button.html' %}
+            </div>
+          </div>
+
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body row align-content-start ml-0 mr-0">
+                {% for filds in article %}
+                  <div class="col col-md-6 col-lg-4 mt-3 mb-2" >
+                    <div class="iframe_article">
+                        <a class="heading_article" href="{{ filds.name_article_en}}">{{ filds.heading_article_en|truncatechars_html:67 }}
+                          <div class="myframe_article" >{{ filds.article_text_en|truncatechars_html:180 }}</div>
+                        </a>
+                      </div>
+                    </div>
+                 {% endfor %}
+              </div>
+          </div>
+          <!-- Interview -->
+          <h3>
+            <p class="text-start text-primary mb-0">
+                {% trans 'Interview' %}
+            </p>
+          </h3>
+
+          <div class="border-top" id="headingTwo">
+              <div class="float-right" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                {% include 'includes/publication-button.html' %}
+              </div>
+          </div>
+
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body row align-content-start ml-0 mr-0">
+                {% for filds in interview %}
+                <div class="col col-md-6 col-lg-4 mt-3 mb-2">
+                  <div class="iframe_interview">
+                    <a class="heading_interview" href="{{ filds.name_interview_en }}" name="myframes">{{ filds.heading_interview_en|truncatechars_html:70}}</a>
+                          <div class="mt-3 mb-3">
+                            <iframe style=" border-radius: 5px; margin:0 auto;padding:0; display:block;"
+                              width="262.87" height="155" name="myframes"
+                              scrolling="no" src="{{ filds.name_interview_en }}"
+                              frameborder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowfullscreen>
+                            </iframe>
+                          </div>
+                      </div>
+                  </div>
+                 {% endfor %}
+              </div>
+            </div>
+            <!-- Awards -->
+            <h3>
+              <p class="text-start text-primary mb-0">
+                  {% trans 'Awards' %}
+              </p>
+            </h3>
+
+            <div class="border-top" id="headingThree">
+                <div class="float-right" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  {% include 'includes/publication-button.html' %}
+                </div>
+            </div>
+
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body row align-content-start ml-0 mr-0">
+                  {% for filds in awards %}
+                  <div class="col col-md-6 col-lg-4 mt-3 mb-2">
+                    <div class="iframe_awards">
+                        <a class="heading_awards" href="{{ filds.name_awards_en }}"> {{ filds.heading_awards_en|truncatechars_html:70 }}
+                          <img class="mb-0" src="{% if filds.image_awards %} {{filds.image_awards.url}} {% else %}{% static 'img/promo.png' %}{% endif %}"
+                              width="262.78" height="80"   style="border-radius: 5px;">
+                          <div class="myframe_awards">
+                            {{ filds.awards_text_en|truncatechars_html:100 }}
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                   {% endfor %}
+                </div>
+              </div>
+        </div>
+        {% endif %}
+
+        {% if LANGUAGE_CODE == 'ru' %}
+        <div class="col my-4" id="accordion" >
+                <!-- Articles -->
+              <h3>
+                <p class="text-start text-primary mb-0">
+                  {% trans 'Articles' %}
+                </p>
+              </h3>
+
+              <div class="border-top ml-0 mr-0" id="headingOne">
+                <div class="float-right" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
+                    {% include 'includes/publication-button.html' %}
+                </div>
+              </div>
+
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body row align-content-start ml-0 mr-0">
+                    {% for filds in article %}
+                      <div class="col col-md-6 col-lg-4 mt-3 mb-2" >
+                        <div class="iframe_article">
+                            <a class="heading_article" href="{{ filds.name_article_ru }}">{{ filds.heading_article_ru|truncatechars:70 }}
+                              <div class="myframe_article" >{{ filds.article_text_ru|truncatechars:115 }}</div>
+                            </a>
+                          </div>
+                        </div>
+                     {% endfor %}
+                  </div>
+              </div>
+              <!-- Interview -->
+              <h3>
+                <p class="text-start text-primary mb-0">
+                    {% trans 'Interview' %}
+                </p>
+              </h3>
+
+              <div class="border-top" id="headingTwo">
+                  <div class="float-right" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    {% include 'includes/publication-button.html' %}
+                  </div>
+              </div>
+
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                  <div class="card-body row align-content-start ml-0 mr-0">
+                    {% for filds in interview %}
+                    <div class="col col-md-6 col-lg-4 mt-3 mb-2">
+                      <div class="iframe_interview">
+                        <a class="heading_interview" href="{{ filds.name_interview_ru }}" name="myframes">{{ filds.heading_interview_ru|truncatechars_html:70 }}</a>
+                              <div class="mt-3 mb-3">
+                                <iframe style=" border-radius: 5px; margin:0 auto;padding:0; display:block;"
+                                  width="262.87" height="155" name="myframes"
+                                  scrolling="no" src="{{ filds.name_interview_ru }}"
+                                  frameborder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowfullscreen>
+                                </iframe>
+                              </div>
+                          </div>
+                      </div>
+                     {% endfor %}
+                  </div>
+                </div>
+                <!-- Awards -->
+                <h3>
+                  <p class="text-start text-primary mb-0">
+                      {% trans 'Awards' %}
+                  </p>
+                </h3>
+
+                <div class="border-top" id="headingThree">
+                    <div class="float-right" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      {% include 'includes/publication-button.html' %}
+                    </div>
+                </div>
+
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body row align-content-start ml-0 mr-0">
+                      {% for filds in awards %}
+                      <div class="col col-md-6 col-lg-4 mt-3 mb-2">
+                        <div class="iframe_awards">
+                            <a class="heading_awards" href="{{ filds.name_awards_ru }}" target="_blank">{{ filds.heading_awards_ru|truncatechars_html:70 }}
+                              <img class="mb-0" src="{% if filds.image_awards %} {{filds.image_awards.url}} {% else %}{% static 'img/promo.png' %}{% endif %}"
+                                  width="262.78" height="80" style="border-radius: 5px;">
+                              <div class="myframe_awards">
+                                {{ filds.awards_text_ru|truncatechars_html:100 }}
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                       {% endfor %}
+                    </div>
+                  </div>
+            </div>
+            {% endif %}
+  </div>
+</section>
+
+<style>
+
+  .main{
+    overflow-x:hidden;
+  }
+
+  h3 {
+    margin:0;
+    padding:0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #007BFF;
+  }
+
+  .border-top {
+    border: 1px solid #007BFF;
+    width:100%;
+    height:auto;
+
+  }
+
+  #collapseOne, #collapseTwo, #collapseThree{
+      transition: 0.50s;
+       -webkit-transition: 0.50s;
+       -o-transition: 0.50s;
+        -moz-transition: 0.50s;
+    }
+
+
+  /* International Life Sciences Article */
+
+  .iframe_article {
+    margin:0 auto;
+    padding:0;
+    width:285;
+    height:180;
+    background: rgba(252, 253, 255, 0.98);
+    border: 1px solid rgba(196, 196, 196, 0.3);
+    box-sizing: border-box;
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+  }
+
+  .heading_article{
+    display:block;
+    margin:0 auto;
+    width: 261px;
+    height: 44px;
+    padding-top: 9px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    text-align-all: justify;
+    word-break: inherit;
+  }
+
+  .myframe_article{
+    display:block;
+    width: 261px;
+    height: 92px;
+    margin:0 auto;
+    padding-top:9px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    text-align-last: auto;
+    word-break: break-all;
+    line-break: normal;
+  }
+
+/* International Life Sciences Interview */
+
+  .heading_interview{
+    display:block;
+    margin:0 auto;
+    padding-top:9px;
+    width: 261px;
+    height: 36px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    text-align-all: justify;
+    word-break: inherit;
+  }
+
+
+  .iframe_interview{
+    margin:0 auto;
+    padding:0;
+    width: 285px;
+    height: 215px;
+    background: rgba(252, 253, 255, 0.98);
+    border: 1px solid rgba(196, 196, 196, 0.3);
+    box-sizing: border-box;
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+  }
+
+/* International Life Sciences Award */
+
+  .iframe_awards{
+    margin:0 auto;
+    padding:0;
+    width: 285px;
+    height: 215px;
+    background: rgba(252, 253, 255, 0.98);
+    border: 1px solid rgba(196, 196, 196, 0.3);
+    box-sizing: border-box;
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+  }
+
+  .heading_awards{
+    display:block;
+    margin:0 auto;
+    padding-top:9px;
+    max-width: 261px;
+    max-height: 44px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    text-align-all: justify;
+    word-break: inherit;
+  }
+
+  .myframe_awards{
+    margin:0 auto;
+    padding-top:9px;
+    position: absolute;
+    display:block;
+    width: 248px;
+    height: 81px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    text-align-last: auto;
+    word-break: break-all;
+    line-break: normal;
+    }
+
+</style>
+
+{% endblock content %}

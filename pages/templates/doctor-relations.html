@@ -1,0 +1,44 @@
+{% extends '_base.html' %}
+{% load i18n %}
+
+{% block head %}
+<title>Longevity InTime - {% trans 'Doctor relations' %}</title>
+{% endblock head %}
+
+{% block content %}
+<section class="main doctor-relations container-fluid d-flex align-items-center">
+    <div class="container justify-content-center my-4 py-4">
+        <div class="mb-4 py-4 row px-lg-5 mx-lg-5">
+            <div class="col-12 col-lg-3 text-left pt-2 mb-4">
+                <a href="{% url 'pages:about' %}">
+                    {% include 'includes/back-button.html' %}
+                </a>
+            </div>
+
+            <h1 class="col text-uppercase section-heading text-dark text-center">
+                {% trans 'Doctor relations' %}
+            </h1>
+
+            <div class="col-12 col-lg-3 text-right mt-4 mt-lg-0"></div>
+        </div>
+        
+        <section class="text-left text-secondary mb-2 pb-2 px-lg-5 mx-lg-5">
+            {% if LANGUAGE_CODE == 'en' %}
+                <p>Longevity InTime Biotech is a telemedicine company that delivers TOP 20 Severe Diseases Online Detection & Prevention Program to self-insured employers, sportsmen, health plans & consumers.</p>
+                <p>Longevity InTime Biotech is a 5-year prevention program designed to help patients to reduce their risk for developing TOP 20 disease, incl heart attack, stroke, diabetes, cancers.</p>
+                <p>The program helps patients with pre-severe diseases risk to reduce their risk for developing major life shortening diseases by 74% based on researches of our scientific team.</p>
+                <p>Longevity InTime Biotech has raised more than $2 million in capital from approximately 50 likeminded professionals who have invested in the company and serve on our every day basis & advisory board.</p>
+                <p>We invite physicians, private doctors to invest in Longevity InTime Biotech. Our doctors & physicians normally invest $15K-$25K and can use an IRA/401K (for USA) to invest.</p>
+            {% endif %}
+            
+            {% if LANGUAGE_CODE == 'ru' %}
+                <p>Longevity InTime Biotech - телемедицинская компания, которая предоставляет ТОП-20 онлайн программ по выявлению и профилактике тяжелых заболеваний для самозастрахованных работодателей, спортсменов, планов медицинского страхования и потребителей.</p>
+                <p>Longevity InTime Biotech - это 5-летняя профилактическая программа, призванная помочь пациентам снизить риск развития TOP-20 болезней, включая инфаркт, инсульт, диабет, рак.</p>
+                <p>Программа помогает пациентам с риском развития тяжелых заболеваний снизить риск развития основных заболеваний, приводящих к сокращению жизни, на 74%, основываясь на исследованиях нашей научной группы.</p>
+                <p>Компания Longevity InTime Biotech привлекла более 2 миллионов долларов США примерно от 50 профессионалов-единомышленников, которые инвестировали в компанию и работают в нашей повседневной консультативной группе.</p>
+                <p>Мы приглашаем терапевтов, частных врачей инвестировать в Longevity InTime Biotech. Средний чек варьируется от 15 до 25 тысяч долларов США и инвесторы могут использовать IRA / 401K (для США) для инвестиций.</p>
+            {% endif %}
+        </section>
+    </div>
+</section>
+{% endblock %}

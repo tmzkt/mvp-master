@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Testimonials </title>
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+	<script src="jquery-3.4.1.min.js"></script>
+	<script src="owlcarousel/owl.carousel.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".owl-carousel").owlCarousel({
+				nav:true,
+				loop:true,
+				autoplay:true
+			});
+		});
+	</script>
+    <style type="text/css">
+	
+		.owl-carousel
+		{
+			margin-left: auto;
+			margin-right: auto;
+		}
+	
+		.testimonial
+		{
+			border: 1px RGB(68, 169, 184) solid;
+			height: 200px;
+			background: url(img/author_stars.png);
+			background-repeat: no-repeat;
+			background-color: RGB(14, 46, 83);
+			background-position: 10% 80%;
+		}
+		
+		.author-text 
+		{
+			margin-left: 10px;
+			margin-top: 40px;
+			color: #FFFFFF;
+		}
+		
+		.author-img 
+		{
+			float: right;
+			width: 120px !important;
+			height: 120px !important;
+			border: 2px RGB(79, 175, 191) solid;
+			border-radius: 50%;
+			margin-right: 25px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="owl-carousel">
+		<div class="testimonial"> 
+			<p class="author-text">"Отличный сервис. Решил свои проблемы, стал сильнее и энергичнее". - Иван Иванов</p>
+			<img class="author-img" src="img/asian_man.jpg"/>
+		</div>
+		<div class="testimonial"> 
+			<p class="author-text">"Отличный сервис. Решил свои проблемы, стал сильнее и энергичнее". - Иван Иванов</p>
+			<img class="author-img" src="img/asian_man.jpg"/>
+		</div>
+		<div class="testimonial"> 
+			<p class="author-text">"Отличный сервис. Решил свои проблемы, стал сильнее и энергичнее". - Иван Иванов</p>
+			<img class="author-img" src="img/asian_man.jpg"/>
+		</div>
+		<div class="testimonial"> 
+			<p class="author-text">"Отличный сервис. Решил свои проблемы, стал сильнее и энергичнее". - Иван Иванов</p>
+			<img class="author-img" src="img/asian_man.jpg"/>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900');
+@font-face {
+  font-family: FontAwesome;
+  src: url(../fonts/FontAwesome.otf);
+}
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  vertical-align: baseline;
+  font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+input,
+textarea {
+  font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+p {
+  line-height: 1.75;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+section h2.section-heading {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+section h3.section-subheading {
+  font-size: 18px;
+  font-weight: 400;
+  font-style: solid;
+  margin-bottom: 75px;
+  text-transform: none;
+  font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.main {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  background-color: white;
+  padding-top: 70px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  min-height: calc(100vh - 72px);
+}
+
+/* Backgrounds */
+.promo {
+  /*background-image: url(../img/promo.png);*/
+  background-image: url(../img/Longevity_bg.png);
+}
+.log-in {
+  background-image: url(../img/log-in.png);
+}
+.sign-up, .pre-order, .contact {
+  background-image: url(../img/registration.png);
+}
+.sign-up-done {
+  background-image: url(../img/log-in.png);
+}
+.email-verify-done,
+.password-reset,
+.password-change,
+.password-changed {
+  background-image: url(../img/password-reset.png);
+}
+.pre-order {
+  background-image: url(../img/registration.png);
+}
+
+nav * {
+  font-size: 14px !important;
+}
+
+.text-mmuted {
+  color: #6c757d !important;
+}
+
+.main .btn {
+  font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+  border-radius: 12px;
+}
+
+.btn-primary:disabled {
+  background-color: #A0A6AB;
+  border-color: #A0A6AB;
+}
+
+.app-menu .btn, .app-menu select {
+  border-radius: 7px;
+}
+
+a:hover {
+  color: #3312FF;
+  text-decoration: none;
+}
+
+/*  */
+/*  */
+/*  */
+
+input,
+textarea {
+  font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+p {
+  line-height: 1.75;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+section h1.section-heading {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+section h3.section-subheading {
+  font-size: 18px;
+  font-weight: 400;
+  font-style: solid;
+  margin-bottom: 75px;
+  text-transform: none;
+  font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.full-height {
+  min-height: 100vh;
+}
+
+.alert {
+  font-weight: normal;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 200px;
+  min-width: 200px;
+  height: 200px;
+  background: #e9ecef;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+label[for='image'] {
+  position: relative;
+  overflow: hidden;
+}
+
+label[for='image'] .form-control-file {
+  width: 1000%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.profile .devices {
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+}
+
+.password-change label,
+.password-reset label {
+  display: none;
+}
+
+.dashboard .form-group small,
+.password-change .form-group small {
+  display: none;
+}
+
+.form-control.is-invalid,
+.form-control.is-valid {
+  background-position: center right calc(0.375em + 0.1875rem);
+}
+
+.alert-dismissible .close {
+  right: -8px;
+}
+
+/* Action buttons */
+.action-btn {
+  background: rgb(244, 244, 244);
+  border: 1px solid rgba(37, 34, 34, 0.45);
+  border-radius: 15px;
+  font-family: Montserrat;
+  font-style: normal;
+  width: 260px;
+}
+.action-btn div:nth-child(1) {
+  font-size: 16px;
+}
+.action-btn div:nth-child(2) {
+  font-size: 20px;
+}
+.action-btn:hover {
+  background: rgb(220, 220, 220);
+}
+.action-btn:active {
+  background: rgb(144, 144, 144);
+}
+.action-btn[disabled] * {
+  color: #6c757d;
+}
+.action-btn.disabled {
+  background: rgb(244, 244, 244);
+  color: #6c757d;
+}
+
+/* Icons */
+.icon-large {
+  transform: scale(2);
+}
+
+/* Tooltips */
+.bs-tooltip-auto[x-placement^='right'] .arrow::before,
+.bs-tooltip-right .arrow::before {
+  border-right-color: #17a2b8;
+}
+.bs-tooltip-auto[x-placement^='left'] .arrow::before,
+.bs-tooltip-left .arrow::before {
+  border-left-color: #17a2b8;
+}
+.bs-tooltip-auto[x-placement^='bottom'] .arrow::before,
+.bs-tooltip-bottom .arrow::before {
+  border-bottom-color: #17a2b8;
+}
+.bs-tooltip-auto[x-placement^='top'] .arrow::before,
+.bs-tooltip-top .arrow::before {
+  border-top-color: #17a2b8;
+}
+.tooltip-arrow,
+.tooltip-inner {
+  background-color: #17a2b8;
+}
+.tooltip.show {
+  opacity: 1;
+}
+.tooltip-inner {
+  max-width: 350px;
+}
+div.tooltip-inner {
+  max-width: 550px;
+}
+
+
+/* Light theme */
+a {
+  color: #343a40;
+  font-weight: 600;
+}
+.dark {
+  color: white;
+}
+.dark a {
+  color: white;
+}
+.dark a:hover:not(.btn) {
+  color: #3312FF;
+}
+.card {
+  border-radius: 10px;
+}
+
+/* Forms */
+.form-group textarea {
+  font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+form.login-form,
+form.language {
+  border-width: 0;
+}
+form.login-form .btn,
+.log-out-button,
+.log-in-button,
+.language {
+  height: 22px;
+  padding: 0 12px;
+  line-height: 20px;
+}
+form.login-form {
+  font-size: 14px;
+}
+form {
+  max-width: 100%;
+}
+.form-control,
+.form-group {
+  width: 100%;
+  max-width: 40rem;
+}
+form.card {
+  border-radius: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-group textarea {
+  font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+form.login-form input {
+  border-style: inherit;
+  padding: 0 0.2rem;
+  width: 8em;
+  height: 22px;
+}
+form input:focus,
+form textarea:focus {
+  outline: none;
+}
+.form-control,
+.form-group {
+  width: 100%;
+  max-width: 40rem;
+}
+.main form {
+  margin: auto;
+  width: 100%;
+  max-width: 40rem;
+}
+form p,
+form div {
+  width: 100%;
+  max-width: 40rem;
+  text-align: left;
+}
+
+.sign-up label {
+  display: none;
+}
+
+.errorlist {
+  margin: 0;
+}
+
+/* Antivirus */
+.antivirus .total__item-val {
+  text-align: right;
+}
+
+/* Text */
+p {
+  text-indent: 20px;
+  text-align: justify;
+}
+
+/* Containers */
+.container.transparent {
+  background: rgba(252, 253, 255, 0.8);
+  border-radius: 20px;
+  max-width: 1200px;
+}
+
+/* Popup messages */
+.popup-message-container {
+  position: fixed;
+  top: 86px;
+  right: 6px;
+}
+
+/* Video */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px; height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

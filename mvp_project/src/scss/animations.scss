@@ -1,0 +1,10 @@
+@keyframes fadeOutDown {
+  0% {
+    transform: translateY(80%);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,46 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+
+{% block head %}
+<title>Longevity InTime - {% trans 'Recommendations' %}</title>
+{% endblock head %}
+{% block content %}
+<section class="main dashboard container-fluid d-flex align-items-center">
+    <div class="container align-items-center mt-4">
+        <section class="my-4">
+            <a href="{% url 'cms:disease' %}">
+                {% include 'includes/back-button.html' %}
+                <span class="mx-4">{% trans 'Disease' %}</span>
+            </a>
+        </section>
+
+        <section class="text-left text-secondary my-4 py-4 mx-lg-5 px-lg-5">
+            <h1 class="text-uppercase section-heading text-dark text-center my-4 py-4">
+                {% trans 'Recommendations' %}
+            </h1>
+            {% for r in rec %}
+                <p class="card card-body">{{ r }}</p>
+            {% endfor %}
+        </section>
+        {% if rec_not %}
+        <section class="text-left text-secondary my-4 py-4 mx-lg-5 px-lg-5">
+            <h1 class="text-uppercase section-heading text-dark text-center my-4 py-4">
+                {% trans 'Not recommendations' %}
+            </h1>
+
+            {% for r in rec_not %}
+                <p class="card card-body">{{ r }}</p>
+            {% endfor %}
+        </section>
+        {% endif %}
+
+        <section class="my-4 pb-4">
+            <a href="{% url 'cms:disease' %}">
+                {% include 'includes/back-button.html' %}
+                <span class="mx-4">{% trans 'Disease' %}</span>
+            </a>
+        </section>
+    </div>
+</section>
+{% endblock content %}

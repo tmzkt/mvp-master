@@ -1,0 +1,14 @@
+@mixin button-reset {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  font: inherit;
+  line-height: normal;
+  cursor: pointer;
+  user-select: none;
+
+  &:focus {
+    outline: none;
+  }
+}

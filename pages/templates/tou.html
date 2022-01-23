@@ -1,0 +1,31 @@
+{% extends '_base.html' %}
+{% load i18n %}
+
+{% block head %}
+<title>Longevity InTime - {% trans 'Terms of use' %}</title>
+{% endblock head %}
+
+{% block content %}
+    <section class="main terms container-fluid d-flex align-items-center">
+        <div class="container justify-content-cente">
+            <div class="text-center">
+                <h1 class="text-uppercase my-4">{% trans 'Terms of use' %}</h1>
+                
+                {% get_current_language as LANGUAGE_CODE %}
+
+                {% if LANGUAGE_CODE == 'en' %}
+                    <h3 class="text-secondary section-subheading text-secondary my-3 text-center">                    
+                    Coming soon...
+                    </h3>
+                {% endif %}
+
+                {% if LANGUAGE_CODE == 'ru' %}
+                    <h3 class="text-secondary section-subheading text-secondary my-3">                    
+                    Скоро появится...
+                    </h3>
+                {% endif %}
+
+            </div>
+        </div>
+    </section>
+{% endblock %}

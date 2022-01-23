@@ -1,0 +1,75 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block head %}
+<title>Longevity InTime - {% trans 'Pre order' %}</title>
+{% endblock head %}
+
+{% block content %}
+<section class="main pre-order container-fluid d-flex align-items-center">
+  <div class="container my-4 py-4">
+    <form method="post" class="card shadow p-4">
+      <h2 class="section-heading mb-4 w-100">{% trans 'Pre order' %}</h2>
+
+      <div class="text-secondary pb-2">
+        <a href='https://drive.google.com/file/d/1e9d5VDjSMdaFisqSkMDdbvuN2uP-kz0F/view?usp=sharing' target="_blank">
+          {% trans 'To learn more please download' %}
+        </a>
+      </div>
+
+      {% bootstrap_messages %}
+
+      {% csrf_token %}
+      <div class="form-group mb-0">
+        {% bootstrap_field form.name %}
+      </div>
+
+      <div class="form-group mb-0">
+        {% bootstrap_field form.message %}
+      </div>
+
+      {% if request.user.is_authenticated %}
+        <div class="form-group">
+          <input type="text" class="form-control" id="email" name="email" placeholder='{% trans "Enter your email" %}' value='{{ user.email }}' >
+        </div>
+
+      {% else %}
+        <div class="form-group">
+          {% bootstrap_field form.email %}
+        </div>
+      {% endif %}
+
+      <div class="text-center">
+        <button class="btn btn-primary" type="submit">{% trans 'Send' %}</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<script>
+  // Check Submit button activity
+  const submitButton = document.querySelector('button[type="submit"]')
+
+  const nameInput = document.querySelector('#id_name')
+  const messagelnput = document.querySelector('#id_message')
+  const emailInput = document.querySelector('#email')
+
+  function checkButtonActivity() {
+    const inputAllFilled = nameInput.value && emailInput.value && messagelnput.value
+
+    if (inputAllFilled) {
+      submitButton.removeAttribute("disabled")
+    } else {
+      submitButton.setAttribute("disabled", "true")
+    }
+  }
+
+  checkButtonActivity()
+
+  for (const input of [nameInput, messagelnput, emailInput]) {
+    input.addEventListener('input', checkButtonActivity)
+  }
+</script>
+{% endblock content %}

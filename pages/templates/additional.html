@@ -1,0 +1,52 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block head %}
+<title>Longevity InTime - {% trans 'Additional' %}</title>
+{% endblock head %}
+
+{% block content %}
+<section class="main additional container-fluid d-flex align-items-center">
+    <div class="container justify-content-center my-4 py-4">
+        <div class="mb-4 py-4 row px-lg-5 mx-lg-5">
+            <div class="col-12 col-lg-3 text-left pt-2 mb-4">
+                <a href="{% url 'pages:about' %}">
+                    {% include 'includes/back-button.html' %}
+                </a>
+            </div>
+
+            <h1 class="col text-uppercase section-heading text-dark text-center">
+                {% trans 'Additional' %}
+            </h1>
+
+            <div class="col-12 col-lg-3 text-right mt-4 mt-lg-0"></div>
+        </div>
+
+        <section class="text-left text-secondary mb-2 pb-2 px-lg-5 mx-lg-5">
+            {% if LANGUAGE_CODE == 'en' %}
+                <p>How many times have you heard that someone has a serious illness & the doctors "missed" the signals?</p>
+                <p>Do the doctors "did not notice" even those who paid their insurance on time & followed all the advice of the best of the best?</p>
+                <p>Would you like to extend your pleasant & active life by 30 years, if you could?</p>
+                <p>Are you tired of expensive insurance, “exclusions” from medical expenses, doctors' mistakes, wasted time on the way to appointments, lines in waiting rooms, useless gadgets, awkward apps, results that are hard to understand and recommendations that are difficult to follow?</p>
+                <p>Get a BMI Disease Tracker AI Health for life expectancy prediction & disease prevention now.</p>
+                <p>Connect our app to your health tracking gadgets or insert your data manually. AI server, based on 70 years of human trials Big Data is going to give your personal risks & recommendations how to avoid them: <a href="https://play.google.com/store/apps/details?id=com.application.bmiobesity&hl=ru">Open in Google Play</a>.</p>
+                <p>BMI Disease Tracker app in the Apple Store, with less features, old design, update is coming soon. <a href="https://apps.apple.com/ru/app/antiobesity/id1511198472">Open in App Store</a>.</p>
+                <p>We are also testing AntiCoronaVirus app, you can download it for Android from our website: <a href="http://www.AntiCoronaVirus.Center">AntiCoronaVirus.Center</a>.</p>
+            {% endif %}
+
+            {% if LANGUAGE_CODE == 'ru' %}
+                <p>Сколько раз вы слышали, что кто-то серьезно болен, и врачи «проспали» начало болезни?</p>
+                <p>Неужели врачи «не заметили» даже тех, кто вовремя оплатил страховку, ходил на диспансеризацию и последовал всем советам лучших из лучших?</p>
+                <p>Вы бы хотели продлить свою приятную и активную жизнь на 30 лет, если бы могли? Стив Джобс (56), основатель Microsoft Пол Аллен (64) и мать Билла Гейтса (65) имели доступ ко всем лучшим докторам и знаниям в мире и неограниченным ресурсам, но они умерли преждевременно.</p>
+                <p>Вы устали от дорогой страховки, «исключений» из медицинских расходов, ошибок врачей, потраченного впустую времени на приемы, очередей в залах ожидания, бесполезных гаджетов, неудобных приложений, результатов, которые трудно понять, и рекомендаций, которым трудно следовать?</p>
+                <p>Хотите жить еще 30 лет активно и счастливо?</p>
+                <p>Получите онлайн-трекер AI Health для прогнозирования продолжительности жизни и профилактики заболеваний прямо сейчас. Подключите свое приложение к гаджетам отслеживания работоспособности или вставьте данные вручную. Сервер искусственного интеллекта, основанный на 70-летних испытаниях на людях. Большие данные из стран G20 дадут вам расчеты рисков и рекомендации, как их избежать.</p>
+                <p>Зарегистрируйтесь в первом приложении Longevity InTime Tracker и воспользуйтесь преимуществами долголетия: <a href="https://play.google.com/store/apps/details?id=com.application.bmiobesity&hl=ru">Открыть Google Play</a></p>
+                <p>P.S. Что касается пользователей iOS, у нас есть приложение BMI Disease Tracker в Apple Store, но оно с меньшим количеством функций и старым дизайном. Мы планируем обновить его в течение месяца. Но вы также можете использовать его сегодня для получения выгоды в будущем. <a href="https://apps.apple.com/ru/app/antiobesity/id1511198472">Открыть в App Store</a>.</p>
+                <p>Мы также тестируем приложение AntiCoronaVirus, вы можете скачать его для Android с нашего сайта <a href="http://www.AntiCoronaVirus.Center">AntiCoronaVirus.Center</a></p>
+            {% endif %}
+        </section>
+    </div>
+</section>
+{% endblock %}
